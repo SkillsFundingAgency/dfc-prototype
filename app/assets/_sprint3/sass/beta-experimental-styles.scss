@@ -1,0 +1,76 @@
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/colours.scss';
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/conditionals.scss';
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/grid_layout.scss';
+
+/* ----------------------------------------------------
+Job categories on homepage
+----------------------------------------------------- */
+
+.category-list {
+	li {
+		margin-bottom: 0.526em;
+		&.selected {
+			font-weight: bold;
+			color: $grey-1;
+		}
+	}
+	a {
+		font-weight: bold;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}		
+	}	
+}
+
+/* ----------------------------------------------------
+Job categories - individual items
+----------------------------------------------------- */
+
+.category-job {
+	margin-bottom: 1.5789em;
+	.heading-medium {
+		margin-bottom: 0px;
+	}
+	&__title {
+		margin-top:0px;
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__alt-titles {
+		color:$secondary-text-colour;
+		font-size: 14px;
+		@include media(tablet) {
+			font-size: 16px;
+		}
+	}
+	&__overview {
+		margin-bottom: 0px;
+	}
+}
+
+/* ----------------------------------------------------
+Back to top button
+----------------------------------------------------- */
+
+#back-to-top {
+	position: fixed;
+	bottom:0px;
+	right:0px;
+	padding:0.6em;
+	margin-right:15px;
+	background: $link-colour;
+	.js-enabled & {
+		@include media(tablet) {
+			display: none;
+		}		
+	}
+	a {
+		color: $page-colour;
+	} 	
+}

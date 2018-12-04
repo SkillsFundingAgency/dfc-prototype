@@ -1,0 +1,121 @@
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/colours.scss';
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/conditionals.scss';
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/grid_layout.scss';
+
+$site-width:960px;
+
+/* -------------------------------------------------------------
+	Global
+------------------------------------------------------------- */
+
+.PROD_full-page-width-wrapper {
+  max-width: $site-width;
+
+  @include ie-lte(8) {
+    width: $site-width;
+  }
+
+  margin: 0 $gutter-half;
+
+  @include media(tablet) {
+    margin: 0 $gutter;
+  }
+
+  @include media($min-width: ($site-width + $gutter * 2)) {
+    margin: 0 auto;
+  }
+}
+
+.PROD_phase-banner-beta_above-colour {
+	border-bottom: 0px;
+}
+
+/* -------------------------------------------------------------
+	Hero
+------------------------------------------------------------- */
+
+.PROD_hero {
+	background: $turquoise;
+	margin: 0 0 0em 0;
+	padding: 25px 0px 15px;
+	color: $white;
+	@include media(tablet) {
+		padding: 40px 0px 30px;
+	}
+	.heading-xlarge {
+		margin: 0 0 30px 0;
+	}
+	p {
+		a {
+			font-weight: bold;
+			color: $white;
+		}
+	}
+}
+
+//Changes to the hero when inside a full width container
+.PROD_full-page-width-wrapper { 
+	.PROD_hero {
+		padding: 25px 0 15px;
+		@include media(tablet) {
+			padding: 40px 0 30px;
+		}
+	}
+}
+
+.PROD_hero .PROD_search {
+	background: $white;
+	margin-bottom: 15px;
+
+	&:after { //Clearfix
+	    content: "";
+	    display: table;
+	    clear: both;
+	}
+
+	.PROD_search__input-container {
+		float: left;
+		width: 100%;
+		padding: 0 41px 0 0;
+		margin: 0 -41px 0 0;
+		box-sizing: border-box;
+		position: relative;
+	}
+	.PROD_search__input {
+		position: relative;
+	    border: none;
+	    height: 40px;
+	    font-size: 19px;
+	    padding: 6px;
+	    width: 100%;
+	    box-sizing: border-box;
+	    z-index: 2;
+	    float:left;
+	    z-index: 10;
+	    font-size:16px;
+	    @include media(tablet){
+	    	font-size:19px;
+	    }
+	}
+	.PROD_search__submit {
+		float:left;
+		text-indent: -1000em;
+		position: relative;
+		float:left;
+		z-index: 1;
+		border-radius: 0;
+		background: $black;
+		width: 41px;
+		height: 40px; 
+		border: none;
+		background: url(/public/images/search-button.png) $black no-repeat 4px 50%;
+		&:hover {
+			cursor: pointer;
+		}
+		&:focus {
+		    z-index: 15;
+		    position: relative;
+		}
+	}
+}
+

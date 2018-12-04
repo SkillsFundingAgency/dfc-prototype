@@ -1,0 +1,51 @@
+{% extends "../layout_search.html" %}
+
+{% block page_title %}
+Careers Service - Skills match
+{% endblock %}
+
+{% block content %}
+
+	<main id="content" role="main">
+		{% include "../includes/phase_banner_alpha.html" %} {% include "../includes/breadcrumb_plum_match.html" %}
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<h1 class="heading-xlarge">
+					<span class="heading-secondary">4 out of 8</span>
+					Match your skills to:
+					<br> Plumber
+				</h1>
+				<form>
+					<div class="form-group">
+						<fieldset>
+							<legend>
+								<span class="form-label-bold">4. Can you follow safe working practices?</span>
+								<!--<span class="form-hint">
+									This is about being able to perform tasks without posing any risk
+									to anyone or anything.
+								</span>-->
+							</legend>
+							<label class="block-label selection-button-radio" for="radio-1">
+								<input id="radio-1" name="radio-group" type="radio" value="Yes">
+								Got it
+							</label>
+							<label class="block-label selection-button-radio" for="radio-2">
+								<input id="radio-2" name="radio-group" type="radio" value="No">
+								Working on it
+							</label>
+							<p class="form-block">or</p>
+							<label class="block-label selection-button-radio" for="radio-3">
+								<input id="radio-3" name="radio-group" type="radio" value="In progress">
+								Need to develop it
+							</label>
+						</fieldset>
+					</div>
+				</form>
+				<p><a class="button" href="./skills-match-plumber-5.html" role="button">Next</a>
+				<p><a href="./skills-match-plumber-3.html" class="link-back">Back to question 3</a></p>
+			</div>
+		</div>
+	</main>
+
+
+{% endblock %}

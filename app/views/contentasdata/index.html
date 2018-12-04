@@ -1,0 +1,190 @@
+﻿{% extends "layoutempty.html" %}
+
+{% block page_title %}
+  Content As Data Prototype
+{% endblock %}
+{% block head %}
+<link href="/public/_sprint11/stylesheets/contentasdata.css" media="screen" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+{% endblock %}
+{% block body_classes %}contentasdata{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    <div class="contentasdata_header">
+        Working hours, patterns and environment
+    </div>
+
+    <div class="contentasdata_box">
+        <h2>Working hours & patterns</h2>
+        <form>
+            <div class="inputwrapper">
+                <label>What is the employee status?</label>
+                <div class="selectwrapper">
+                    <select name="Status">
+                        <option value="" disabled selected>Please select...</option>
+                        <option value="usually">Usually</option>
+                        <option value="typically">Typically</option>
+                        <option value="occasionally">Occasionaly</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inputwrapper">
+                <label>Can they set their own hours?</label>
+                <div class="input-wrapper input-wrapper-radio">
+                    <input type="radio" id="yes" name="setown" value="yes" /><label for="yes">Yes</label>
+                    <input type="radio" id="no" name="setown" value="no" /><label for="no">No</label>
+                </div>
+            </div>
+            <div class="sectionwrapper">
+                <h3>When will they work?</h3>
+
+                <div class="inputwrapper">
+                    <label class="hashelptext" for="frequency">Frequency<span>For example: usually, typically, often, always</span></label>
+                    <div class="input-wrapper">
+                        <input type="text" />
+                    </div>
+                </div>
+
+                <div class="inputwrapper">
+                    <label class="hashelptext" for="frequency">Working hours</label>
+                    <div class="selectwrapper">
+                        <select name="Hours">
+                            <option value="" disabled selected>Please select...</option>
+                            <option value="">[x] to [y] hours a week</option>
+                            <option value="">usually [x] hours a week</option>
+                            <option value="">usually [x]am to [y]pm</option>
+                            <option value="">between [x]am and [y]pm</option>
+                            <option value="">Long hours</option>
+                            <option value="">minimum of x hours a week</option>
+                            <option value="">school hours</option>
+                            <option value="">varies - "Your working hours will vary because"</option>
+                            <option value="">unsociable</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="inputwrapper">
+                    <label class="hashelptext" for="frequency">Value [x]<span>For example a value, 27</span></label>
+                    <div class="input-wrapper">
+                        <input type="text" />
+                    </div>
+                </div>
+
+                <div class="inputwrapper disabled">
+                    <label class="hashelptext" for="frequency">Value [y]<span>For example a value, 40</span></label>
+                    <div class="input-wrapper">
+                        <input type="text" />
+                    </div>
+                </div>
+
+                <div class="inputwrapper">
+                    <label class="hashelptext" for="frequency">Working pattern</label>
+                    <div class="selectwrapper">
+                        <select name="Pattern">
+                            <option value="" disabled selected>Please select...</option>
+                            <option value="">Mon - Fri</option>
+                            <option value="">Mon - Sat</option>
+                            <option value="">Overtime (clarify paid or unpaid)</option>
+                            <option value="">On call</option>
+                            <option value="">Duty duration</option>
+                            <option value="">Inc. overtime / weekends / bank holidays</option>
+                            <option value="">Rota</option>
+                            <option value="">Term time</option>
+                            <option value="">Job share</option>
+                            <option value="">Shift</option>
+                            <option value="">Seasonal</option>
+                            <option value="">Variable</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="inputwrapper">
+                    <label>Can they set their own hours?</label>
+                    <div class="input-wrapper input-wrapper-check">
+                        <input type="checkbox" id="evenings" name="evenings" value="evenings" /><label for="evenings">Evenings</label>
+                        <input type="checkbox" id="weekends" name="weekends" value="weekends" /><label for="weekends">Weekends</label>
+                        <input type="checkbox" id="overtime" name="overtime" value="overtime" /><label for="overtime">Overtime</label>
+                        <input type="checkbox" id="bankholidays" name="bankholidays" value="bankholidays" /><label for="bankholidays">Bank holidays</label>
+                    </div>
+                </div>
+
+                <div class="inputwrapper">
+                    <label class="hashelptext" for="frequency">Why / further information<span>An explanation as to why the above are typical or further information</span></label>
+                    <div class="input-wrapper">
+                        <textarea rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="outcomewrapper">
+                    <h4>Outcome</h4>
+                    <div class="bluebox">
+                        <p>“You'll usually work 40 hours a week, Monday to Friday, including evenings, weekends and bank holidays, if you work in a bakery.”</p>
+                    </div>
+                </div>
+
+                <div class="another">Add another</div>
+            </div>
+        </form>
+
+        <h2>Environment</h2>
+        <form>
+            <div class="inputwrapper">
+                <label>Including</label>
+                <div class="input-wrapper input-wrapper-check">
+                    <input type="checkbox" id="travelling" name="travelling" value="travelling" /><label for="travelling">Travelling</label>
+                    <input type="checkbox" id="awayfromhome" name="awayfromhome" value="awayfromhome" /><label for="awayfromhome">Away from home</label>
+                    <input type="checkbox" id="atheight" name="atheight" value="atheight" /><label for="atheight">At height</label>
+                    <input type="checkbox" id="In court" name="In court" value="In court" /><label for="In court">In court</label>
+                    <input type="checkbox" id="On your own or in a small team" name="On your own or in a small team" value="On your own or in a small team" /><label for="On your own or in a small team">On your own or in a small team</label>
+                    <input type="checkbox" id="Meeting clients in their own homes" name="Meeting clients in their own homes" value="Meeting clients in their own homes" /><label for="Meeting clients in their own homes">Meeting clients in their own homes</label>
+                    <input type="checkbox" id="At home" name="At home" value="At home" /><label for="At home">At home</label>
+                    <input type="checkbox" id="At hospital" name="At hospital" value="At hospital" /><label for="At hospital">At hospital</label>
+                    <input type="checkbox" id="In an office" name="In an office" value="In an office" /><label for="In an office">In an office</label>
+                    <input type="checkbox" id="In a rented space" name="In a rented space" value="In a rented space" /><label for="In a rented space">In a rented space</label>
+                    <input type="checkbox" id="Outdoors" name="Outdoors" value="Outdoors" /><label for="Outdoors">Outdoors</label>
+
+                    <h4>Clothing</h4><span></span>
+                    <input type="checkbox" id="Working in a uniform" name="Working in a uniform" value="Working in a uniform" /><label for="Working in a uniform">Working in a uniform</label>
+                    <input type="checkbox" id="Working in protective clothing" name="Working in protective clothing" value="Working in protective clothing" /><label for="Working in protective clothing">Working in protective clothing</label>
+
+                    <h4>Personal state</h4><span></span>
+                    <input type="checkbox" id="Physically demanding" name="Physically demanding" value="Physically demanding" /><label for="Physically demanding">Physically demanding</label>
+                    <input type="checkbox" id="Emotionally demanding" name="Emotionally demanding" value="Emotionally demanding" /><label for="Emotionally demanding">Emotionally demanding</label>
+
+                </div>
+            </div>
+            <div class="outcomewrapper">
+                <h4>Outcome</h4>
+                <div class="bluebox">
+                    <p>“The job can involve travelling, working in court and meeting clients in their own homes. The job can also be emotionally demanding”</p>
+                </div>
+            </div>
+        </form>
+
+        <h2>Additional text</h2>
+        <form>
+            <div class="inputwrapper inputwrapper-additional">
+                <label class="hashelptext" for="additional">Additional text<span>Any additional free text that cannot be generated using the selectors above.</span></label>
+                <div class="input-wrapper">
+                    <textarea rows="10"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="contentasdata_header contentasdata_header_final">
+        Final Outcome
+    </div>
+    <div class="contentasdata_box contentasdata_box_final">
+        <h3>Working hours, patterns and environments</h3>
+        <p>You'll usually work 40 hours a week, Monday to Friday, including evenings, weekends and bank holidays, if you work in a bakery.</p>
+        <p>The job can involve travelling, working in court and meeting clients in their own homes. The job can also be emotionally demanding</p>
+    </div>
+</main>
+
+{% endblock %}
+
+

@@ -1,0 +1,52 @@
+{% extends "../layout_search.html" %}
+
+{% block page_title %}
+  Careers Service - Book this
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+    {% include "../includes/breadcrumb_book.html" %}
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<h1 class="heading-xlarge">Book this appointment</h1>
+                <p>You're booking an appointment with Joe on Tuesday, 8th February at 15:00.</p><p>Face-to-face appointments are at the <a href="#">Manchester National Careers Service</a> main office.</p> <p>Enter your details in the boxes below.</p>
+                <div class="form-group">
+					<label class="form-label" for="full-name-f1">Full name</label> <input class="form-control" id="full-name-f1" type="text">
+				</div>
+				<div class="form-group">
+					<label class="form-label" for="email">Email address <span class="form-hint">To receive a confirmation email</span></label> <input class="form-control" id="email" type="text">
+				</div>
+				<div class="form-group">
+					<label class="form-label" for="phone">Phone</label> <input class="form-control" id="phone" type="text">
+				</div>
+                <div class="form-group">
+					<label class="form-label" for="qualification">Highest qualification</label><input class="form-control" id="qualification" type="text">
+				</div>
+                <div class="form-group">
+                    <label class="form-label" for="textarea-a"><p>Your careers adviser will find it helpful if you can tell them about your current situation.</p>
+                        <p>For example:</p>
+					<ul class="list list-bullet">
+						<li>previous work or training</li>
+						<li>personal circumstances</li>
+						<li>career goals</li>
+					</ul>
+                    </label>
+					<textarea class="form-control w100" cols="30" id="textarea-a" rows="10"></textarea>
+					<p class="font-xsmall">(Limit is 1000 characters)</p>
+				</div>
+				<div class="form-group">
+					<label class="form-label" for="file-input">Upload documents (for example CV or skills profile)</label> <input id="file-input" type="file">
+				</div>
+				<div class="form-group">
+					<a class="button" href="while-you-wait.html" role="button">Book this appointment</a>
+				</div>
+                <p>or return to the <a href="appointment-list.html">list of appointments</a>.</p>
+
+			</div>
+		</div>
+	</main>
+
+
+{% endblock %}

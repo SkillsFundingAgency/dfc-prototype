@@ -1,0 +1,340 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+	Service Green
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+     {% include "../includes/phase_banner_beta.html" %}
+
+     <!-- <div class="breadcrumbs">
+          <ol>
+               <li><a href="../search-start_job-categories_job-profiles-keywords_v3.html">Home</a></li>
+               <li><a href="#1">Browse</a></li>
+               <li><a href="#1">Job categories</a></li>
+               <li>Health and care</li>
+          </ol>
+     </div> -->
+
+     <div class="grid-row">
+          <div class="column-two-thirds">
+               <div class="page-header">
+                    <h1 class="page-header__title">Health and care</h1>
+                    <!-- <p class="page-header__summary">Blurb about the category, what do the jobs on this page have in common etc.</p> -->
+               </div>
+
+               <div class="paginated-page" id="page1">
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Children's nurse</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Children's nurses provide care for children and young people with acute or long-term health problems.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Dental nurse</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Dental nurses help dentists to care for their patients, and may also carry out reception work and other tasks.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Dental hygienist</a></h2>
+                         <h3 class="category-job__alt-titles">Oral health practitioner</h3>
+                         <p class="category-job__overview">Dental hygienists offer advice, information and treatments to prevent and treat tooth decay and gum disease.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Dentist</a></h2>
+                         <h3 class="category-job__alt-titles">Dental surgeon, dental practitioner</h3>
+                         <p class="category-job__overview">Dentists diagnose and treat teeth and mouth problems, and work to prevent dental disease and promote oral health.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">GP</a></h2>
+                         <h3 class="category-job__alt-titles">General practitioner, doctor</h3>
+                         <p class="category-job__overview">General practitioners (GPs) are doctors who provide medical services to people in the community.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Healthcare assistant</a></h2>
+                         <h3 class="category-job__alt-titles">Support worker, nursing assistant, nursing auxiliary</h3>
+                         <p class="category-job__overview">Healthcare assistants help look after patients in hospitals or in patients’ own homes.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Hospital doctor</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">A hospital doctor diagnoses and treats illness and disease in patients admitted to hospital.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Mental health nurse</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Mental health nurses work in hospitals and the community, to support people with a range of mental health issues. </p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Midwife</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Midwives give care and support to pregnant women and their babies, before, during and after childbirth.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Occupational therapist</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Occupational therapists help people overcome difficulties caused by physical or mental illness, accidents or ageing.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Pharmacist</a></h2>
+                         <h3 class="category-job__alt-titles">Dispensing chemist, community pharmacist, hospital pharmacist</h3>
+                         <p class="category-job__overview">Pharmacists provide expert advice on the use and supply of medicines and medical appliances.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Psychologist</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Psychologists study people's behaviour, motivations, thoughts and feelings, to help them overcome or control their problems.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Psychotherapist</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Psychotherapists use talking techniques and therapies to help people who are distressed, or have mental health problems.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Physiotherapist</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Physiotherapists work with patients to improve their range of movement and promote health and wellbeing.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Radiographer</a></h2>
+                         <h3 class="category-job__alt-titles">Medical radiographer</h3>
+                         <p class="category-job__overview">Radiographers use equipment to diagnose or treat patients who are ill or injured.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Play therapist</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Play therapists help children to make sense of difficult life experiences or complex psychological issues through play.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Care worker</a></h2>
+                         <h3 class="category-job__alt-titles">Care assistant, support worker, nursing home assistant</h3>
+                         <p class="category-job__overview">Care workers help vulnerable people to manage their daily activities and to live as independently as possible.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Childminder</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Childminders care for babies, toddlers and children in their own home, supporting their learning and development.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Family support worker</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Family support workers help and advise families with long- or short-term difficulties.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Nursery manager</a></h2>
+                         <h3 class="category-job__alt-titles">Nursery assistant, pre-school assistant, playgroup assistant, nanny, childcare worker</h3>
+                         <p class="category-job__overview">Nursery workers help babies and children up to 5 years old to develop and learn in a safe and supportive environment.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Social work assistant</a></h2>
+                         <h3 class="category-job__alt-titles">Community support worker, home care officer, social services assistant</h3>
+                         <p class="category-job__overview">Social work assistants give advice, guidance and support to help people with their physical, emotional and social needs.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Social worker</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Social workers help to protect vulnerable children and adults from harm or abuse, and support people to live independently.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Bailiff</a></h2>
+                         <h3 class="category-job__alt-titles">Enforcement agent, enforcement officer, high court enforcement officer</h3>
+                         <p class="category-job__overview">Bailiffs visit properties to collect debts, serve a court document or give a notice or summons.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Border Force officer</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Border Force officers secure the UK border by carrying out immigration and customs controls for people and goods entering the UK.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Criminal intelligence analyst</a></h2>
+                         <h3 class="category-job__alt-titles">Intelligence officer</h3>
+                         <p class="category-job__overview">Criminal intelligence analysts find and analyse data to help detect and prevent crime, and to protect the security of the UK.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Firefighter</a></h2>
+                         <h3 class="category-job__alt-titles">Fireman, firewoman</h3>
+                         <p class="category-job__overview">Firefighters save people and property from fire and other dangers, and give advice on fire prevention.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Forensic scientist</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Forensic scientists prepare traces of physical evidence for use in courts of law.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Paramedic</a></h2>
+                         <h3 class="category-job__alt-titles">Ambulance paramedic</h3>
+                         <p class="category-job__overview">Paramedics deal with emergencies, giving people life-saving medical help.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Police officer</a></h2>
+                         <h3 class="category-job__alt-titles">Policeman, policewoman, police constable</h3>
+                         <p class="category-job__overview">A police officer keeps law and order, investigates crime and supports crime prevention.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Prison officer</a></h2>
+                         <h3 class="category-job__alt-titles">Prison guard, prison warder</h3>
+                         <p class="category-job__overview">Prison officers supervise and rehabilitate inmates in prisons, remand centres and young offenders' institutions.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Probation officer</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Probation officers supervise people serving community and prison sentences, and help them to stay away from crime.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Security officer</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Security officers make sure that buildings, valuables and people are safe and secure.</p>
+                    </div>
+               </div>
+
+<!--                <div class="pagination" id="searchResultsPagination">
+                    <ul class="previous-next-navigation">
+                         <li class="next">
+                              <a href="#1" id="nextBtn">
+                                   <span class="pagination-label">Next</span>
+                                   <span class="visuallyhidden">page</span>
+                                   <span class="page-numbers">2 of Number of Pages</span>
+                              </a>
+                         </li>
+                         <li class="previous">
+                              <a href="#1" id="prevBtn">
+                                   <span class="pagination-label">Previous</span>
+                                   <span class="visuallyhidden">page</span>
+                                   <span class="page-numbers">1 of Number of pages</span>
+                              </a>
+                         </li>
+                    </ul>
+               </div> -->
+          </div>
+<!--           <div class="column-one-third">
+               <div class="govuk-related-items">
+                    <h2 class="heading-medium">Job categories</h2>
+                    <div class="related-gov-links">
+                         <ul class="font-xsmall">
+                              <li style="margin-bottom:0.4em"><a href="animal-care_agriculture_paginated_v3.html" class="prototype-link">Animal care and agriculture</a></li>
+                              <li style="margin-bottom:0.4em"><a href="beauty_wellbeing_paginated_v3.html" class="prototype-link selected">Beauty and wellbeing</a></li>
+                              <li style="margin-bottom:0.4em"><a href="business_finance_paginated_v3.html" class="prototype-link">Business and finance</a></li>
+                              <li style="margin-bottom:0.4em"><a href="caring_paginated_v3.html" class="prototype-link">Caring</a></li>
+                              <li style="margin-bottom:0.4em"><a href="computing_technology_digital_paginated_v3.html" class="prototype-link">Computing, technology and digital</a></li>
+                              <li style="margin-bottom:0.4em"><a href="construction_manufacturing_paginated_v3.html" class="prototype-link">Construction and manufacturing</a></li>
+                              <li style="margin-bottom:0.4em"><a href="creative_media_paginated_v3.html" class="prototype-link">Creative and media</a></li>
+                              <li style="margin-bottom:0.4em"><a href="distribution_storage_paginated_v3.html" class="prototype-link">Distribution and storage</a></li>
+                              <li style="margin-bottom:0.4em"><a href="emergency_uniform_services_paginated_v3.html" class="prototype-link">Emergency and uniform services</a></li>
+                              <li style="margin-bottom:0.4em"><a href="engineering_paginated_v3.html" class="prototype-link">Engineering</a></li>
+                              <li style="margin-bottom:0.4em"><a href="health_paginated_v3.html" class="prototype-link">Health</a></li>
+                              <li style="margin-bottom:0.4em"><a href="law_administration_paginated_v3.html" class="prototype-link">Law and administration</a></li>
+                              <li style="margin-bottom:0.4em"><a href="retail_sales_paginated_v3.html" class="prototype-link">Retail and sales</a></li>
+                              <li style="margin-bottom:0.4em"><a href="science_research_paginated_v3.html" class="prototype-link">Science and research</a></li>
+                              <li style="margin-bottom:0.4em"><a href="sports_leisure_paginated_v3.html" class="prototype-link">Sports and leisure</a></li>
+                              <li style="margin-bottom:0.4em"><a href="teaching_education_paginated_v3.html" class="prototype-link">Teaching and education</a></li>
+                              <li style="margin-bottom:0.4em"><a href="tourism_hopitality_paginated_v3.html" class="prototype-link">Tourism and hopitality</a></li>
+                              <li style="margin-bottom:0.4em"><a href="trades_maintenance_paginated_v3.html" class="prototype-link">Trades and maintenance</a></li>
+                              <li style="margin-bottom:0.4em"><a href="transport_paginated_v3.html" class="prototype-link">Transport</a></li>
+                         </ul>
+                    </div>
+               </div>
+          </div> -->
+     </div>
+</main>
+
+<script>
+
+     function paginationClicked(thisDirection) {
+          // A delay has been added to mimic page refresh
+          delayLoadOfPage = window.setTimeout(function() {
+               updatePage(thisDirection);
+               updatePaginationModel(thisDirection);
+               updatePaginationView();
+               nextBtn.blur();
+               prevBtn.blur();
+          ;}, 700);
+     }
+
+     function updatePaginationModel(thisDirection) {
+          if (thisDirection === 'next') {
+               currentPage = currentPage+1;
+               nextPage = nextPage+1;
+               prevPage = prevPage+1;
+          } else {
+               currentPage = currentPage-1;
+               nextPage = nextPage-1;
+               prevPage = prevPage-1
+          }
+     }
+
+     function initPaginationModel() {
+          currentPage = 1;
+          nextPage = 2;
+          prevPage = 0;
+     }
+
+     function updatePage(thisDirection) {
+          if (thisDirection === 'next') {
+               thisDirection = nextPage;
+          } else {
+               thisDirection = prevPage;
+          }
+          document.getElementById('page' + currentPage).classList.add('js-hidden');
+          document.getElementById('page' + thisDirection).classList.remove('js-hidden');
+          // Move user to the top of the window as if a new page has loaded
+          window.scrollTo( 0, 0);
+     }
+
+     function updatePaginationView() {
+          // Create labels for next and previous UI
+          var nextLabel = nextPage + ' of ' + numberOfPages;
+          var prevLabel = prevPage + ' of ' + numberOfPages;
+
+          // Set pagination buttons
+          for(i = 0; i < nextBtn.childNodes.length; i++) {
+               if(nextBtn.childNodes[i].classList && nextBtn.childNodes[i].classList.contains('page-numbers')) {
+                    nextBtn.childNodes[i].innerHTML = nextLabel;
+               }
+          }
+          for(i = 0; i < prevBtn.childNodes.length; i++) {
+               if(prevBtn.childNodes[i].classList && prevBtn.childNodes[i].classList.contains('page-numbers')) {
+                    prevBtn.childNodes[i].innerHTML = prevLabel;
+               }
+          }    
+
+          // Hide UI if at beginnig or end
+          if (prevPage === 0) {
+               prevBtn.parentNode.classList.add('js-hidden');
+          } else {
+               prevBtn.parentNode.classList.remove('js-hidden');
+          }
+          if (currentPage === numberOfPages || numberOfPages === 1) {
+               nextBtn.parentNode.classList.add('js-hidden');
+          } else {
+               nextBtn.parentNode.classList.remove('js-hidden');
+          }
+     } 
+
+     function showHidePagination(){
+          if (numberOfPages ===  0){
+               document.getElementById('searchResultsPagination').classList.add('js-hidden');
+          }
+     } 
+
+     function init(){
+          // Setup default model
+          initPaginationModel();
+          showHidePagination();
+          // Make sure default button labels are correct
+          updatePaginationView();
+     }
+
+     var pageNumber = 1;
+     var numberOfPages = 2;
+
+     // uploadElement.addEventListener('change', onChange);
+     nextBtn.addEventListener('click', function() { paginationClicked('next'); });
+     prevBtn.addEventListener('click', function() { paginationClicked('prev'); });
+
+     init();
+
+</script>
+
+
+{% endblock %}

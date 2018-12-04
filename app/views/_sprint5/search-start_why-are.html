@@ -1,0 +1,71 @@
+{% extends "./layout.html" %}
+
+{% block page_title %}
+	Service Green
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+     {% include "./includes/phase_banner_beta.html" %}
+
+     <header class="hero">
+          <div class="grid-row">
+               <div class="column-two-thirds">
+
+                    <h1 class="heading-xlarge">Service Green</h1>
+                    <p class="lede">Find information and advice on getting the right job for you</p>
+
+                    <form id="searchForm">
+                         <div class="form-group">
+                              <div class="search">
+                                   <div id="search-box" class="search__input">
+                                        <input class="typeahead__input" autocomplete="off" id="my-typeahead" name="input-typeahead" placeholder="Search the service" type="text">
+                                   </div>
+                                   <input class="search__submit" onclick="saveSearchTermsAndContinue()" type="button" value="Search">
+                              </div>
+                         </div>
+                    </form>
+               </div>
+          </div>
+     </header>	
+</main>
+
+<script>
+
+var counter = 0;
+
+// This function gets the value entered in the search box and saves it to the session data
+// Then loads the next page
+function saveSearchTermsAndContinue() {
+     var searchTerm = document.getElementById('my-typeahead').value;
+     window.setSessionData('searchTerm', searchTerm);
+     if (counter > 0) {
+          window.location.href="search-results_blank";
+     };
+     counter++;
+}
+
+// This function make sure the form is submitted when search field is in focus and the user presses enter
+// This function is overriding one set in the accessible-typeahead.min.js that doesn't allow this behaviour if there are auto-complete options
+function searchOnReturn() {
+     var searchContainer = document.getElementById("my-typeahead");
+     var e = window.event;
+     searchContainer.addEventListener('keydown', function(e) {
+          if (e.which === 13 || e.keycode === 13) {
+               e.preventDefault();
+               saveSearchTermsAndContinue();
+          }
+     });
+} 
+
+function init () {
+     searchOnReturn();
+}
+window.onload = init;
+
+</script>
+
+
+{% endblock %}

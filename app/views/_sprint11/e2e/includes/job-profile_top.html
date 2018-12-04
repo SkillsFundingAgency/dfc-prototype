@@ -1,0 +1,26 @@
+<h1 class="heading-xlarge">
+    {{ profileName }}
+    <span class="heading-secondary">{{ profileSecondaryName }}</span>
+</h1>
+
+<div class="govuk-box-grey">
+    <p>A police officer keeps law and order, investigates crime and supports crime prevention.</p>
+</div>
+<div class="profile">
+    <div class="sixty">
+        <span class="salary-icon">
+            <img alt="Salary, a pound sign" src="/public/images/salary.png">
+        </span>
+        <span class="visually-hidden">Salary:</span>
+        <span class="bold">&pound;{{ profileSalaryLow }} to &pound;{{ profileSalaryHigh }}</span>
+        per year
+    </div>
+    <div class="forty">
+        <span class="hours-icon">
+            <img alt="Hours, a clock face" src="/public/images/hours.png">
+        </span>
+        <span class="visually-hidden">Hours:</span>
+        <span class="bold">{{ profileHoursLow }} to {{ profileHoursHigh }} hours</span>
+        per week
+    </div>
+</div>

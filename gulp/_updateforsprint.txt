@@ -1,0 +1,9 @@
+How to update gulp to add new sprint prototype
+
+1. Update config.json to include new references (duplicated all S1 with new S(X) name)
+2. Create two new lines on copy-assets.js for the assets and documentation assets (duplicate S1 line and edit accordingly)
+3. Create two new lines on sass.js for sass and documents-sass (duplicate S1 lines and edit accordingly)
+4. Update watch.js to look for new sass files, (duplicate S1 lines and edit accordinly)
+5. Finally update your tasks.js file to include the new tasks you've created in the various js files. sass, sass-documentation, assets, document-assets, watch-sass, watch-assets
+6. Replace all references to the previous sprint i.e. '_sprint1' and 'Sprint 1', in all files folder in the new sprint 'views' folder
+7. Add link to index.html to the new sprints index.html  

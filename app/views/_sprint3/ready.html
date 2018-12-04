@@ -1,0 +1,70 @@
+{% extends "./layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<h1 class="heading-xlarge">
+				<span class="heading-secondary">Sprint 3</span>
+				Ready for live
+			</h1>
+			<p class="lede">Prototypes to guide the creation of the live site. The code <strong>should not</strong> be used directly in the live environment</p>
+
+			<h2 class="heading-large">Search</h2>
+			<a href="PROD_search_full-width-hero"><h3 class="heading-medium" style="margin-top:0px;">Service homepage</h3></a>
+			<p>To understand the behaviour between the search on the homepage and the search results page, enter the following:</p>
+			<table style='margin-bottom: 30px;'>
+				<thead>
+					<tr>
+						<th scope="col">Search term</th>
+						<th scope="col">Result</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>'doctor'</td>
+						<td>Successful search page</td>
+					</tr>
+					<tr>
+						<td>'doctr'</td>
+						<td>Results with spelling suggestion</td>
+					</tr>
+					<tr>
+						<td><i>Empty search</i></td>
+						<td>Nothing happens</td>
+					</tr>
+					<tr>
+						<td><i>Enter anything else</i></td>
+						<td>No results page</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3 class="heading-medium" style="margin-top:0px;">Search results page</h3>
+			<ul class="list list-bullet">
+				<li><a href="PROD_search-results_success">Successful search</a></li>
+				<li><a href="PROD_search-results_no-results">No results</a></li>
+				<li><a href="PROD_search-results_spelling-suggestion">Spelling suggestion</a></li>
+			</ul>
+			<hr/>
+
+			<h2 class="heading-large">Current opportunities</h2>
+			<p>Only refer to the 'current opportunities' section in the belwo prototypes, as the design and content of the other sections has not been confirmed</p>
+
+			<ul class="list list-bullet">
+				<li><a href="job-profiles/PROD_social-worker_opportunity-feeds_successful.html#current-opportunities">Opportunities to show</a></li>
+				<li><a href="job-profiles/PROD_social-worker_opportunity-feeds_no-results.html#current-opportunities">No opportunities</a></li>
+			</ul>
+			
+		</div>
+	</div>
+</main>
+
+{% endblock %}
+
+

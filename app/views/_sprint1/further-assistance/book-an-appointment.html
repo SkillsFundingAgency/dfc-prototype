@@ -1,0 +1,34 @@
+{% extends "../layout_search.html" %}
+
+{% block page_title %}
+  Careers Service - Book an appointment
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+       {% include "../includes/breadcrumb_book.html" %}
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<h1 class="heading-xlarge">Book an appointment</h1>
+				<h2 class="heading-large">First available appointment</h2>
+                <p>This is the first available appointment in your area. There are other advisers in your area and appointments using the free online video service are also available.</p>
+                <p><a href="appointment-list-skype.html">See all advisers that offer online video appointments</a>.</p>
+				<div class="grid-row govuk-box-highlight-border big-border-box">
+					<!--<div class="column-one-third">
+						<p><img alt="Joe, Careers adviser" src="/public/images/worker-2.jpg" width="100%"></p>
+					</div>-->
+					<div class="column-full">
+						<h3 class="heading-medium appointment">Tuesday, 8th February at 14:00</h3>
+						<!--<p>Joe has been a careers adviser in the legal sector for 12 years. He worked as a paralegal for 7 years.</p>-->
+						<p><a class="button" href="book-this.html" role="button">Book this appointment</a></p>
+						<p>or <a href="choose-other-joe.html">choose a different appointment<!--with Joe--></a>.</p>
+					</div>
+				</div>
+				<!--<p><a href="appointment-list.html">I'd like to see who else is available</a>.</p>-->
+              </div>
+		</div>
+	</main>
+
+{% endblock %}

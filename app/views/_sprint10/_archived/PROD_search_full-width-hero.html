@@ -1,0 +1,78 @@
+{% extends "../layout_full-width.html" %}
+
+{% block page_title %}
+	Service Green
+{% endblock %}
+
+{% block content %}
+
+{% include "../includes/phase_banner_beta_full-width.html" %}
+
+<header class="PROD_hero">
+     <div class="PROD_full-page-width-wrapper">
+          <div class="grid-row">
+               <div class="column-two-thirds">
+                    <h1 class="heading-xlarge">Service Green</h1>
+                    <p class="lede">Explore what kind of work is right for you, and take the next steps towards what you want to be</p>
+                    <form id="searchForm">
+                         <!-- <label>Enter a job title</label> -->
+                         <div class="PROD_search">
+                              <div id="search-box" class="PROD_search__input-container">
+                                   <input id="searchInput" class="PROD_search__input" autocomplete="off" placeholder="Enter a job title or keywords" type="text">
+                              </div>
+                              <input class="PROD_search__submit" onclick="saveSearchTermsAndContinue()" type="button" value="Search">
+                         </div>
+                    </form>
+               </div>
+          </div>
+     </div>
+</header> 
+
+<main id="content" role="main">
+</main>
+
+<script>
+// This function gets the value entered in the search box and saves it to the session data
+// Then loads the next page
+function saveSearchTermsAndContinue() {
+     var searchPrompt = "Enter a job title";
+     window.setSessionData('searchPrompt', searchPrompt);
+     var searchTerm = document.getElementById('searchInput').value;
+     window.setSessionData('searchTerm', searchTerm, function(){
+          setTimeout(changePage, 500);
+          function changePage() {
+               if (searchTerm === 'doctor') {
+                    window.location.href="PROD_search-results_success";
+               } else if (searchTerm === 'doctr') {
+                    window.location.href="PROD_search-results_spelling-suggestion";
+               } else if (searchTerm.trim() === '') {
+                    alert('If the user runs an empty search nothing should happen');
+               } else {
+                    window.location.href="PROD_search-results_no-results";
+               }
+          }
+     });
+}
+
+// This function make sure the form is submitted when search field is in focus and the user presses enter
+// This function is overriding one set in the accessible-typeahead.min.js that doesn't allow this behaviour if there are auto-complete options
+function searchOnReturn() {
+     var searchContainer = document.getElementById("searchInput");
+     var e = window.event;
+     searchContainer.addEventListener('keydown', function(e) {
+          if (e.which === 13 || e.keycode === 13) {
+               e.preventDefault();
+               saveSearchTermsAndContinue();
+          }
+     });
+} 
+
+function init () {
+     searchOnReturn();
+}
+window.onload = init;
+
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "./layout_full-width.html" %}
+
+{% block page_title %}
+	Service Green
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Service Green' %}
+{% set bannerStyle = 'BETA-style' %}
+{% include "./includes/VOC_exit-routes_v2.html" %}
+
+<main id="content" role="main">
+	<div id="global-header-bar"></div>
+	<div class="breadcrumbs">
+		<ol>
+			<li><a href="#1">Home</a></li>
+		</ol>
+	</div>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<h1 class="heading-xlarge">
+				Cookies
+			</h1>
+			<p class="lede">Page about what cookies are used and why</p>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
+
+

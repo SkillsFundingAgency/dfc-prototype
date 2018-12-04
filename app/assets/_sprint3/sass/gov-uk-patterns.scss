@@ -1,0 +1,895 @@
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/conditionals.scss';
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/colours.scss';
+
+/* ----------------------------------------------------
+GOV.UK - search results
+----------------------------------------------------- */
+
+.header-title {
+    float: left;
+    color: #fff !important;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+
+    @media (min-width: 641px) {
+        font-size:24px;
+        line-height: 1.25
+    }
+
+    @media screen and (max-width: 379px) {
+        margin:5px 15px 0
+    }
+
+    @media screen and (min-width: 380px) {
+        margin-top:14px
+    }
+
+    @media (min-width: 641px) {
+        margin-top:8px
+    }
+    &:visited, &:hover, &:focus{
+        color:white !important;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+main.search {
+    padding-bottom: 30px
+}
+
+@media (min-width: 641px) {
+    main.search {
+        padding-bottom:60px
+    }
+}
+
+main.search h1 {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    font-weight: bold;
+    padding-bottom: 10px
+}
+
+@media (min-width: 641px) {
+    main.search h1 {
+        font-size:24px;
+        line-height: 1.25
+    }
+}
+
+main.search .search-header {
+    position: relative;
+    margin: 0;
+    padding: 10px 0 15px;
+    overflow: visible
+}
+
+@media (min-width: 641px) {
+    main.search .search-header {
+        padding:20px 0 30px;
+        width: 66.666%
+    }
+}
+
+main.search .search-header .searchfield {
+    position: relative
+}
+
+main.search .search-header .search-input {
+    position: static;
+    margin: 0;
+    padding: 0 50px 0 0;
+}
+
+main.search .search-header .search-submit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    overflow: visible
+}
+
+main.search .search-header input {
+    border: 1px solid #bbb;
+    -webkit-appearance: none;
+    border-radius: 0;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 10px;
+    display: block;
+    height: 50px;
+    border-color: #bfc1c3;
+    border-right: none;
+    line-height: 48px !important
+}
+
+@media (min-width: 641px) {
+    main.search .search-header input {
+        font-size:19px;
+        line-height: 1.31579
+    }
+}
+
+main.search .search-header button {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border: none;
+    overflow: hidden;
+    text-indent: -5000px;
+    color: #fff;
+    background-color: #2b8cc4;
+    background-image: url(https://assets.publishing.service.gov.uk/frontend/search/search-button-fe10ecb60b18fdbcdadaf0918f1761b3847bf85d9924e3ca52a0110c648cb73a.png);
+    background-repeat: no-repeat;
+    background-position: -12.5% 50%
+}
+
+main.search .search-header button:hover {
+    background-color: #267daf
+}
+
+main.search .search-header .spelling-suggestion p {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.14286;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    margin: 0;
+    padding: 10px 0 0
+}
+
+@media (min-width: 641px) {
+    main.search .search-header .spelling-suggestion p {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media (min-width: 641px) {
+    main.search #results {
+        margin:0 -15px
+    }
+}
+
+@media (min-width: 641px) {
+    main.search #results .inner-block {
+        padding:0 15px
+    }
+}
+
+@media (min-width: 641px) {
+    main.search #results .filter-form {
+        float:left;
+        width: 33.33333%
+    }
+}
+
+main.search #results .filter-form .info {
+    margin: 0 0 15px
+}
+
+.js-enabled main.search #results .filter-form .submit {
+    display: none
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block {
+        float:left;
+        width: 66.66667%
+    }
+}
+
+main.search #results .results-block mark {
+    background-color: transparent;
+    color: inherit;
+    font-weight: bold
+}
+
+main.search #results .results-block .result-count {
+    padding: 0
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block .scoped-result-count {
+        font-size:21px
+    }
+}
+
+main.search #results .results-block .scoped-result-count a {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.14286;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    padding-top: 8px;
+    padding-bottom: 7px
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block .scoped-result-count a {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block .scoped-result-count a {
+        padding-top:5px;
+        padding-bottom: 5px
+    }
+}
+
+main.search #results .results-block .results-list {
+    padding: 30px 0;
+    list-style: none;
+    margin: 0
+}
+
+main.search #results .results-block .results-list.debug {
+    list-style: decimal
+}
+
+main.search #results .results-block .results-list.debug .sections {
+    list-style: none
+}
+
+main.search #results .results-block .results-list.debug .debug-link {
+    color: green;
+    word-wrap: break-word
+}
+
+main.search #results .results-block .results-list.debug .debug-info {
+    color: red
+}
+
+main.search #results .results-block .results-list.debug .debug-info span {
+    display: inline-block;
+    min-width: 150px
+}
+
+main.search #results .results-block .results-list li {
+    max-width: 32.5em;
+    margin: 0;
+    padding: 0 0 15px
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block .results-list li {
+        padding:0 0 25px
+    }
+}
+
+main.search #results .results-block .results-list li .examples {
+    padding-left: 15px;
+    border-left: 1px solid grey
+}
+
+main.search #results .results-block .results-list li .examples li {
+    max-width: 32.5em;
+    margin: 0;
+    padding: 0 0 15px
+}
+
+main.search #results .results-block .results-list li .examples li p {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block .results-list li .examples li p {
+        font-size:14px;
+        line-height: 1.42857
+    }
+}
+
+main.search #results .results-block .results-list li .examples li:last-child {
+    padding: 0
+}
+
+main.search #results .results-block .results-list li h4 {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    margin: 0
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block .results-list li h4 {
+        font-size:14px;
+        line-height: 1.42857
+    }
+}
+
+main.search #results .results-block .results-list li h4 a {
+    font-weight: bold;
+    text-decoration: none
+}
+
+main.search #results .results-block .results-list li h4 a:hover,main.search #results .results-block .results-list li h4 a:focus {
+    color: #005ea5;
+    text-decoration: underline
+}
+
+main.search #results .results-block .results-list li h4.see-all a {
+    text-decoration: underline
+}
+
+main.search #results .results-block .results-list li.descoped-results {
+    border-left: 4px solid #005ea5;
+    padding: 15px 0 0 15px;
+    margin-bottom: 30px
+}
+
+main.search #results .results-block .results-list li.descoped-results .descope-message {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.14286;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block .results-list li.descoped-results .descope-message {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+main.search #results .results-block .results-list li.descoped-results ol {
+    padding: 15px 0 0
+}
+
+main.search #results .results-block .results-list h3 {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    margin: 0;
+    padding-bottom: 2px
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block .results-list h3 {
+        font-size:24px;
+        line-height: 1.25
+    }
+}
+
+main.search #results .results-block .results-list h3 a {
+    font-weight: bold;
+    text-decoration: none
+}
+
+main.search #results .results-block .results-list h3 a:visited mark {
+    color: #4c2c92
+}
+
+main.search #results .results-block .results-list h3 a:hover,main.search #results .results-block .results-list h3 a:focus,main.search #results .results-block .results-list h3 a:hover mark,main.search #results .results-block .results-list h3 a:focus mark {
+    color: #005ea5;
+    text-decoration: underline
+}
+
+main.search #results .results-block .results-list .sections {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.14286;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    margin: 0;
+    padding: 0;
+    overflow: hidden
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block .results-list .sections {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+main.search #results .results-block .results-list .sections li {
+    margin: 0;
+    padding: 3px 0 2px;
+    float: left;
+    width: 50%
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block .results-list .sections li {
+        width:40%
+    }
+}
+
+main.search #results .results-block .results-list .attributes {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    color: #6f777b;
+    padding: 0 0 3px;
+    margin: 0
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block .results-list .attributes {
+        font-size:14px;
+        line-height: 1.42857
+    }
+}
+
+main.search #results .results-block .results-list .attributes li {
+    display: inline;
+    padding: 0
+}
+
+main.search #results .results-block .results-list .attributes li:after {
+    content: ',';
+    position: relative;
+    left: -0.25em
+}
+
+main.search #results .results-block .results-list .attributes li:last-child::after {
+    content: ''
+}
+
+main.search #results .results-block .results-list p {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.14286;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    margin: 0;
+    padding: 0
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block .results-list p {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+main.search #results .results-block .results-list p.historic,main.search #results .results-block .results-list p.meta {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    padding: 0 0 3px;
+    word-wrap: break-word;
+    color: #6f777b
+}
+
+@media (min-width: 641px) {
+    main.search #results .results-block .results-list p.historic,main.search #results .results-block .results-list p.meta {
+        font-size:14px;
+        line-height: 1.42857
+    }
+}
+
+main.search #results .zero-results h2 {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: none;
+    font-size-adjust: 0.525
+}
+
+@media (min-width: 641px) {
+    main.search #results .zero-results h2 {
+        font-size:24px;
+        line-height: 1.25
+    }
+}
+
+main.search #results .zero-results ul,main.search #results .zero-results p {
+    margin-top: 0
+}
+
+main.no-results-term {
+    padding-top: 0px;
+    padding-bottom: 130px
+}
+
+@media (min-width: 641px) {
+    main.no-results-term {
+        padding-top:0px;
+        padding-bottom: 300px
+    }
+
+    main.no-results-term h1 {
+        font-family: "nta", Arial, sans-serif;
+        font-size: 32px;
+        line-height: 1.09375;
+        font-weight: 400;
+        text-transform: none;
+        font-size-adjust: 0.5;
+        font-weight: bold;
+        padding-bottom: 15px
+    }
+}
+
+@media (min-width: 641px) and (min-width: 641px) {
+    main.no-results-term h1 {
+        font-size:48px;
+        line-height: 1.04167
+    }
+}
+
+b,strong {
+    font-weight: 600
+}
+
+/* ----------------------------------------------------
+Service manual - header
+----------------------------------------------------- */
+
+.page-header {
+    margin-bottom: 15px;
+    margin-top: 15px
+}
+
+@media (min-width: 641px) {
+    .page-header {
+        margin-bottom:45px
+    }
+}
+
+@media (min-width: 641px) {
+    .page-header {
+        margin-top:45px
+    }
+}
+
+.page-header__context {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #6f777b;
+    margin-bottom: 0;
+    padding-bottom: .167em
+}
+
+@media (min-width: 641px) {
+    .page-header__context {
+        font-size:24px;
+        line-height: 1.25
+    }
+}
+
+.page-header__title {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 32px;
+    line-height: 1.09375;
+    margin-bottom: 15px
+}
+
+@media (min-width: 641px) {
+    .page-header__title {
+        font-size:48px;
+        line-height: 1.04167
+    }
+}
+
+@media (min-width: 641px) {
+    .page-header__title {
+        margin-bottom:45px
+    }
+}
+
+.page-header__summary {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 15px
+}
+
+@media (min-width: 641px) {
+    .page-header__summary {
+        font-size:24px;
+        line-height: 1.25
+    }
+}
+
+@media (min-width: 641px) {
+    .page-header__summary {
+        margin-bottom:45px
+    }
+}
+
+.page-header__intro {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25
+}
+
+@media (min-width: 641px) {
+    .page-header__intro {
+        font-size:19px;
+        line-height: 1.31579
+    }
+}
+
+/* ----------------------------------------------------
+Service manual - sub-section accordians
+----------------------------------------------------- */
+
+.subsection {
+    width: 100%;
+    margin-bottom: 30px
+}
+
+@media (min-width: 641px) {
+    .subsection {
+        margin-bottom:45px
+    }
+}
+
+.subsection__title {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 5px
+}
+
+@media (min-width: 641px) {
+    .subsection__title {
+        font-size:24px;
+        line-height: 1.25
+    }
+}
+
+.subsection__description {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 7.5px
+}
+
+@media (min-width: 641px) {
+    .subsection__description {
+        font-size:19px;
+        line-height: 1.31579
+    }
+}
+
+@media (min-width: 641px) {
+    .subsection__description {
+        margin-bottom:15px
+    }
+}
+
+.subsection__list {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    padding-left: 0;
+    list-style-type: none
+}
+
+@media (min-width: 641px) {
+    .subsection__list {
+        font-size:19px;
+        line-height: 1.31579
+    }
+}
+
+.subsection__list-item {
+    margin-bottom: 0.5em
+}
+
+.subsection__list-item a {
+    text-decoration: none
+}
+
+.js-accordion-with-descriptions .subsection-controls button {
+    float: right;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.14286;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #005ea5;
+    padding: 0.5em 0
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection-controls button {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+.js-accordion-with-descriptions .subsection-wrapper {
+    border-bottom: 1px solid #bfc1c3
+}
+
+.js-accordion-with-descriptions .subsection {
+    margin-bottom: 0
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection {
+        margin-bottom:0
+    }
+}
+
+.js-accordion-with-descriptions .subsection__header {
+    position: relative;
+    padding-top: 14px;
+    padding-bottom: 12px;
+    border-top: 1px solid #bfc1c3
+}
+
+.js-accordion-with-descriptions .subsection__header:hover {
+    cursor: pointer;
+    background: #f8f8f8
+}
+
+.js-accordion-with-descriptions .subsection__title {
+    margin-bottom: 0;
+    margin-right: 15px
+}
+
+.js-accordion-with-descriptions .subsection__title button {
+    color: #005ea5;
+    cursor: pointer;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2;
+    background: none;
+    border: 0;
+    padding-left: 0;
+    text-align: left
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection__title button {
+        font-size:24px;
+        line-height: 1.25
+    }
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection__title {
+        margin-right:30px
+    }
+}
+
+.js-accordion-with-descriptions .subsection__description {
+    margin-bottom: 0;
+    margin-right: 15px
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection__description {
+        margin-bottom:0;
+        margin-right: 30px
+    }
+}
+
+.js-accordion-with-descriptions .subsection__icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 16px;
+    width: 16px;
+    margin-top: -8px;
+    background-image: url(https://assets.publishing.service.gov.uk/service-manual-frontend/icons-plus-minus-1bd32ac92894793f16898334c6a8af216b283adcb4d0a9b8cbe1621509f6b0d5.png);
+    background: url(https://assets.publishing.service.gov.uk/service-manual-frontend/icons-plus-minus-d4de828db60520db2057af7ed3526d770973e70a94c4d8a1ba6cf4a6dcf6490e.svg),linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    background-position: 0 -16px
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection__icon {
+        right:15px
+    }
+}
+
+.js-accordion-with-descriptions .subsection--is-open .subsection__icon {
+    background-position: 0 0
+}
+
+.js-accordion-with-descriptions .subsection__content {
+    padding-top: 5px;
+    padding-bottom: 15px
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection--is-open .subsection__content {
+        padding-top:10px;
+        padding-bottom: 30px
+    }
+}
+
+p {
+    margin-top: 0.3125em;
+    margin-bottom: 1.25em
+}
+
+@media (min-width: 641px) {
+    p {
+        margin-top:0.26316em;
+        margin-bottom: 1.05263em
+    }
+}
+
+.js-accordion-with-descriptions .subsection-controls:after,.js-accordion-with-descriptions .subsection-wrapper:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.js-accordion-with-descriptions .subsection-controls:after,.js-accordion-with-descriptions .subsection-wrapper:after {
+    content: "";
+    display: block;
+    clear: both
+}
+

@@ -1,0 +1,107 @@
+{% extends "../layout_full-width.html" %}
+
+{% block page_title %}
+	Service Green
+{% endblock %}
+
+{% block content %}
+
+{% include "../includes/phase_banner_beta_full-width.html" %}
+
+<header class="PROD_hero" style="padding-bottom: 0.25em;">
+     <div class="PROD_full-page-width-wrapper">
+          <div class="grid-row">
+               <div class="column-two-thirds">
+                    <h1 class="heading-xlarge">Service Green</h1>
+                    <p class="lede">Explore what kind of work is right for you, and take the next steps towards what you want to be</p>
+               </div>
+               <div class="column-one-third">
+                    <form id="searchForm">
+                         <!-- <label>Enter a job title</label> -->
+                         <div class="PROD_search">
+                              <div id="search-box" class="PROD_search__input-container">
+                                   <input id="searchInput" class="PROD_search__input" autocomplete="off" placeholder="Enter a job title or keywords" type="text">
+                              </div>
+                              <input class="PROD_search__submit" onclick="saveSearchTermsAndContinue()" type="button" value="Search">
+                         </div>
+                    </form>
+               </div>
+          </div>
+     </div>
+</header> 
+<main id="content" role="main">
+     <div class="grid-row">
+          <div class="column-full">
+               <h2 class="heading-medium">Explore by job category</h2>
+          </div>
+          <div class="column-one-third">
+               <ul class="list category-list">
+                    <li><a href="../job-categories/_archived/animal-care_agriculture_paginated_v1.html" class="prototype-link">Animal care and agriculture</a></li>
+                    <li><a href="../job-categories/_archived/beauty_wellbeing_paginated_v1.html" class="prototype-link">Beauty and wellbeing</a></li>
+                    <li><a href="../job-categories/_archived/business_finance_paginated_v1.html" class="prototype-link">Business and finance</a></li>
+                    <li><a href="../job-categories/_archived/caring_paginated_v1.html" class="prototype-link">Caring</a></li>
+                    <li><a href="../job-categories/_archived/computing_technology_digital_paginated_v1.html" class="prototype-link">Computing, technology and digital</a></li>
+                    <li><a href="../job-categories/_archived/construction_manufacturing_paginated_v1.html" class="prototype-link">Construction and manufacturing</a></li>
+                    <li><a href="../job-categories/_archived/creative_media_paginated_v1.html" class="prototype-link">Creative and media</a></li>
+               </ul>
+          </div>
+          <div class="column-one-third">
+               <ul class="list category-list">
+                    <li><a href="../job-categories/_archived/distribution_storage_paginated_v1.html" class="prototype-link">Distribution and storage</a></li>
+                    <li><a href="../job-categories/_archived/emergency_uniform_services_paginated_v1.html" class="prototype-link">Emergency and uniform services</a></li>
+                    <li><a href="../job-categories/_archived/engineering_paginated_v1.html" class="prototype-link">Engineering</a></li>
+                    <li><a href="../job-categories/_archived/health_paginated_v1.html" class="prototype-link">Health</a></li>
+                    <li><a href="../job-categories/_archived/law_administration_paginated_v1.html" class="prototype-link">Law and administration</a></li>
+                    <li><a href="../job-categories/_archived/retail_sales_paginated_v1.html" class="prototype-link">Retail and sales</a></li>
+               </ul>
+          </div>
+          <div class="column-one-third">
+               <ul class="list category-list">
+                    <li><a href="../job-categories/_archived/science_research_paginated_v1.html" class="prototype-link">Science and research</a></li>
+                    <li><a href="../job-categories/_archived/sports_leisure_paginated_v1.html" class="prototype-link">Sports and leisure</a></li>
+                    <li><a href="../job-categories/_archived/teaching_education_paginated_v1.html" class="prototype-link">Teaching and education</a></li>
+                    <li><a href="../job-categories/_archived/tourism_hopitality_paginated_v1.html" class="prototype-link">Tourism and hopitality</a></li>
+                    <li><a href="../job-categories/_archived/trades_maintenance_paginated_v1.html" class="prototype-link">Trades and maintenance</a></li>
+                    <li><a href="../job-categories/_archived/transport_paginated_v1.html" class="prototype-link">Transport</a></li>
+               </ul>
+          </div>
+     </div>
+</main>
+
+<script>
+// This function gets the value entered in the search box and saves it to the session data
+// Then loads the next page
+function saveSearchTermsAndContinue() {
+     var searchPrompt = "Enter a job title or keywords";
+     window.setSessionData('searchPrompt', searchPrompt);
+     var searchTerm = document.getElementById('searchInput').value;
+     window.setSessionData('searchTerm', searchTerm, function(){
+          setTimeout(changePage, 500);
+          function changePage() {
+               window.location.href="../search-results_blank_v2";
+          }
+     });
+}
+
+// This function make sure the form is submitted when search field is in focus and the user presses enter
+// This function is overriding one set in the accessible-typeahead.min.js that doesn't allow this behaviour if there are auto-complete options
+function searchOnReturn() {
+     var searchContainer = document.getElementById("searchInput");
+     var e = window.event;
+     searchContainer.addEventListener('keydown', function(e) {
+          if (e.which === 13 || e.keycode === 13) {
+               e.preventDefault();
+               saveSearchTermsAndContinue();
+          }
+     });
+} 
+
+function init () {
+     searchOnReturn();
+}
+window.onload = init;
+
+</script>
+
+
+{% endblock %}

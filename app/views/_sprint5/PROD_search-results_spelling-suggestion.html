@@ -1,0 +1,50 @@
+{% extends "./layout.html" %}
+
+{% block page_title %}
+Careers Service - Search
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="search">
+	{% include "./includes/phase_banner_beta.html" %} 
+	<div class="breadcrumbs">
+		<!-- <ol>
+			<li><a href="#1">Home</a></li>
+			<li>Search</li>	      
+		</ol> -->
+	</div>
+
+	<div class="search-header">
+		<div class="searchfield">
+			<fieldset class="search-input">
+				<label for="search-main">
+					<h1>Search results for <span class="visuallyhidden">“doctor”</span></h1>
+				</label>
+				<input type="search" name="q" placeholder="Enter a job title" value="doctr" id="search-main">
+			</fieldset>
+
+			<fieldset class="search-submit">
+				<button type="submit" class="button">Search</button>
+			</fieldset>
+		</div>
+		<fieldset class="spelling-suggestion">
+			<p>Did you mean '<a href="PROD_search-results_success.html">doctor</a>'?</p>
+		</fieldset>
+	</div>
+
+	<div id="results" class="js-live-search-results-block">
+		<div class="results-block">
+			<div class="inner-block js-live-search-results-list">
+				<div class="result-count scoped-result-count" id="js-live-search-result-count" aria-hidden="true">0 results found</div>
+
+				<div class="zero-results" style="padding-top:30px">
+					<p class="bold-small">Try again using a different job title or keyword</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,132 @@
+{% extends "./layout.html" %}
+
+{% block page_title %}
+Careers Service - Search
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+		{% include "./includes/phase_banner_beta.html" %} 
+		{% include "./includes/breadcrumb_search.html" %}
+		<header class="hero search">
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<label class="heading-xlarge" for="search">Search results <span class="visuallyhidden">“ for *”</span></label>
+					<div class="search">
+						<form action="/search" method="get" role="search">
+							<!--<label class="search__label visually-hidden" for="search">*</label>-->
+							<div class="search__input">
+								<input class="js-search-focus" id="search" name="q" type="search" placeholder="for example, plumber">
+							</div><!--<input type="hidden" name="filter_manual" value="/service-manual">-->
+							<input class="search__submit" type="submit" value="Search">
+						</form>
+					</div>										
+				</div>
+				<div class="column-one-third">					
+			</div>
+		</header>
+		<div class="grid-row">
+<!-- 			<div class="column-one-third">
+				<p>You chose:</p>
+					<ul class="list tags" tabindex="0">
+						<li>
+							<a class="#"><span class="tag-filter">Not office based</span></a>
+						</li>
+						<li>
+							<a class="#"><span class="tag-filter">Practical skills</span></a>
+						</li>
+						<li>
+							<a class="#"><span class="tag-filter">Apprenticeship route</span></a>
+						</li>
+					</ul>
+					<p><a href="job-profile-index.html">Change your choice</a></p>	
+			</div> -->
+			<div class="column-two-thirds search-results-list">
+				<p class="heading-small">8 results found. </p>
+				<!-- ////////// Result 1 - START ////////// -->
+				<div class="search-result">
+					<h3 class="heading-medium"><a href="./job-profiles/plumber">Plumber</a></h3>
+					<p class="meta grey">Heating and ventilation engineer, HVAC engineer</p>
+					<p>Plumbers fit and service heating systems. They also repair faults in hot and cold water supplies and drainage networks.</p>
+					<p class="heading-small">Salary: £18,000 to £35,000 (average per year)</p>
+<!-- 					<div class="panel panel-border-wide hybrid">
+						<p>Related topics:</p>
+						<ul class="list">
+							<li>
+								<a href="#">Sample CV</a>
+							</li>
+							<li>
+								<a href="#">Sample covering letter</a>
+							</li>
+							<li>
+								<a href="#">Get help to write an apprenticeship application</a>
+							</li>
+						</ul>
+					</div> -->
+				</div><!-- ////////// Result 1 - END ////////// -->
+				<!-- ////////// Result 2 - START ////////// -->
+				<div class="search-result">
+					<h3 class="heading-medium"><a href="job-profiles/paralegal">Paralegal</a></h3>
+					<p class="meta grey">Legal executive, legal clerk</p>
+					<p>Paralegals prepare legal documents, carry out research and give legal advice to clients.</p>
+					<p class="heading-small">Salary: £16,000 to £40,000 (average per year)</p>
+				</div><!-- ////////// Result 2 - END ////////// -->
+				<!-- ////////// Result 3 - START ////////// -->
+				<div class="search-result">
+					<h3 class="heading-medium"><a href="job-profiles/diver">Diver</a></h3>
+					<p class="meta grey">Deep sea diver</p>
+					<p>Divers work underwater at sea, or in rivers, lakes, canals and reservoirs.</p>
+					<p class="heading-small">Salary: Variable (average per year)</p>
+				</div><!-- ////////// Result 3 - END ////////// -->
+				<!-- ////////// Result 4 - START ////////// -->
+				<div class="search-result">
+					<h3 class="heading-medium"><a href="job-profiles/credit-controller">Credit controller</a></h3>
+					<p class="meta grey">Debt collection agent</p>
+					<p>Credit controllers help firms get the money they're owed from businesses and individuals.</p>
+					<p class="heading-small">Salary: £16,000 to £30,000 (average per year)</p>
+				</div><!-- ////////// Result 4 - END ////////// -->
+				<!-- ////////// Result 5 - START ////////// -->
+				<div class="search-result">
+					<h3 class="heading-medium"><a href="job-profiles/chef">Chef</a></h3>
+					<p class="meta grey">Cook, gourmet chef, sous chef</p>
+					<p>Chefs prepare and cook food.</p>
+					<p class="heading-small">Salary: £13,000 to £50,000 (average per year)</p>
+				</div><!-- ////////// Result 5 - END ////////// -->
+				<!-- ////////// Result 6 - START ////////// -->
+				<div class="search-result">
+					<h3 class="heading-medium"><a href="job-profiles/publican">Publican</a></h3>
+					<p class="meta grey">Pub landlord, licensee, manager of licensed premises</p>
+					<p>Publicans, or pub landlords, manage licensed premises like pubs and bars.</p>
+					<p class="heading-small">Salary: £20,000 to £50,000 (average per year)</p>
+				</div><!-- ////////// Result 6 - END ////////// -->
+				<!-- ////////// Result 7 - START ////////// -->
+				<div class="search-result">
+					<h3 class="heading-medium"><a href="job-profiles/bank-manager">Bank manager</a></h3>
+					<p class="meta grey">Building society manager, financial institution manager or director</p>
+					<p>Bank managers oversee the day-to-day operations of their branch, supervise staff and work to attract new customers.</p>
+					<p class="heading-small">Salary: £18,000 to £70,000 (average per year)</p>
+				</div><!-- ////////// Result 7 - END ////////// -->
+				<!-- ////////// Result 8 - START ////////// -->
+				<div class="search-result">
+					<h3 class="heading-medium"><a href="job-profiles/medical-secretary">Medical secretary</a></h3>
+					<p class="meta grey">Hospital administrator, medical practice administrator</p>
+					<p>Medical secretaries provide office support in hospitals, GP surgeries and universities.</p>
+					<p class="heading-small">Salary: £16,500 to £28,500 (average per year)</p>
+				</div><!-- ////////// Result 8 - END ////////// -->
+				<p><a href="#">Bookmark these results</a>.</p>
+				<nav aria-label="Pagination" class="pagination form-group" role="navigation">
+					<ul class="list">
+						<li class="previous">
+							<a href="#" rel="prev" title="Navigate to previous page"><span class="pagination-label">Previous</span> <span class="visually-hidden">page</span> <span class="pagination-part-title">1 of 3</span></a>
+						</li>
+						<li class="next">
+							<a href="#" rel="next" title="Navigate to next page"><span class="pagination-label">Next</span> <span class="visually-hidden">page</span> <span class="pagination-part-title">3 of 3</span></a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</main>
+
+{% endblock %}
