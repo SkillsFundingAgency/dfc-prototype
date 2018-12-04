@@ -2,7 +2,6 @@
 .DS_Store
 .start.pid
 .port.tmp
-package.json
 public
 govuk_modules
 node_modules/*
