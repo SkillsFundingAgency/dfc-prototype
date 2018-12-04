@@ -1,0 +1,1113 @@
+{
+    "job-profile:teaching assistant": {
+        "names": {
+            "en-GB": "teaching assistant"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:police officer": {
+        "names": {
+            "en-GB": "police officer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:primary school teacher": {
+        "names": {
+            "en-GB": "primary school teacher"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:train driver": {
+        "names": {
+            "en-GB": "train driver"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:social worker": {
+        "names": {
+            "en-GB": "social worker"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:care worker": {
+        "names": {
+            "en-GB": "care worker"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:studio sound engineer": {
+        "names": {
+            "en-GB": "studio sound engineer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:border force officer": {
+        "names": {
+            "en-GB": "border force officer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:psychologist": {
+        "names": {
+            "en-GB": "psychologist"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:secondary school teacher": {
+        "names": {
+            "en-GB": "secondary school teacher"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:airline pilot": {
+        "names": {
+            "en-GB": "airline pilot"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:counsellor": {
+        "names": {
+            "en-GB": "counsellor"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:prison officer": {
+        "names": {
+            "en-GB": "prison officer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:firefighter": {
+        "names": {
+            "en-GB": "firefighter"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:healthcare assistant": {
+        "names": {
+            "en-GB": "healthcare assistant"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:veterinary nurse": {
+        "names": {
+            "en-GB": "veterinary nurse"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:zookeeper": {
+        "names": {
+            "en-GB": "zookeeper"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:paramedic": {
+        "names": {
+            "en-GB": "paramedic"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:midwife": {
+        "names": {
+            "en-GB": "midwife"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:computer games tester": {
+        "names": {
+            "en-GB": "computer games tester"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:electrician": {
+        "names": {
+            "en-GB": "electrician"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:family support worker": {
+        "names": {
+            "en-GB": "family support worker"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:forensic scientist": {
+        "names": {
+            "en-GB": "forensic scientist"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:hairdresser": {
+        "names": {
+            "en-GB": "hairdresser"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:air cabin crew": {
+        "names": {
+            "en-GB": "air cabin crew"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:gp": {
+        "names": {
+            "en-GB": "gp"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:hospital doctor": {
+        "names": {
+            "en-GB": "hospital doctor"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:adult nurse": {
+        "names": {
+            "en-GB": "adult nurse"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:mental health nurse": {
+        "names": {
+            "en-GB": "mental health nurse"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:childrens nurse": {
+        "names": {
+            "en-GB": "childrens nurse"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:dental nurse": {
+        "names": {
+            "en-GB": "dental nurse"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:physiotherapist": {
+        "names": {
+            "en-GB": "physiotherapist"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:special educational needs (sen) teaching assistant": {
+        "names": {
+            "en-GB": "special educational needs (sen) teaching assistant"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:architect": {
+        "names": {
+            "en-GB": "architect"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:hotel receptionist": {
+        "names": {
+            "en-GB": "hotel receptionist"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:solicitor": {
+        "names": {
+            "en-GB": "solicitor"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:interior designer": {
+        "names": {
+            "en-GB": "interior designer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:beauty therapist": {
+        "names": {
+            "en-GB": "beauty therapist"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:personal trainer": {
+        "names": {
+            "en-GB": "personal trainer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:computer games developer": {
+        "names": {
+            "en-GB": "computer games developer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:software develop": {
+        "names": {
+            "en-GB": "software develop"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:motor mechanic": {
+        "names": {
+            "en-GB": "motor mechanic"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:estate agent": {
+        "names": {
+            "en-GB": "estate agent"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:events manager": {
+        "names": {
+            "en-GB": "events manager"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:chef": {
+        "names": {
+            "en-GB": "chef"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:vet": {
+        "names": {
+            "en-GB": "vet"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:taxi driver": {
+        "names": {
+            "en-GB": "taxi driver"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:plumber": {
+        "names": {
+            "en-GB": "plumber"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:play therapist": {
+        "names": {
+            "en-GB": "play therapist"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:psychotherapist": {
+        "names": {
+            "en-GB": "psychotherapist"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:criminal intelligence analyst": {
+        "names": {
+            "en-GB": "criminal intelligence analyst"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:paralegal": {
+        "names": {
+            "en-GB": "paralegal"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:pharmacist": {
+        "names": {
+            "en-GB": "pharmacist"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:sports professional": {
+        "names": {
+            "en-GB": "sports professional"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:it support technician": {
+        "names": {
+            "en-GB": "it support technician"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:massage therapist": {
+        "names": {
+            "en-GB": "massage therapist"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:careers adviser": {
+        "names": {
+            "en-GB": "careers adviser"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:tv presenter": {
+        "names": {
+            "en-GB": "tv presenter"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:stockbroker": {
+        "names": {
+            "en-GB": "stockbroker"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:carpenter or joiner": {
+        "names": {
+            "en-GB": "carpenter or joiner"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:childminder": {
+        "names": {
+            "en-GB": "childminder"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:sports coach": {
+        "names": {
+            "en-GB": "sports coach"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:social work assistant": {
+        "names": {
+            "en-GB": "social work assistant"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:sales representative": {
+        "names": {
+            "en-GB": "sales representative"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:travel agent": {
+        "names": {
+            "en-GB": "travel agent"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:interpreter": {
+        "names": {
+            "en-GB": "interpreter"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:refuse collector": {
+        "names": {
+            "en-GB": "refuse collector"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:probation officer": {
+        "names": {
+            "en-GB": "probation officer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:graphic designer": {
+        "names": {
+            "en-GB": "graphic designer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:quantity surveyor": {
+        "names": {
+            "en-GB": "quantity surveyor"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:customer service assistant": {
+        "names": {
+            "en-GB": "customer service assistant"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:bailiff": {
+        "names": {
+            "en-GB": "bailiff"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:photographer": {
+        "names": {
+            "en-GB": "photographer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:special educational needs (sen) teacher": {
+        "names": {
+            "en-GB": "special educational needs (sen) teacher"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:marketing manager": {
+        "names": {
+            "en-GB": "marketing manager"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:dentist": {
+        "names": {
+            "en-GB": "dentist"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:production worker (manufacturing)": {
+        "names": {
+            "en-GB": "production worker (manufacturing)"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:financial adviser": {
+        "names": {
+            "en-GB": "financial adviser"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:waiting staff": {
+        "names": {
+            "en-GB": "waiting staff"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:occupational therapist": {
+        "names": {
+            "en-GB": "occupational therapist"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:security officer": {
+        "names": {
+            "en-GB": "security officer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:dental hygienist": {
+        "names": {
+            "en-GB": "dental hygienist"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:further education lecturer": {
+        "names": {
+            "en-GB": "further education lecturer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:efl teacher": {
+        "names": {
+            "en-GB": "efl teacher"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:driving instructor": {
+        "names": {
+            "en-GB": "driving instructor"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:environmental health officer": {
+        "names": {
+            "en-GB": "environmental health officer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:bank manager": {
+        "names": {
+            "en-GB": "bank manager"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:offshore drilling worker": {
+        "names": {
+            "en-GB": "offshore drilling worker"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:personal assistant": {
+        "names": {
+            "en-GB": "personal assistant"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:warehouse worker": {
+        "names": {
+            "en-GB": "warehouse worker"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:proofreader": {
+        "names": {
+            "en-GB": "proofreader"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:electrical engineer": {
+        "names": {
+            "en-GB": "electrical engineer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:nursery manager": {
+        "names": {
+            "en-GB": "nursery manager"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:radiographer": {
+        "names": {
+            "en-GB": "radiographer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:animator": {
+        "names": {
+            "en-GB": "animator"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:car salesperson": {
+        "names": {
+            "en-GB": "car salesperson"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:registrar of births, deaths, marriages and civil partnerships": {
+        "names": {
+            "en-GB": "registrar of births, deaths, marriages and civil partnerships"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:funeral director": {
+        "names": {
+            "en-GB": "funeral director"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:mechanical engineer": {
+        "names": {
+            "en-GB": "mechanical engineer"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:kitchen assistant": {
+        "names": {
+            "en-GB": "kitchen assistant"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "job-profile:tourist guide": {
+        "names": {
+            "en-GB": "tourist guide"
+        },
+        "meta": {
+            "canonical": true
+        },
+        "edges": {
+            "from": []
+        }
+    }
+}

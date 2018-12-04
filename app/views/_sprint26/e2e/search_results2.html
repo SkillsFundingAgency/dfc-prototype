@@ -1,0 +1,91 @@
+{% extends "./layout.html" %}
+
+{% block page_title %}
+  Legal - Search Results
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+
+{% include "./includes/survey.html" %}
+
+
+<main id="content" role="main" class="search">
+	<div id="global-header-bar"></div>
+    {% include "./includes/breadcrumb_search.html" %}
+
+	<div class="search-header">
+		<div class="searchfield">
+			<fieldset class="search-input">
+				<label for="search-main">
+					<h1>Search results for <span class="visuallyhidden">“Legal”</span></h1>
+				</label>
+				<input type="search" name="q" placeholder="Enter a job title" value="Legal" id="search-main">
+			</fieldset>
+
+			<fieldset class="search-submit">
+				<button type="submit" class="button">Search</button>
+			</fieldset>
+		</div>
+        
+<!-- 		<fieldset class="spelling-suggestion">
+			<p>Did you mean <a href="#1">design</a></p>
+		</fieldset> -->
+	</div>
+
+	<div id="results" class="js-live-search-results-block">
+
+		<div class="results-block">
+			<div class="inner-block js-live-search-results-list">
+                <div class="search-results-filters">
+                    <h4>Filter by:</h4>
+                    <ul>
+                        <li class="search-filter-jp">Job profiles</li>
+                        <li class="search-filter-jc">Job categories</li>
+                    </ul>
+                </div>
+				<div class="result-count scoped-result-count">2 results found</div>
+				<div class="search-results-list" id="searchResultsList" style="padding-top: 30px;">
+                    <div class="search-result search-result-jp">
+                        <h3 class="heading-medium "><a href="./job-profiles/police-officer" class="prototype-link">Paralegal</a><span class="search-result-type">Job profile</span></h3>
+                        <p class="meta dfc-code-search-jpAltTitle">Legal assistant, property assistant, contracts assistant</p>
+                        <p>Paralegals carry out research, prepare legal documents and give legal advice to clients.</p>
+                        <p class="heading-small">Salary: £20,000 to £60,000 per year</p>
+                    </div>
+
+                    <div class="search-result search-result-jc">
+                        <h3 class="heading-medium "><a href="./job-categories/legal.html" class="prototype-link">Law and legal</a><span class="search-result-type">Job category</span></h3>
+                        <p>Category description</p>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--<div class="grid-row">
+		<div class="column-two-thirds js-hidden pagination" id="searchResultsPagination">
+			<ul class="previous-next-navigation">
+				<li class="next">
+					<a href="#1" id="nextBtn">
+						<span class="pagination-label">Next</span>
+						<span class="visuallyhidden">page</span>
+						<span class="page-numbers">2 of Number of Pages</span>
+					</a>
+				</li>
+				<li class="previous">
+					<a href="#1" id="prevBtn">
+						<span class="pagination-label">Previous</span>
+						<span class="visuallyhidden">page</span>
+						<span class="page-numbers">1 of Number of pages</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>-->
+
+</main>
+{% include "./includes/signpost.html" %}
+
+{% endblock %}

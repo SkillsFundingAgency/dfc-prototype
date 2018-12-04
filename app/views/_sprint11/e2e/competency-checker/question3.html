@@ -1,0 +1,63 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Training routes' %}
+
+{% include "../includes/survey.html" %}
+
+    {% include "../includes/global_header_bar.html" %}
+
+<main id="content" role="main">
+    {% include "../includes/breadcrumb_filters.html" %}
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h4 class="heading-small grey">Question 3 of 10</h4>
+            <h1 class="heading-medium top0">Analysing</h1>
+            <p>You are helping the other plumbers you work for by preparing the right amount of piping for them to use to install a new bathroom.</p>
+            <p>The plumbers have provided you with the measurements on a piece of paper and you are cutting the piping for them.</p>
+            <p>You are about to cut one of the pipes to the measurements provided on the paper that the plumbers have given you.</p>
+            <p>However, you think that the measurement is too large based on the size of the room you saw.</p>
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h1 class="heading-small">Choose your approach</h1>
+            <form>
+                <div class="form-group">
+                    <fieldset class="">
+                        <div class="multiple-choice">
+                            <input class="shm-radio" id="radio-inline-1" onClick="sessionStorage.SHManswer=1" type="radio" name="radio-inline-group" value="Yes">
+                            <label for="radio-inline-1">Check the measurements yourself as you want to see if the numbers on the paper are right before cutting the piping.</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input class="shm-radio" id="radio-inline-2" onClick="sessionStorage.SHManswer=2" type="radio" name="radio-inline-group" value="No">
+                            <label for="radio-inline-2">Cut all the other measurements except this one and wait to the end of the day for the plumber to ask you where the piping is.</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input class="shm-radio" id="radio-inline-3" onClick="sessionStorage.SHManswer=3" type="radio" name="radio-inline-group" value="Yes">
+                            <label for="radio-inline-3">Make a decision to cut the piping to the length that is written down on the paper as you think the plumber would rather get the measurement they requested.</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="grid-row">
+        <div class="column-full"><a href="answer3" id="cc-next" class="explore-button">Next</a></div>
+        <p class="cc-error right js-hidden">Please select an option from the choices above before continuing.</p>
+    </div>
+
+</main>
+
+
+
+{% endblock %}

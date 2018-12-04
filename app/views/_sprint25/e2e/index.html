@@ -1,0 +1,108 @@
+{% extends "./layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+
+{% include "./includes/survey.html" %}
+
+
+<header class="PROD_hero">
+    <div class="PROD_full-page-width-wrapper">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <h1 class="heading-xlarge">Find a career</h1>
+                <p class="lede">Explore what kind of work is right for you, and take the next steps towards what you want to be</p>
+                <form id="searchForm">
+                    <!-- <label>Enter a job title</label> -->
+                    <div class="PROD_search">
+                        <div id="search-box" class="PROD_search__input-container">
+                            <input id="searchInput" class="PROD_search__input" autocomplete="off" placeholder="" type="text">
+                        </div>
+                        <input class="PROD_search__submit" onclick="saveSearchTermsAndContinue()" type="button" value="Search">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-full">
+            <h2 class="heading-medium">Explore by job category</h2>
+        </div>
+        <div class="column-full">
+            <ul class="list category-list homepage-categories">
+                <li><a href="job-categories/administration">Administration</a></li>
+                <li><a href="job-categories/animal-care">Animal care</a></li>
+                <li><a href="job-categories/beauty-wellbeing">Beauty and wellbeing</a></li>
+                <li><a href="job-categories/business-finance">Business and finance</a></li>
+                <li><a href="job-categories/delivery-storage">Delivery and storage</a></li>
+                <li><a href="job-categories/computing-technology-digital">Computing, technology and digital</a></li>
+                <li><a href="job-categories/construction-trades">Construction and trades</a></li>
+                <li><a href="job-categories/creative-media">Creative and media</a></li>
+                <li><a href="job-categories/emergency-uniform-services">Emergency and uniform services</a></li>
+                <li><a href="job-categories/engineering-maintenance">Engineering and maintenance</a></li>
+                <li><a href="job-categories/environment-land">Environment and land</a></li>
+                <li><a href="job-categories/government-services">Government services</a></li>
+                <li><a href="job-categories/healthcare">Healthcare</a></li>
+                <li><a href="job-categories/hospitality-food">Hospitality and food</a></li>
+                <li><a href="job-categories/legal">Legal</a></li>
+                <li><a href="job-categories/managerial">Managerial</a></li>
+                <li><a href="job-categories/manufacturing">Manufacturing</a></li>
+                <li><a href="job-categories/science-research">Retail and sales</a></li>
+                <li><a href="job-categories/science-research">Science and research</a></li>
+                <li><a href="job-categories/social-care">Social care</a></li>
+                <li><a href="job-categories/sports-leisure">Sports and leisure</a></li>
+                <li><a href="job-categories/teaching-education">Teaching and education</a></li>
+                <li><a href="job-categories/transport">Transport</a></li>
+                <li><a href="job-categories/travel-tourism">Travel and tourism</a></li>
+            </ul>
+        </div>
+    </div>
+    {% include "./includes/filters.html" %}
+    
+</main>
+
+<script>
+// This function gets the value entered in the search box and saves it to the session data
+// Then loads the next page
+function saveSearchTermsAndContinue() {
+     var searchPrompt = "Enter a job title or keywords";
+     window.setSessionData('searchPrompt', searchPrompt);
+     var searchTerm = document.getElementById('searchInput').value;
+     window.setSessionData('searchTerm', searchTerm, function(){
+          setTimeout(changePage, 500);
+          function changePage() {
+               window.location.href="../e2e/search_results";
+          }
+     });
+}
+
+// This function make sure the form is submitted when search field is in focus and the user presses enter
+// This function is overriding one set in the accessible-typeahead.min.js that doesn't allow this behaviour if there are auto-complete options
+function searchOnReturn() {
+     var searchContainer = document.getElementById("searchInput");
+     var e = window.event;
+     searchContainer.addEventListener('keydown', function(e) {
+          if (e.which === 13 || e.keycode === 13) {
+               e.preventDefault();
+               saveSearchTermsAndContinue();
+          }
+     });
+}
+
+function init () {
+     searchOnReturn();
+}
+window.onload = init;
+
+</script>
+
+
+{% endblock %}

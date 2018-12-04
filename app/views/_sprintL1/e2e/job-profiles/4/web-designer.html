@@ -1,0 +1,355 @@
+{% extends "../../jobprofile.html" %}
+
+{% block page_title %}
+{{profileName}} | Explore Careers
+{% endblock %}
+
+{% set preName = "a" %}
+{% set profileName = "Web designer" %}
+{% set profileSecondaryName = "Digital designer" %}
+{% set profileDescription = "Web designers use their creative and technical skills to design new websites and redesign existing ones." %}
+{% set salaryLow = "18,000" %}
+{% set salaryHigh = "40,000" %}
+{% set hoursRange = "37 to 39" %}
+{% set hoursDetail = "a week" %}
+{% set patternValue = "evenings" %}
+{% set patternDescription = "occasionally" %}
+
+
+<!-- Related Careers -->
+{% set RelatedCareerName1 = 'Graphic designer' %}
+{% set RelatedCareerLink1 = '#' %}
+{% set RelatedCareerName2 = 'Web content manager' %}
+{% set RelatedCareerLink2 = '#' %}
+{% set RelatedCareerName3 = 'Animator' %}
+{% set RelatedCareerLink3 = '#' %}
+{% block jobprofile_nav %}
+    {% include "../../includes/job-profile_nav_jobopps.html" %}
+{% endblock %}
+
+
+{% set serviceName = 'Explore careers' %}
+{% set bannerStyle = 'BETA-style' %}
+
+{% block content %}
+
+<section id="HowToBecome">
+    <h2 class="heading-large job-profile-heading">How to become</h2>
+    <p>You can get into this job through:</p>
+    <ul>
+        <li>a university course</li>
+        <li>a college course</li>
+        <li>an apprenticeship</li>
+        <li>working towards this role</li>
+    </ul>    <section class="job-profile-subsection" id="University">
+        <h3>University</h3>
+        <div class="job-profile-subsection-content">
+
+            <p>You could take a higher national diploma or degree in a subject like:</p>
+            <ul>
+                <li>web design and development</li>
+                <li>multimedia design</li>
+                <li>digital media development</li>
+                <li>interactive computing</li>
+            </ul>
+
+
+
+            <h4>Entry requirements</h4>
+            <p>You'll usually need:</p>
+            <ul class="list-reqs">
+                <li>1 or 2 A levels for a higher national diploma</li>
+                <li>2 to 3 A levels for a degree</li>
+            </ul>
+
+            <h4>More information</h4>
+            <ul class="list-link">
+                <li><a class="htb-feature" href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels">equivalent entry requirements</a></li>
+                <li><a class="htb-feature" href="https://www.gov.uk/student-finance">student finance for fees and living costs</a></li>
+                <li><a class="htb-feature" href="https://www.ucas.com/">university courses and entry requirements</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="job-profile-subsection" id="College">
+        <h3>College</h3>
+        <div class="job-profile-subsection-content">
+
+            <p>You could take a college course to learn some of the skills needed in this job. For example, the Level 3 Diploma in Web Design or Multimedia Design.</p>
+
+
+
+            <h4>Entry requirements</h4>
+            <p>You'll usually need:</p>
+            <ul class="list-reqs">
+                <li>4 or 5 GCSEs at grades 9 to 4 (A* to C) for a level 3 course</li>
+            </ul>
+
+            <h4>More information</h4>
+            <ul class="list-link">
+                <li><a class="htb-feature" href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels">equivalent entry requirements</a></li>
+                <li><a class="htb-feature" href="https://www.gov.uk/further-education-courses/financial-help">funding advice</a></li>
+                <li><a class="htb-feature" href="https://nationalcareersservice.direct.gov.uk/course-directory/home">search for courses</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="job-profile-subsection" id="Apprenticeship">
+        <h3>Apprenticeship</h3>
+        <div class="job-profile-subsection-content">
+
+            <p>You could complete training, like an advanced apprenticeship for IT, software, web and telecoms professionals or higher apprenticeship in creative and digital media. </p>
+
+
+
+            <h4>Entry requirements</h4>
+            <p>You'll usually need:</p>
+            <ul class="list-reqs">
+                <li>5 GCSEs at grades 9 to 4 (A* to C), usually including English and maths, for an advanced apprenticeship</li>
+            </ul>
+
+            <h4>More information</h4>
+            <ul class="list-link">
+                <li><a class="htb-feature" href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels">equivalent entry requirements</a></li>
+                <li><a class="htb-feature" href="https://www.gov.uk/apprenticeships-guide">guide to apprenticeships</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="job-profile-subsection" id="work">
+        <h3>Work</h3>
+        <div class="job-profile-subsection-content">
+            <p>You could start out working as a design assistant or web support assistant and train while you work.</p>
+        </div>
+    </section>
+
+    <section class="job-profile-subsection" id="volunteering">
+        <h3>Volunteering and experience</h3>
+        <div class="job-profile-subsection-content">
+            You could volunteer for a local community group or charity and create a website for them. Any experience will be helpful in getting a job.
+        </div>
+    </section>
+
+
+    <section class="job-profile-subsection" id="moreinfo">
+        <h3>More information</h3>
+        <div class="job-profile-subsection-content">
+
+            <h4>Career tips</h4>
+            <p>You'll need a portfolio that demonstrates your creative design skills and shows employers what website work you've done.</p>
+            <p>Make sure that you know the latest trends and techniques in web design by: </p>
+            <ul>
+                <li>getting involved in free webinars or online courses</li>
+                <li>signing up to free online magazines</li>
+                <li>reading the latest blogs for news and tips</li>
+            </ul>                                        <h4>Further information</h4>
+            <p><a href="https://www.thetechpartnership.com/tech-future-careers/what-is-it-like/">Tech Future Careers </a> has more details about digital careers and training. </p>
+        </div>
+    </section>
+</section>
+
+<section class="job-profile-subsection" id="Skills">
+    <h2 class="heading-large">What it takes</h2>
+    <section class="job-profile-subsection">
+        <h3>Skills and knowledge</h3>
+        <div class="job-profile-subsection-content">
+            <p>You'll need:</p>
+            <ul>
+                <li>
+                    knowledge of computer operating systems, hardware and software
+                </li>
+                <li>
+                    to be thorough and pay attention to detail
+                </li>
+                <li>
+                    the ability to write computer programs
+                </li>
+                <li>
+                    persistence and determination
+                </li>
+                <li>
+                    analytical thinking skills
+                </li>
+                <li>
+                    to be flexible and open to change
+                </li>
+                <li>
+                    the ability to use your initiative
+                </li>
+                <li>
+                    maths knowledge
+                </li>
+                <li>expert digital, data and technology skills for analysing and designing systems</li>
+            </ul>
+        </div>
+    </section>
+</section>
+<section id="WhatYouWillDo">
+    <h2 class="heading-large">What you'll do</h2>
+    <section class="job-profile-subsection">
+        <h3>Day-to-day tasks</h3>
+        <div class="job-profile-subsection-content">
+            <p>Your daily duties might include:</p>
+            <ul>
+                <li>taking a lead role in maintaining and developing a site</li>
+                <li>attending meetings to plan and develop site content, style and appearance</li>
+                <li>using web content management systems (CMS)</li>
+                <li>analysing website usage statistics</li>
+                <li>writing reports for senior managers, clients and partnership organisations</li>
+                <li>carrying out quality assurance checks on content</li>
+                <li>reporting technical problems to IT support staff</li>
+            </ul>
+        </div>
+    </section>
+    <section class="job-profile-subsection" id="workingenvironment">
+        <h3>Working environment</h3>
+        <div class="job-profile-subsection-content">
+            <p>You could work in an office, from home or at a client's business.</p>
+        </div>
+    </section>
+
+</section>
+<section id="CareerPathAndProgression">
+    <h2 class="heading-large">Career path and progression</h2>
+
+    <p>With experience you could move into design team management or expand your skills to become a web content manager.</p>
+    <p>You might work towards a move into business management.</p>
+    <p>You could also work as a freelance web designer, or set up your own web design business.</p>
+
+</section>
+
+
+<section id="current-opportunities">
+    <div id="MainContent_C020_Col00" class="sf_colsIn" data-sf-element="Container" data-placeholder-label="Job Profile Opportunities Container">
+        <h2 class="heading-large">Training opportunities</h2>
+
+        <div class="grid-row" id="appGeneric">
+            <div class="column-full">
+                <h3 class="heading-medium">
+                    Apprenticeships
+                    <span class="heading-secondary">In England</span>
+                </h3>
+            </div>
+            <div class="column-half">
+                <div class="panel panel-border-narrow opportunity-item">
+                    <h4 class="heading-small">
+                        <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1479391">Apprentice Support 1st Line Technician</a>
+                    </h4>
+                    <ul class="list">
+                        <li><span class="bold-small">Wage:</span> &pound;11,000.00</li>
+                        <li><span class="bold-small">Location:</span> Westerham TN16 1JF</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-half">
+                <div class="panel panel-border-narrow opportunity-item">
+                    <h4 class="heading-small">
+                        <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1000000187">Higher Apprenticeship - Software Development</a>
+                    </h4>
+                    <ul class="list">
+                        <li><span class="bold-small">Wage:</span> &pound;18,000.00</li>
+                        <li><span class="bold-small">Location:</span> LU1 3PE</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dfc-code-jp-vacancyText">
+            <a href="https://www.findapprenticeship.service.gov.uk/apprenticeshipsearch">Find apprenticeships near you</a>
+        </div>
+
+        <div class="grid-row dfc-code-jp-trainingCourse">
+            <div class="column-full">
+                <h3 class="heading-medium">
+                    Courses
+                    <span class="heading-secondary">In England</span>
+                </h3>
+            </div>
+            <div class="column-half">
+                <div class="panel panel-border-narrow opportunity-item">
+                    <h3 class="heading-small">
+                        <a href="https://nationalcareersservice.direct.gov.uk/course-directory/course-details?courseid=55146121">Introduction to Graphic and Digital Design UAL Level 1 Award</a>
+                    </h3>
+                    <ul class="list">
+                        <li><span class="bold-small">Provider:</span> Richmond And Hillcroft Adult And Community College</li>
+                        <li><span class="bold-small">Start date:</span> 31 January 2019</li>
+                        <li><span class="bold-small">Location:</span> Richmond</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-half">
+                <div class="panel panel-border-narrow opportunity-item">
+                    <h3 class="heading-small">
+                        <a href="https://nationalcareersservice.direct.gov.uk/course-directory/course-details?courseid=54578481">Interactive Digital Design </a>
+                    </h3>
+                    <ul class="list">
+                        <li><span class="bold-small">Provider:</span> BRIT School for Performing Arts and Technology</li>
+                        <li><span class="bold-small">Start date:</span> 30 August 2019</li>
+                        <li><span class="bold-small">Location:</span> CROYDON</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dfc-code-jp-TrainingCoursesText">
+            <a href="https://nationalcareersservice.direct.gov.uk/course-directory/home">Find courses near you</a>
+        </div>
+
+
+        <div class="grid-row dfc-code-jp-trainingCourse">
+            <div class="column-full">
+                <h3 class="heading-medium">
+                    Job vacancies
+                    <span class="heading-secondary">In England</span>
+                </h3>
+            </div>
+            <div class="column-half">
+                <div class="panel panel-border-narrow opportunity-item">
+                    <h3 class="heading-small">
+                        <a href="https://findajob.dwp.gov.uk/details/1176415">Web Designer</a>
+                    </h3>
+                    <ul class="list">
+                        <li><span class="bold-small">Employer:</span>Quattro Recruitment</li>
+                        <li><span class="bold-small">Added:</span>14 November 2018</li>
+                        <li><span class="bold-small">Location:</span>Selby, North Yorkshire</li>
+                        <li><span class="bold-small">Salary:</span>£22k - £26k</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-half">
+                <div class="panel panel-border-narrow opportunity-item">
+                    <h3 class="heading-small">
+                        <a href="https://findajob.dwp.gov.uk/details/1181975">Web Designer</a>
+                    </h3>
+                    <ul class="list">
+                        <li><span class="bold-small">Employer:</span>Infinity Recruitment Consultancy Limited</li>
+                        <li><span class="bold-small">Added:</span>15 November 2018</li>
+                        <li><span class="bold-small">Location:</span>Boston, Lincolnshire</li>
+                        <li><span class="bold-small">Salary:</span>Depending on Experience</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dfc-code-jp-TrainingCoursesText">
+            <a href="https://findajob.dwp.gov.uk/search?q={{profileName}}">Find jobs near you</a>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

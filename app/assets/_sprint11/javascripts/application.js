@@ -57,7 +57,7 @@ $(document).ready(function () {
         GOVUK.cookie('survey', 'dismissed', { days: 31 });
     });
 
-    if (GOVUK.cookie('survey') != "dismissed") {
+    if (GOVUK.cookie('survey') !== "dismissed") {
         $(".survey_container").addClass("visible");
     };
 
@@ -157,5 +157,36 @@ $(document).ready(function () {
     if (exploresteps === "true") {
         $(".explore-step").removeClass("js-hidden");
     };
+
+    var SHManswer = sessionStorage.getItem("SHManswer");
+
+    if (SHManswer === "1") {
+        $("#answer-1").removeClass("js-hidden");
+    };
+
+    if (SHManswer === "2") {
+        $("#answer-2").removeClass("js-hidden");
+    };
+
+    if (SHManswer === "3") {
+        $("#answer-3").removeClass("js-hidden");
+    };
+
+
+    $("#cc-next").click(function () {
+
+        if (!$(".shm-radio:checked").val()) {
+            event.preventDefault();
+            $(".cc-error").removeClass("js-hidden");
+        }
+    });
+
+
+    $("#cc-nextq").click(function () {
+        event.preventDefault();
+        sessionStorage.removeItem('SHManswer');
+        location.href = $(this).attr('href');
+    });
+
 });
 

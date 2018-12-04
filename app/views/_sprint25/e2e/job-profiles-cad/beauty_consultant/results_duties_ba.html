@@ -1,0 +1,84 @@
+{% extends "../../layout.html" %}
+
+{% block page_title %}
+  Legal - Search Results
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+
+
+<main id="content" role="main" class="search">
+    <div id="global-header-bar"></div>
+    {% include "../../includes/breadcrumb_searchresults.html" %}
+    <header class="filter-results-header">
+        <h1 class="filter-results-heading">Careers that have similar duties</h1>
+        <br>
+        <p class="meta"> 7 Filters are currently selected,  <a href="../job-categories/environment-land"> add or remove duties to change your results </a></p>
+        <ul class="list">
+
+        </ul>
+        <p class="filter-results-subheading"></p>
+        <div class="heading-small">3 careers found</div>
+
+    </header>
+    <div class="results-block">
+        <div class="inner-block js-live-search-results-list">
+
+
+            <div class="search-results-list" id="searchResultsList" style="padding-top: 30px;">
+                <div class="search-result">
+                    <h3 class="heading-medium "><a href="../job-profiles/police-officer" class="prototype-link">Beauty therapist</a></h3>
+                    <p>Beauty therapists carry out face and body treatments to help clients look and feel better.</p>
+                    <p class="heading-small">Salary: £15,600 to £18,200</p>
+                    <p class="meta">Found in: <a href="../job-categories/environment-land">Beauty and wellbeing</a>,</p>
+                </div>
+
+                <div class="search-result">
+                    <h3 class="heading-medium "><a href="../job-profiles/police-officer" class="prototype-link">Nail technician</a></h3>
+                    <p>Nail technicians repair, paint and decorate clients' nails.</p>
+                    <p class="heading-small">Salary: £15,600 to £18,200</p>
+                    <p class="meta">Found in: <a href="../job-categories/healthcare">Beauty and wellbeing</a></p>
+                </div>
+
+                <div class="search-result">
+                    <h3 class="heading-medium "><a href="../job-profiles/police-officer" class="prototype-link">Hairdresser</a></h3>
+                    <p>Hairdressers cut, colour and shape clients' hair to create the look they want.</p>
+                    <p class="heading-small">Salary: £12,480 to £17,160</p>
+                    <p class="meta">Found in: <a href="../job-categories/healthcare">Beauty and wellbeing</a></p>
+                </div>
+
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!--<div class="grid-row">
+        <div class="column-two-thirds js-hidden pagination" id="searchResultsPagination">
+            <ul class="previous-next-navigation">
+                <li class="next">
+                    <a href="#1" id="nextBtn">
+                        <span class="pagination-label">Next</span>
+                        <span class="visuallyhidden">page</span>
+                        <span class="page-numbers">2 of Number of Pages</span>
+                    </a>
+                </li>
+                <li class="previous">
+                    <a href="#1" id="prevBtn">
+                        <span class="pagination-label">Previous</span>
+                        <span class="visuallyhidden">page</span>
+                        <span class="page-numbers">1 of Number of pages</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>-->
+
+</main>
+
+
+{% endblock %}

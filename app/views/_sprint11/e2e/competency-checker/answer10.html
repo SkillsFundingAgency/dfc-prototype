@@ -1,0 +1,38 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Training routes' %}
+
+{% include "../includes/survey.html" %}
+
+    {% include "../includes/global_header_bar.html" %}
+
+<main id="content" role="main">
+    {% include "../includes/breadcrumb_filters.html" %}
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h4 class="heading-small grey">Question 10 of 10</h4>
+            <h1 class="heading-medium top0">Achieving goals &amp; objectives 2</h1>
+            <p id="answer-1" class="js-hidden">Excellent! A Plumbing Apprentice should take the initiative to clean up at the end of the day, even if it means you will be finishing a little later than intended. Having the drive and being determined to do your best for the customer is likely to make you a good for to the role.</p>
+            <p id="answer-2" class="js-hidden">Communicating with the customer is important, but you should try your best with each job, even if it means finishing later than intended. Taking the initiative to clean up after you at the end of the day would be a good way of showing your determination to do your best on the job.</p>
+            <p id="answer-3" class="js-hidden">Getting the tasks finished on time and trying your best to achieve results on every job is important for a Plumbing Apprentice. Sometimes you will need to stay a bit later than you may want to to get a job finished. Consider if you would enjoy working in this way as a Plumbing Apprentice.</p>
+        </div>
+    </div>
+
+
+    <div class="grid-row">
+        <div class="column-full"><a href="final_result" id="cc-nextq" class="explore-button">Next</a></div>
+    </div>
+
+</main>
+
+
+
+{% endblock %}

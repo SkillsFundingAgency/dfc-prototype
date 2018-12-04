@@ -1,0 +1,34 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Legal - Search Results
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+
+{% include "../includes/survey.html" %}
+
+
+<main id="content" role="main" class="search">
+    <div id="global-header-bar"></div>
+    {% include "../includes/breadcrumb_searchresults.html" %}
+    <header class="filter-results-header">
+        <h1 class="filter-results-heading">Your filtered careers</h1>
+        <p>Sorry, your search returned no results. You could go back into your filter choices and take out one or two to see if this changes your results.</p>
+
+        <p>Please bear in mind this is a beta site and more careers will be entered shortly.</p>
+
+        <div class="heading-small">0 careers found</div>
+
+    </header>
+
+    </div>
+
+
+</main>
+
+
+{% endblock %}

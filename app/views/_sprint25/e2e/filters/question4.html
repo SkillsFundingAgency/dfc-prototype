@@ -1,0 +1,93 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Explore by interests and preferences' %}
+
+{% include "../includes/survey.html" %}
+
+
+
+<main id="" role="main">
+    <div class="filter_hero">
+        <div id="content">
+            {% include "../includes/global_header_bar.html" %}
+            {% include "../includes/breadcrumb_filters.html" %}
+
+            <div class="grid-row">
+                <div class="column-full">
+                    <h2>{{filterName}}<span>Question 4 of 4</span></h2>
+                </div>
+
+                <div class="column-full">
+                    <div class="filter_header-q4">
+                        <h1>Which route do you want to take?</h1>
+                        <p>You can get into jobs in different ways, from studying for formal qualifications to learning on the job. Choose the routes that suit you best. You can choose more than one. </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="grid-row">
+            <div class="column-full">
+                <form class="filter_list filter_list-q4">
+
+                    <input type="checkbox" class="checkbox" id="q4o2" increment="9"></input>
+                    <label for="q4o2">
+                        <h3>Learn through experience and work your way up</h3>
+                        <p>I want to see careers where I learn on the job and I'm happy to start in a junior role.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q4o3" increment="14"></input>
+                    <label for="q4o3">
+                        <h3>Full or part-time college or university course</h3>
+                        <p>I'd like to see careers that you can get into by doing a course.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q4o4" increment="20"></input>
+                    <label for="q4o4">
+                        <h3>Apprenticeship</h3>
+                        <p>I want to see careers that I can get into through an apprenticeship.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q4o5" increment="5"></input>
+                    <label for="q4o5">
+                        <h3>Industry-specific training</h3>
+                        <p>I'd like to see careers where I can train through industry bodies or private training providers.</p>
+                    </label>
+
+                    <input type="checkbox" class="filter_none" id="q4o1"></input>
+                    <label for="q4o1">
+                        <h3>No preferred route in</h3>
+                        <p>Don't filter on routes in. I'm open to all of them.</p>
+                    </label>
+
+
+                    <div class="filter_lower">
+                        <p><span id="filter_resultcount">120</span> possible careers based on your choices so far </p>
+                    </div>
+                    <div class="filter_buttons">
+                        <a class="filter_button" href="results">Show me my results</a>
+
+                        <a class="filter_button filter_button_back" href="question3">Back</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+</main>
+
+
+
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Interests' %}
+
+{% include "../includes/survey.html" %}
+
+    {% include "../includes/global_header_bar.html" %}
+
+<main id="content" role="main">
+    {% include "../includes/breadcrumb_filters.html" %}
+    <div class="grid-row">
+        <div class="column-full explore-top">
+            <h1 class="heading-xlarge" id="currentcategory">{{filterName}}</h1>
+            <h2 class="heading-medium">Choose your interests</h2>
+            <div class="explore-step js-hidden"><h4 class="step-1">Step 1 of 5</h4></div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Finance</h4>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Food</h4>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Reading</h4>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Travel</h4>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Writing</h4>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Business</h4>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Computing</h4>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Sport</h4>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Music</h4>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Volunteering</h4>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Gaming</h4>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Fashion</h4>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Art</h4>
+            </div>
+        </div>
+        <div class="column-one-third">
+            <div class="explore-box-clear explore-box-small">
+                <h4 class="heading-small">Not applicable</h4>
+            </div>
+        </div>
+
+        <div class="column-full"><a href="restrictions.html" class="explore-button">Continue</a></div>
+    </div>
+
+</main>
+
+
+
+{% endblock %}

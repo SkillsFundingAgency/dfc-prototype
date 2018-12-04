@@ -1,0 +1,191 @@
+<div class="VOC-exit-routes_container {{bannerStyle}}" id="VOC-exit-routes_container">
+     <div class="main">
+          <div class="VOC-exit-routes_banner">
+               <div id="vocExit_recruit-message">
+                    <h2 class="heading-small" style="margin-bottom: 0;">Tell us what you think of {{serviceName}} - <a href="#1" style="font-weight:500;" onclick="vocExit.showSurvey()">fill in a short survey</a></h2>
+                    <a class="VOC-exit-routes_banner__close-btn" href="#1" onclick="vocExit.hideOrReset()">Close</a>
+               </div>
+               <div id="vocExit_survey-header" class="js-hidden">
+                    <h2 class="heading-small">Tell us what you think of {{serviceName}}</h2>
+                    <a class="VOC-exit-routes_banner__close-btn" href="#1" onclick="vocExit.hideOrReset()">Close</a>
+               </div>
+               <div id="vocExit_survey-done" class="js-hidden">
+                    <!-- <h2 class="heading-small">Tell us what you think of {{serviceName}}</h2> -->
+                    <h2 class="heading-small">Thanks, we’ve sent you an email with a link to the survey.</h3>
+                    <a href="#1" onclick="vocExit.hideOrReset()">Close</a>
+                    <!-- <a class="VOC-exit-routes_banner__close-btn" href="#1" onclick="vocExit.hideOrReset()">Close</a> -->
+               </div>              
+          </div>
+
+          <div class="VOC-exit-routes_survey grid-row js-hidden" id="exit-routesSurvey">
+               <div class="VOC-exit-routes_survey__page" id="VOC-exit_page0">
+                    <div class="column-two-thirds">
+                         <p>We'll send you a link to a feedback form. It only takes 2 minutes to fill in.
+                         <br/>
+                         We won't send you spam or share your email address with anyone.</p>
+                         <form onsubmit="event.preventDefault() & vocExit.endSurvey()">
+                              <div>
+                                <label class="form-label" for="email">Email address <span class="font-xsmall">(you need to be 16 or older to be eligible for this survey)</span></label>
+                                <input class="form-control voc-email" id="email" name="email" type="email" required>
+                              </div>
+                              <div class="inline">
+                                   <input type="submit" value="Send" class="button {% if bannerStyle != 'BAU-style' %}VOC-exit-routes_survey__button{% endif %}" style="margin-right: .5em;" />
+                                   <a href="#1" onclick="vocExit.updateViewAndRedirect(this)" class="link-button" data-href="http://www.smartsurvey.com">Don't have an email address? Leave your feedback online instead.</a>
+                              </div>
+                         </form>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+<script>
+
+/* --------------------------------------------------------
+     VOC exit routes banner
+-------------------------------------------------------- */
+
+var vocExit = {};
+
+(function(window, document, vocExit, undefined) {
+
+     /* -- Variables --*/
+
+     var survey = document.getElementById('exit-routesSurvey');
+
+     /* -- External vocConsume functions --*/
+
+     vocExit.showSurvey = function showSurvey() {
+          survey.classList.remove('js-hidden');
+          document.getElementById('vocExit_recruit-message').classList.add('js-hidden');
+          document.getElementById('vocExit_survey-header').classList.remove('js-hidden');
+     }
+
+     vocExit.hideSurvey = function hideSurvey() {
+          survey.classList.add('js-hidden');
+     }
+
+     vocExit.endSurvey = function endSurvey() {
+          vocExit.hideSurvey();
+          document.getElementById('vocExit_survey-done').classList.remove('js-hidden');
+          document.getElementById('vocExit_survey-header').classList.add('js-hidden');
+     }
+
+     vocExit.hideOrReset = function hideOrReset() {
+          document.getElementById('VOC-exit-routes_container').classList.add('js-hidden');
+          // surveySubmitted ? vocExit.endSurvey() : resetSurvey();
+     }
+
+     vocExit.surveyNextQuestion = function surveyNextQuestion() {
+          var branch = checkForPageBranch('next');
+          var branchCurrent = checkForPageBranch('current');
+
+          var thisPageId = 'VOC-exit-routes_page' + currentPage.toString() + branchCurrent;
+          var thisPageElement = document.getElementById(thisPageId);
+          thisPageElement.classList.add('js-hidden');
+
+          var nextPageId = 'VOC-exit-routes_page' + nextPage.toString() + branch;
+          var nextPageElement = document.getElementById(nextPageId);
+          nextPageElement.classList.remove('js-hidden');
+
+          updatePageModel('next');
+     }
+
+     vocExit.surveyPrevQuestion = function surveyPrevQuestion() {
+          var branch = checkForPageBranch('prev');
+          var branchCurrent = checkForPageBranch('current');
+
+          var thisPageId = 'VOC-exit-routes_page' + currentPage.toString() + branchCurrent;
+          var thisPageElement = document.getElementById(thisPageId);
+          thisPageElement.classList.add('js-hidden');
+
+          var prevPageId = 'VOC-exit-routes_page' + prevPage.toString() + branch;
+          var prevPageElement = document.getElementById(prevPageId);
+          prevPageElement.classList.remove('js-hidden');
+
+          updatePageModel();
+     }
+
+     vocExit.updateViewAndRedirect = function updateViewAndRedirect(e) {
+          event.preventDefault();
+          vocExit.hideOrReset();
+          var link = e.getAttribute("data-href");
+          window.location.href=link;
+     }
+
+     /* -- Internal vocConsume function --*/
+
+     // function submitFeedback() {
+     //      surveySubmitted = true;
+     //      surveyNextQuestion();
+     // }
+
+     function resetSurvey() {
+          vocExit.hideSurvey();
+          surveyInit();
+          document.getElementById('vocExit_recruit-message').classList.remove('js-hidden');
+          document.getElementById('vocExit_survey-header').classList.add('js-hidden');
+          surveySubmitted = false;
+     }
+
+     function initPageModel() {
+          currentPage = 0;
+          nextPage = 1;
+          prevPage = -1;
+     }
+
+     function initPageBranchModel(){
+          branchModel = {};
+     }
+
+     function updatePageBranchModel(pageNumber, branchLetter){
+          branchModel[pageNumber] = branchLetter;
+     }
+
+     function checkForPageBranch(direction){
+          var pageBranch = '';
+          for (var key in branchModel) {
+               if (direction === 'next' && key === nextPage.toString()) {
+                    pageBranch = branchModel[key];
+               }
+               if (direction === 'prev' && key === prevPage.toString()) {
+                    pageBranch = branchModel[key];
+               }
+               if (direction === 'current' && key === currentPage.toString()) {
+                    pageBranch = branchModel[key];
+               }
+          }
+          return pageBranch;
+     }
+
+     function updatePageModel(thisDirection) {
+          if (thisDirection === 'next') {
+               currentPage = currentPage+1;
+               nextPage = nextPage+1;
+               prevPage = prevPage+1;
+          } else {
+               currentPage = currentPage-1;
+               nextPage = nextPage-1;
+               prevPage = prevPage-1
+          }
+     }
+
+     function surveyInit() {
+          surveySubmitted = false;
+
+          var surveyPages = document.getElementsByClassName('VOC-exit-routes_survey__page');
+
+          for(i = 0; i < surveyPages.length; i++) {
+               if(i > 0) {
+                    surveyPages[i].classList.add('js-hidden');
+               } else {
+                    surveyPages[i].classList.remove('js-hidden');
+               }
+          }
+          initPageModel();
+          initPageBranchModel();
+          console.log('test');
+     }surveyInit();
+})(window, document, vocExit);
+
+</script>

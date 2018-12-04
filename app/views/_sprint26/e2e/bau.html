@@ -1,0 +1,114 @@
+{% extends "./layout_bau.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+
+
+<main id="content" role="main">
+
+
+    <div class="phase-banner-alpha">
+        <p>
+            <span>
+                We're building a new service - your <a href="/contact-us/feedback">feedback</a> will help us to
+                improve it.
+            </span>
+        </p>
+
+        <div class="account-info">
+            <div>
+                <span class="your-name" id="bannerUserName">
+
+                </span>
+                <a href="/home/signout" id="signout-link" data-gtm-vis-recent-on-screen-2797178_267="711" data-gtm-vis-first-on-screen-2797178_267="711" data-gtm-vis-total-visible-time-2797178_267="100" data-gtm-vis-has-fired-2797178_267="1">Sign out</a>
+            </div>
+            <div>
+                <a class="account-link" href="/your-account/home" id="myaccount-link">Your account</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">National Careers Service</h1>
+            <p class="lede">We provide information, advice and guidance to help you make decisions on learning, training and work.</p>
+            <p>
+                We are redesigning this service. If you had a Lifelong Learning Account you can still use your existing details to
+                sign in. You'll be able to view your saved:
+            </p>
+            <ul class="list list-bullet">
+                <li>CVs</li>
+                <li>Skills health check reports</li>
+                <li>action plans</li>
+                <li>course searches</li>
+            </ul>
+            <h2 class="heading-small"><a href="/_sprint{{currentSprint}}/e2e/">Job profiles</a></h2>
+            <p>Find out what a job involves and if it's right for you.</p>
+            <h2 class="heading-small"><a href="/skills-health-check/home">Skills health check</a></h2>
+            <p>Use our assessment to find out what kind of jobs could suit you and save your results.</p>
+            <h2 class="heading-small"><a href="/course-directory/home">Find a course</a></h2>
+            <p>Look for courses and learning providers and save information about them.</p>
+            <h2 class="heading-small"><a href="/speak-to-an-adviser">Contact an adviser</a></h2>
+            <p>Find out about the different ways to get in touch.</p>
+            <h2 class="heading-small"><a href="/get-a-job">Help to get a job</a></h2>
+            <p>Get advice on the different stages of a job hunt, including how to improve your interview technique and write an effective CV. You can get help to search for your first job, get back into work or change career direction.</p>
+
+        </div>
+        <div class="column-one-third">
+            <aside class="govuk-related-items govuk-related-items-bau" role="complementary">
+                <h2 class="heading-medium">Want to speak to an adviser?</h2>
+                <p class="font-small" style="margin-bottom: 0px;"><span class="bold-small">Call </span>0800 100 900 or <a style="white-space: nowrap;" href="https://cxdirect.serco.com/visitor/EntryPage.htm" rel="external">use webchat</a></p>
+                <p class="grey font-xsmall">8am to 10pm, 7 days a week</p>
+            </aside>
+        </div>
+
+    </div>
+
+</main>
+
+<script>
+    // This function gets the value entered in the search box and saves it to the session data
+    // Then loads the next page
+    function saveSearchTermsAndContinue() {
+        var searchPrompt = "Enter a job title or keywords";
+        window.setSessionData('searchPrompt', searchPrompt);
+        var searchTerm = document.getElementById('searchInput').value;
+        window.setSessionData('searchTerm', searchTerm, function () {
+            setTimeout(changePage, 500);
+            function changePage() {
+                window.location.href = "../e2e/search_results";
+            }
+        });
+    }
+
+    // This function make sure the form is submitted when search field is in focus and the user presses enter
+    // This function is overriding one set in the accessible-typeahead.min.js that doesn't allow this behaviour if there are auto-complete options
+    function searchOnReturn() {
+        var searchContainer = document.getElementById("searchInput");
+        var e = window.event;
+        searchContainer.addEventListener('keydown', function (e) {
+            if (e.which === 13 || e.keycode === 13) {
+                e.preventDefault();
+                saveSearchTermsAndContinue();
+            }
+        });
+    }
+
+    function init() {
+        searchOnReturn();
+    }
+    window.onload = init;
+
+</script>
+
+
+{% endblock %}

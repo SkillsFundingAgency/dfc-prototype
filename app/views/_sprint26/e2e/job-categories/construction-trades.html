@@ -1,0 +1,62 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+
+{% set categoryName = 'Construction and trades' %}
+
+{% include "../includes/survey.html" %}
+
+
+<main id="content" role="main">
+    {% include "../includes/global_header_bar.html" %}
+
+    {% include "../includes/breadcrumb_categories.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge" id="currentcategory">{{ categoryName}}</h1>
+            <!-- <p class="page-header__summary">Blurb about the category, what do the jobs on this page have in common etc.</p> -->
+
+            <div class="paginated-page" id="page1">
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Architect</a></h2>
+                    <!-- <h3 class="category-job__alt-titles">Computer games designer, video games designer</h3> -->
+                    <p class="category-job__overview">Architects design new buildings and the spaces around them, and work on the restoration and conservation of existing buildings.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Carpenter</a></h2>
+                    <h3 class="category-job__alt-titles">Joiner, bench joiner</h3>
+                    <p class="category-job__overview">Carpenters and joiners make and install wooden structures, fittings and furniture.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Electrician</a></h2>
+                    <h3 class="category-job__alt-titles">Electrical fitter, electrical engineer, electrical technician, installation electrician</h3>
+                    <p class="category-job__overview">Electricians fit, service and fix electrical equipment, circuits, machinery and wiring.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Plumber</a></h2>
+                    <!-- <h3 class="category-job__alt-titles">Programmer</h3> -->
+                    <p class="category-job__overview">Plumbers fit and service hot and cold water systems, heating systems and drainage networks.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Quantity surveyor</a></h2>
+                    <!-- <h3 class="category-job__alt-titles">Programmer</h3> -->
+                    <p class="category-job__overview">Quantity surveyors oversee construction projects, managing risks and controlling costs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="column-one-third">
+            {% include "../includes/other_categories.html" %}
+        </div>
+    </div>
+</main>
+
+{% endblock %}

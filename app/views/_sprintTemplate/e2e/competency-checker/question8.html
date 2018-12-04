@@ -1,0 +1,62 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Training routes' %}
+
+{% include "../includes/survey.html" %}
+
+    {% include "../includes/global_header_bar.html" %}
+
+<main id="content" role="main">
+    {% include "../includes/breadcrumb_filters.html" %}
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h4 class="heading-small grey">Question 8 of 10</h4>
+            <h1 class="heading-medium top0">Following instructions &amp; procedures 2</h1>
+            <p>You have to be at work at 6am tomorrow morning to start on fitting a solar heating system to a new commercial building.</p>
+            <p>Your Supervisor set this time and has asked you to check the directions to the site this evening to ensure you are on time.</p>
+            <p>You know the area quite well so you think you might be able to find the site without checking the directions and be there on time, but you have a map of the area anyway.</p>
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h1 class="heading-small">Choose your approach</h1>
+            <form>
+                <div class="form-group">
+                    <fieldset class="">
+                        <div class="multiple-choice">
+                            <input class="shm-radio" id="radio-inline-1" onClick="sessionStorage.SHManswer=1" type="radio" name="radio-inline-group" value="Yes">
+                            <label for="radio-inline-1">Follow your Supervisor's advice and have a look at the directions to the site so that you can make sure you are there on time.</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input class="shm-radio" id="radio-inline-2" onClick="sessionStorage.SHManswer=2" type="radio" name="radio-inline-group" value="No">
+                            <label for="radio-inline-2">Ensure you have the map ready with you for tomorrow morning to check the directions if you need to.</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input class="shm-radio" id="radio-inline-3" onClick="sessionStorage.SHManswer=3" type="radio" name="radio-inline-group" value="Yes">
+                            <label for="radio-inline-3">Decide yourself that you probably can still get to the site for the time your Supervisor requested if you don't check directions.</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="grid-row">
+        <div class="column-full"><a href="answer8" id="cc-next" class="explore-button">Next</a></div>
+        <p class="cc-error right js-hidden">Please select an option from the choices above before continuing.</p>
+    </div>
+
+</main>
+
+
+
+{% endblock %}

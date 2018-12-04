@@ -1,0 +1,38 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Training routes' %}
+
+{% include "../includes/survey.html" %}
+
+    {% include "../includes/global_header_bar.html" %}
+
+<main id="content" role="main">
+    {% include "../includes/breadcrumb_filters.html" %}
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h4 class="heading-small grey">Question 3 of 10</h4>
+            <h1 class="heading-medium top0">Analysing</h1>
+            <p id="answer-1" class="js-hidden">Good! As a Plumbing Apprentice, you may need to base your decisions on the facts in front of you. You will need to be accurate and comfortable working with numbers.</p>
+            <p id="answer-2" class="js-hidden">Communicating with your colleagues is good but when you have been given a task to do and the information you need to do it, it may be best to complete the task as you have been instructed.</p>
+            <p id="answer-3" class="js-hidden">Sometimes you will need to check the numbers or the facts you have been given. You will need to be comfortable to work with numbers, rather than base your decisions on thoughts or feelings that you have. If you think you may struggle with this aspect, you may want to reconsider if this is the role for you.</p>
+        </div>
+    </div>
+
+
+    <div class="grid-row">
+        <div class="column-full"><a href="question4" id="cc-nextq" class="explore-button">Next</a></div>
+    </div>
+
+</main>
+
+
+
+{% endblock %}

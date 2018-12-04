@@ -1,0 +1,307 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+Careers Service - Search
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="search">
+	{% include "../includes/phase_banner_beta.html" %} 
+	<div class="breadcrumbs">
+		<!-- <ol>
+			<li><a href="#1">Home</a></li>
+			<li>Search</li>	      
+		</ol> -->
+	</div>
+
+	<div class="search-header">
+		<div class="searchfield">
+			<fieldset class="search-input">
+				<label for="search-main">
+					<h1>Search results for <span class="visuallyhidden">“doctor”</span></h1>
+				</label>
+				<input type="search" name="q" placeholder="Enter a job title" value="doctor" id="search-main">
+			</fieldset>
+
+			<fieldset class="search-submit">
+				<button type="submit" class="button">Search</button>
+			</fieldset>
+		</div>
+<!-- 		<fieldset class="spelling-suggestion">
+			<p>Did you mean <a href="#1">design</a></p>
+		</fieldset> -->
+	</div>
+
+	<div id="results" class="js-live-search-results-block">
+		<div class="results-block">
+			<div class="inner-block js-live-search-results-list">
+				<div class="result-count scoped-result-count" id="js-live-search-result-count" aria-hidden="true"><span id="numberOfResults"></span> results found</div>
+				<div class="search-results-list js-hidden" id="searchResultsList" style="padding-top: 30px;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="grid-row">
+		<div class="column-two-thirds js-hidden pagination" id="searchResultsPagination">
+			<ul class="previous-next-navigation">
+				<li class="next">
+					<a href="#1" id="nextBtn">
+						<span class="pagination-label">Next</span>
+						<span class="visuallyhidden">page</span>
+						<span class="page-numbers">2 of Number of Pages</span>
+					</a>
+				</li>
+				<li class="previous">
+					<a href="#1" id="prevBtn">
+						<span class="pagination-label">Previous</span>
+						<span class="visuallyhidden">page</span>
+						<span class="page-numbers">1 of Number of pages</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</main>
+
+<script>
+
+	function Get(yourUrl){
+	    var Httpreq = new XMLHttpRequest(); 
+	    Httpreq.open("GET",yourUrl,false);
+	    Httpreq.send(null);
+	    return Httpreq.responseText;          
+	}
+
+	function createResultMarkup(title, alternativeTitles, overview, link, salary){
+		var emptyDataLabel = '<span class="text-secondary">No data</span>';
+
+		// Set link href
+		if (!(link === null) && link.length > 0) {
+		 	var thisLink = link.toString();
+		} else {
+		 	var thisLink = "#1";
+		}
+		// Set title HTML
+		var titleHTML = '<h3 class="heading-medium"><a href="' + thisLink + '" class="prototype-link">' + title + '</a></h3>';
+
+		//Set alternative title HTML
+		if(alternativeTitles.length > 0) {
+			var alternativeTitlesHTML = '<p class="meta grey">' + alternativeTitles + '</p>';
+		} else {
+			var alternativeTitlesHTML = ''; // A result item can have no alternative titles 
+		}
+
+		//Set overview HTML
+		if (overview.length > 0) {
+			var overviewHTML = '<p>' + overview + '</p>';
+		} else {
+			var overviewHTML = emptyDataLabel;
+		}
+
+		// Set salary HTML
+		if (salary.length > 0) {
+			variableSalaryPosition = variableSalaryPosition - 1;
+			if (variableSalaryPosition === 0) {
+				var salaryHTML = '<p class="heading-small">Salary: Variable</p>';
+			} else {
+				var salaryHTML = '<p class="heading-small">Salary: ' + salary + ' per year</p>';
+			}	
+		} else {
+			var salaryHTML = emptyDataLabel;
+		}
+
+		//Create and return final HTML
+		var thisResult = 
+			'<div class="search-result">' +
+				titleHTML +
+				alternativeTitlesHTML +
+				overviewHTML
+				// salaryHTML +
+			'</div>'
+		return thisResult;
+	}
+
+	function insertResultMarkup(thisResultView) {
+		var page = 'page' + pageNumber;
+		var container = document.getElementById(page);
+		container.insertAdjacentHTML( 'beforeend', thisResultView);
+	}
+
+	function insertNewPage() {
+		pageNumber = pageNumber+1;
+		if (pageNumber > 1) {
+			var pageVisible = 'js-hidden';
+		}
+		mainContainer.insertAdjacentHTML( 'beforeend', '<div class="paginated-page ' + pageVisible +'" id="page' + pageNumber + '"></div>' );		
+	}
+
+    // function onChange(event) {
+    //     var reader = new FileReader();
+    //     reader.onload = onReaderLoad;
+    //     reader.readAsText(event.target.files[0]);
+    // }
+
+    // function onReaderLoad(event){
+    //     var JSONFile = JSON.parse(event.target.result);
+    //     JSONLoaded(JSONFile);
+    // }
+
+    // function removeUploadUI(){
+    // 	var uploadUI = document.getElementById('uploadUI');
+    // 	uploadUI.classList.add('js-hidden');
+    // }
+
+    function showResultContainer(){
+    	var searchResultsList = document.getElementById('searchResultsList');
+    	searchResultsList.classList.remove('js-hidden');
+    }
+
+    function checkForSplit() {
+    	if(itemsCounter === 10) {
+    		itemsCounter = itemsCounter-1;
+    		return true;
+    	} else if (itemsCounter === 1){
+			itemsCounter = itemsPerPage;
+			return false;
+    	} else {
+    		itemsCounter = itemsCounter-1;
+    		return false;
+    	}
+	}
+
+	function paginationClicked(thisDirection) {
+		// A delay has been added to mimic page refresh
+		delayLoadOfPage = window.setTimeout(function() {
+			updatePage(thisDirection);
+			updatePaginationModel(thisDirection);
+			updatePaginationView();
+			nextBtn.blur();
+			prevBtn.blur();
+		;}, 700);
+	}
+
+	function updatePaginationModel(thisDirection) {
+		if (thisDirection === 'next') {
+			currentPage = currentPage+1;
+			nextPage = nextPage+1;
+			prevPage = prevPage+1;
+		} else {
+			currentPage = currentPage-1;
+			nextPage = nextPage-1;
+			prevPage = prevPage-1
+		}
+	}
+
+	function initPaginationModel() {
+		currentPage = 1;
+		nextPage = 2;
+		prevPage = 0;
+	}
+
+	function updatePage(thisDirection) {
+		if (thisDirection === 'next') {
+			thisDirection = nextPage;
+		} else {
+			thisDirection = prevPage;
+		}
+		document.getElementById('page' + currentPage).classList.add('js-hidden');
+		document.getElementById('page' + thisDirection).classList.remove('js-hidden');
+		// Move user to the top of the window as if a new page has loaded
+		window.scrollTo( 0, 0);
+	}
+
+	function updatePaginationView() {
+		// Create labels for next and previous UI
+		var nextLabel = nextPage + ' of ' + pageNumber;
+		var prevLabel = prevPage + ' of ' + pageNumber;
+
+		// Set pagination buttons
+		for(i = 0; i < nextBtn.childNodes.length; i++) {
+			if(nextBtn.childNodes[i].classList && nextBtn.childNodes[i].classList.contains('page-numbers')) {
+				nextBtn.childNodes[i].innerHTML = nextLabel;
+			}
+		}
+		for(i = 0; i < prevBtn.childNodes.length; i++) {
+			if(prevBtn.childNodes[i].classList && prevBtn.childNodes[i].classList.contains('page-numbers')) {
+				prevBtn.childNodes[i].innerHTML = prevLabel;
+			}
+		}	
+
+		// Hide UI if at beginnig or end
+		if (prevPage === 0) {
+			prevBtn.parentNode.classList.add('js-hidden');
+		} else {
+			prevBtn.parentNode.classList.remove('js-hidden');
+		}
+		if (currentPage === pageNumber || pageNumber === 1) {
+			nextBtn.parentNode.classList.add('js-hidden');
+		} else {
+			nextBtn.parentNode.classList.remove('js-hidden');
+		}
+	}
+
+	function JSONLoaded(JSONFile){
+		// var data = JSONFile;
+		var dataFilePath = '/public/_sprint10/data/azure-BAU-search_doctor.json';
+		var data = JSON.parse(Get(dataFilePath));
+		
+		// Set result counter
+		var resultAmount = data.value.length;
+		document.getElementById('numberOfResults').innerHTML = resultAmount.toString();
+
+		// Create the first page for results to go in
+		// mainContainer.insertAdjacentHTML( 'beforeend', '<div class="paginated-page" id="page' + pageNumber + '"></div>' );	
+
+		// Loop through results and create HTML
+		for (i = 0; i < data.value.length; i++) { 
+			var title = data.value[i].Title;
+			var alternativeTitles = data.value[i].AlternativeTitles;
+			var overview = data.value[i].Overview;
+			// The data is missing hyperlink & salary 
+			// var salary = data.value[i].Salary;
+			var	salary = '£26,350 to £102,500'; // Manually set salary on all results as there currenlty isn't anything data to use
+			var link = data.value[i].Link;
+
+			// Add a new page for every ten result items
+			if(checkForSplit()){
+				insertNewPage();
+			}
+
+			if (title.length > 0) { // As a minimum the title must exist
+				var thisResultView = createResultMarkup (title, alternativeTitles, overview, link, salary);
+				insertResultMarkup(thisResultView);		
+			}
+		}
+		showResultContainer();	
+		// removeUploadUI();
+
+		// Setup default model
+		initPaginationModel();
+		// Make sure default button labels are correct
+		updatePaginationView();
+		// Make pagination visible
+		document.getElementById('searchResultsPagination').classList.remove('js-hidden');
+	}
+
+	var mainContainer = document.getElementById('searchResultsList');
+	var itemsPerPage = 10;
+	var itemsCounter = itemsPerPage;
+	var pageNumber = 0;
+	var variableSalaryPosition = 2;
+	var uploadElement = document.getElementById('dataFile');
+	var nextBtn = document.getElementById('nextBtn');
+	var prevBtn = document.getElementById('prevBtn');
+
+    // uploadElement.addEventListener('change', onChange);
+    nextBtn.addEventListener('click', function() { paginationClicked('next'); });
+	prevBtn.addEventListener('click', function() { paginationClicked('prev'); });
+
+	// Auto load data, use when upload funtion disabled
+	JSONLoaded();
+ 
+</script>
+
+{% endblock %}

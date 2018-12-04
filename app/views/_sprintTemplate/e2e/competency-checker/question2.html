@@ -1,0 +1,63 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Training routes' %}
+
+{% include "../includes/survey.html" %}
+
+    {% include "../includes/global_header_bar.html" %}
+
+<main id="content" role="main">
+    {% include "../includes/breadcrumb_filters.html" %}
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h4 class="heading-small grey">Question 2 of 10</h4>
+            <h1 class="heading-medium top0">Relating & Networking 2</h1>
+            <p>Your Supervisor is showing you how to service a very old boiler.</p>
+            <p>They explain what they are doing, and then say that you can take over from them to finish the task.</p>
+            <p>You have not seen this type of boiler before and you would like to ask the Supervisor some further questions about the task you are doing.</p>
+            <p>However, you do not want to give them a bad impression of you or make the Supervisor think that you were not listening to his explanation of the task</p>
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h1 class="heading-small">Choose your approach</h1>
+            <form>
+                <div class="form-group">
+                    <fieldset class="">
+                        <div class="multiple-choice">
+                            <input class="shm-radio" id="radio-inline-1" onClick="sessionStorage.SHManswer=1" type="radio" name="radio-inline-group" value="Yes">
+                            <label for="radio-inline-1">Feel confident to ask the question to your Supervisor to check that you have understood the task correctly.</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input class="shm-radio" id="radio-inline-2" onClick="sessionStorage.SHManswer=2" type="radio" name="radio-inline-group" value="No">
+                            <label for="radio-inline-2">Continue with the part of the task that you do understand and then decide whether to ask the Supervisor for help later.</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input class="shm-radio" id="radio-inline-3" onClick="sessionStorage.SHManswer=3" type="radio" name="radio-inline-group" value="Yes">
+                            <label for="radio-inline-3">Keep quiet and get on with the task as best as you can as you do not want to give the impression that you were not listening.</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="grid-row">
+        <div class="column-full"><a href="answer2" id="cc-next" class="explore-button">Next</a></div>
+        <p class="cc-error right js-hidden">Please select an option from the choices above before continuing.</p>
+    </div>
+
+</main>
+
+
+
+{% endblock %}

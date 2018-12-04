@@ -4,11 +4,11 @@
 .port.tmp
 package.json
 public
-lib/govuk_template.html
 govuk_modules
 node_modules/*
 .tmuxp.*
 /.vs/slnx.sqlite
+/.vs/slnx.sqlite-journal
 /.vs/ProjectSettings.json
 /.vs/config/applicationhost.config
 /.vs/Citizen Digital - Prototype/v15/.suo

@@ -1,0 +1,81 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Salary' %}
+
+{% include "../includes/survey.html" %}
+
+    {% include "../includes/global_header_bar.html" %}
+
+<main id="content" role="main">
+    {% include "../includes/breadcrumb_filters.html" %}
+    <div class="grid-row">
+        <div class="column-full explore-top">
+            <h1 class="heading-xlarge">{{filterName}}</h1>
+            <h2 class="heading-medium">Starter salary</h2>
+            <div class="explore-step js-hidden"><h4 class="step-3">Step 3 of 5</h4></div>
+        </div>
+
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Low</h4>
+            </div>
+        </div>
+
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Average</h4>
+            </div>
+        </div>
+
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">High</h4>
+            </div>
+        </div>
+
+        <div class="column-full">
+            <h2 class="heading-medium">Experienced salary <br /><span class="grey heading-small">(Typically 5+ years)</span></h2>
+        </div>
+
+
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Low</h4>
+            </div>
+        </div>
+
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">Average</h4>
+            </div>
+        </div>
+
+        <div class="column-one-third">
+            <div class="explore-box explore-box-small">
+                <h4 class="heading-small">High</h4>
+            </div>
+        </div>
+    </div>
+    <p><br /></p>
+    <div class="grid-row">
+        <div class="column-one-third">
+            <div class="explore-box-clear explore-box-small">
+                <h4 class="heading-small">Money is not my main motivation</h4>
+            </div>
+        </div>
+        <div class="column-two-thirds"><a href="filters_results" class="explore-button">Continue</a></div>
+    </div>
+
+</main>
+
+
+
+{% endblock %}

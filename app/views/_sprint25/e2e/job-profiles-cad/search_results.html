@@ -1,0 +1,114 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Legal - Search Results
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+
+
+<main id="content" role="main" class="search">
+    <div id="global-header-bar"></div>
+    {% include "../includes/breadcrumb_search_cad.html" %}
+
+    <div class="search-header">
+        <div class="searchfield">
+            <fieldset class="search-input">
+                <label for="search-main">
+                    <h1>Search results for <span class="visuallyhidden">“Halth”</span></h1>
+                </label>
+                <input type="search" name="q" placeholder="Enter a job title" value="Halth" id="search-main">
+            </fieldset>
+
+            <fieldset class="search-submit">
+                <button type="submit" class="button">Search</button>
+            </fieldset>
+        </div>
+
+        <fieldset class="spelling-suggestion">
+            <p>Did you mean <a href="search_resultsDYM">Health</a></p>
+        </fieldset> 
+    </div>
+
+    <div id="results" class="js-live-search-results-block">
+
+        <div class="results-block">
+            <div class="inner-block js-live-search-results-list">
+
+                <div class="result-count scoped-result-count">4 results found</div>
+                <div class="search-results-list" id="searchResultsList" style="padding-top: 30px;">
+                    
+                    <div class="search-result">
+                        <h3 class="heading-medium "><a href="police_officer/police-officer" class="prototype-link">Police officer</a></h3>
+                        <p class="meta dfc-code-search-jpAltTitle">Policeman, policewoman, police constable</p>
+                        <p>Police officers keep law and order, investigate crime, and support crime prevention.</p>
+                        <p class="heading-small">Salary: £20,000 to £60,000</p>
+                        <p class="meta">Found in: <a href="../job-categories/government-services">Government services</a>, <a href="../job-categories/Emergency"> Emergency and uniform services</a> </p>
+                    </div>
+
+                    <div class="search-result">
+                        <h3 class="heading-medium "><a href="beauty_consultant/beauty-consultant" class="prototype-link">Beauty consultant</a></h3>
+                        <p class="meta dfc-code-search-jpAltTitle">Beautician</p>
+                        <p>Beauty consultants sell beauty products and help customers choose the right products to buy.</p>
+                        <p class="heading-small">Salary: £15,600 to £18,200</p>
+                        <p class="meta">Found in: <a href="job-categories/Retail">Retail and sales</a>, <a href="job-categories/beauty"> Beauty and wellbeing</a></p>
+                    </div>
+
+                    <div class="search-result">
+                        <h3 class="heading-medium "><a href="security_officer/security-officer" class="prototype-link">Security officer</a></h3>
+                        <p>Security officers make sure that buildings, valuables and people are safe and secure.</p>
+                        <p class="heading-small">Salary: £21,320 to £24,960</p>
+                        <p class="meta">Found in: <a href="job-categories/Emergency">Emergency and uniform services</a> </p>
+                    </div>
+
+                    <div class="search-result">
+                        <h3 class="heading-medium "><a href="software_developer/software-developer" class="prototype-link">Software developer</a></h3>
+                        <p class="meta dfc-code-search-jpAltTitle">Programmer</p>
+                        <p>Software developers design, build and test computer programmes for business, education and leisure activities.</p>
+                        <p class="heading-small">Salary: £39,000 to £45,760</p>
+                        <p class="meta">Found in: <a href="job-categories/computer">Computing</a>, <a href="job-categories/technology">technology and digital</a> </p>
+                    </div>
+
+                    <div class="search-result">
+                        <h3 class="heading-medium "><a href="teaching_assistant/teaching-assistant" class="prototype-link">Teaching assistant</a></h3>
+                        <p class="meta dfc-code-search-jpAltTitle">Classroom assistant, learning support assistant</p>
+                        <p>Teaching assistants support teachers and help children develop.</p>
+                        <p class="heading-small">Salary: £15,600 to £18,200</p>
+                        <p class="meta">Found in: <a href="job-categories/Teaching">Teaching and education</a> </p>
+                    </div>
+
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!--<div class="grid-row">
+        <div class="column-two-thirds js-hidden pagination" id="searchResultsPagination">
+            <ul class="previous-next-navigation">
+                <li class="next">
+                    <a href="#1" id="nextBtn">
+                        <span class="pagination-label">Next</span>
+                        <span class="visuallyhidden">page</span>
+                        <span class="page-numbers">2 of Number of Pages</span>
+                    </a>
+                </li>
+                <li class="previous">
+                    <a href="#1" id="prevBtn">
+                        <span class="pagination-label">Previous</span>
+                        <span class="visuallyhidden">page</span>
+                        <span class="page-numbers">1 of Number of pages</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>-->
+    
+</main>
+
+
+{% endblock %}

@@ -1,0 +1,185 @@
+{% extends "../../layout.html" %}
+
+{% block page_title %}
+	Service Green
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+     {% include "../../includes/phase_banner_beta.html" %}
+
+     <div class="breadcrumbs">
+          <ol>
+               <li><a href="../../_archived/search-start_job-categories_job-profiles-keywords_v3.html">Home</a></li>
+               <li><a href="#1">Browse</a></li>
+               <li><a href="#1">Job categories</a></li>
+               <li>Science and research</li>
+          </ol>
+     </div>
+
+     <div class="grid-row">
+          <div class="column-two-thirds">
+               <div class="page-header">
+                    <h1 class="page-header__title">Science and research</h1>
+                    <!-- <p class="page-header__summary">Blurb about the category, what do the jobs on this page have in common etc.</p> -->
+               </div>
+
+               <div class="paginated-page" id="page1">
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="#1" class="prototype-link">Forensic scientist</a></h2>
+                         <!-- <h3 class="category-job__alt-titles"></h3> -->
+                         <p class="category-job__overview">Forensic scientists prepare traces of physical evidence for use in courts of law.</p>
+                    </div>
+               </div>
+
+               <div class="pagination" id="searchResultsPagination">
+                    <ul class="previous-next-navigation">
+                         <li class="next">
+                              <a href="#1" id="nextBtn">
+                                   <span class="pagination-label">Next</span>
+                                   <span class="visuallyhidden">page</span>
+                                   <span class="page-numbers">2 of Number of Pages</span>
+                              </a>
+                         </li>
+                         <li class="previous">
+                              <a href="#1" id="prevBtn">
+                                   <span class="pagination-label">Previous</span>
+                                   <span class="visuallyhidden">page</span>
+                                   <span class="page-numbers">1 of Number of pages</span>
+                              </a>
+                         </li>
+                    </ul>
+               </div>
+          </div>
+          <div class="column-one-third">
+               <div class="govuk-related-items">
+                    <h2 class="heading-medium">Job categories</h2>
+                    <div class="related-gov-links">
+                         <ul class="font-xsmall">
+                              <li style="margin-bottom:0.4em"><a href="animal-care_agriculture_paginated_v1.html" class="prototype-link">Animal care and agriculture</a></li>
+                              <li style="margin-bottom:0.4em"><a href="beauty_wellbeing_paginated_v1.html" class="prototype-link selected">Beauty and wellbeing</a></li>
+                              <li style="margin-bottom:0.4em"><a href="business_finance_paginated_v1.html" class="prototype-link">Business and finance</a></li>
+                              <li style="margin-bottom:0.4em"><a href="caring_paginated_v1.html" class="prototype-link">Caring</a></li>
+                              <li style="margin-bottom:0.4em"><a href="computing_technology_digital_paginated_v1.html" class="prototype-link">Computing, technology and digital</a></li>
+                              <li style="margin-bottom:0.4em"><a href="construction_manufacturing_paginated_v1.html" class="prototype-link">Construction and manufacturing</a></li>
+                              <li style="margin-bottom:0.4em"><a href="creative_media_paginated_v1.html" class="prototype-link">Creative and media</a></li>
+                              <li style="margin-bottom:0.4em"><a href="distribution_storage_paginated_v1.html" class="prototype-link">Distribution and storage</a></li>
+                              <li style="margin-bottom:0.4em"><a href="emergency_uniform_services_paginated_v1.html" class="prototype-link">Emergency and uniform services</a></li>
+                              <li style="margin-bottom:0.4em"><a href="engineering_paginated_v1.html" class="prototype-link">Engineering</a></li>
+                              <li style="margin-bottom:0.4em"><a href="health_paginated_v1.html" class="prototype-link">Health</a></li>
+                              <li style="margin-bottom:0.4em"><a href="law_administration_paginated_v1.html" class="prototype-link">Law and administration</a></li>
+                              <li style="margin-bottom:0.4em"><a href="retail_sales_paginated_v1.html" class="prototype-link">Retail and sales</a></li>
+                              <li style="margin-bottom:0.4em"><a href="science_research_paginated_v1.html" class="prototype-link">Science and research</a></li>
+                              <li style="margin-bottom:0.4em"><a href="sports_leisure_paginated_v1.html" class="prototype-link">Sports and leisure</a></li>
+                              <li style="margin-bottom:0.4em"><a href="teaching_education_paginated_v1.html" class="prototype-link">Teaching and education</a></li>
+                              <li style="margin-bottom:0.4em"><a href="tourism_hopitality_paginated_v1.html" class="prototype-link">Tourism and hopitality</a></li>
+                              <li style="margin-bottom:0.4em"><a href="trades_maintenance_paginated_v1.html" class="prototype-link">Trades and maintenance</a></li>
+                              <li style="margin-bottom:0.4em"><a href="transport_paginated_v1.html" class="prototype-link">Transport</a></li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+     </div>
+</main>
+
+<script>
+
+     function paginationClicked(thisDirection) {
+          // A delay has been added to mimic page refresh
+          delayLoadOfPage = window.setTimeout(function() {
+               updatePage(thisDirection);
+               updatePaginationModel(thisDirection);
+               updatePaginationView();
+               nextBtn.blur();
+               prevBtn.blur();
+          ;}, 700);
+     }
+
+     function updatePaginationModel(thisDirection) {
+          if (thisDirection === 'next') {
+               currentPage = currentPage+1;
+               nextPage = nextPage+1;
+               prevPage = prevPage+1;
+          } else {
+               currentPage = currentPage-1;
+               nextPage = nextPage-1;
+               prevPage = prevPage-1
+          }
+     }
+
+     function initPaginationModel() {
+          currentPage = 1;
+          nextPage = 2;
+          prevPage = 0;
+     }
+
+     function updatePage(thisDirection) {
+          if (thisDirection === 'next') {
+               thisDirection = nextPage;
+          } else {
+               thisDirection = prevPage;
+          }
+          document.getElementById('page' + currentPage).classList.add('js-hidden');
+          document.getElementById('page' + thisDirection).classList.remove('js-hidden');
+          // Move user to the top of the window as if a new page has loaded
+          window.scrollTo( 0, 0);
+     }
+
+     function updatePaginationView() {
+          // Create labels for next and previous UI
+          var nextLabel = nextPage + ' of ' + numberOfPages;
+          var prevLabel = prevPage + ' of ' + numberOfPages;
+
+          // Set pagination buttons
+          for(i = 0; i < nextBtn.childNodes.length; i++) {
+               if(nextBtn.childNodes[i].classList && nextBtn.childNodes[i].classList.contains('page-numbers')) {
+                    nextBtn.childNodes[i].innerHTML = nextLabel;
+               }
+          }
+          for(i = 0; i < prevBtn.childNodes.length; i++) {
+               if(prevBtn.childNodes[i].classList && prevBtn.childNodes[i].classList.contains('page-numbers')) {
+                    prevBtn.childNodes[i].innerHTML = prevLabel;
+               }
+          }    
+
+          // Hide UI if at beginnig or end
+          if (prevPage === 0) {
+               prevBtn.parentNode.classList.add('js-hidden');
+          } else {
+               prevBtn.parentNode.classList.remove('js-hidden');
+          }
+          if (currentPage === numberOfPages || numberOfPages === 1) {
+               nextBtn.parentNode.classList.add('js-hidden');
+          } else {
+               nextBtn.parentNode.classList.remove('js-hidden');
+          }
+     } 
+
+     function showHidePagination(){
+          if (numberOfPages ===  0){
+               document.getElementById('searchResultsPagination').classList.add('js-hidden');
+          }
+     } 
+
+     function init(){
+          // Setup default model
+          initPaginationModel();
+          showHidePagination();
+          // Make sure default button labels are correct
+          updatePaginationView();
+     }
+
+     var pageNumber = 1;
+     var numberOfPages = 1;
+
+     // uploadElement.addEventListener('change', onChange);
+     nextBtn.addEventListener('click', function() { paginationClicked('next'); });
+     prevBtn.addEventListener('click', function() { paginationClicked('prev'); });
+
+     init();
+
+</script>
+
+
+{% endblock %}

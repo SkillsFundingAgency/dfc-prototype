@@ -1,0 +1,92 @@
+{% extends "../layout_E2E.html" %}
+
+{% block page_title %}
+     Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% include "../includes/E2E_VOC_exit-routes_v2.html" %}
+
+<main id="content" role="main">
+     <div id="global-header-bar"></div>
+
+     <div class="breadcrumbs">
+          <ol>
+               <li><a href="../E2E_homepage.html">Home</a></li>
+          </ol>
+     </div>
+
+     <div class="grid-row">
+          <div class="column-two-thirds">
+
+               <h1 class="heading-xlarge">Transport</h1>
+               <!-- <p class="page-header__summary">Blurb about the category, what do the jobs on this page have in common etc.</p> -->
+
+               <div class="paginated-page" id="page1">
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="../job-profiles/E2E_psychologist" class="prototype-link">Air cabin crew</a></h2>
+                         <h3 class="category-job__alt-titles">Flight attendant</h3>
+                         <p class="category-job__overview">Air cabin crew look after airline passengers, making sure they have a safe, comfortable and pleasant flight.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="../job-profiles/E2E_psychologist" class="prototype-link">Airline pilot</a></h2>
+                         <h3 class="category-job__alt-titles">Aircraft pilot, co-pilot, first officer, captain</h3>
+                         <p class="category-job__overview">Airline pilots fly passengers and cargo to destinations around the world.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="../job-profiles/E2E_psychologist" class="prototype-link">Driving instructor</a></h2>
+                         <!-- <h3 class="category-job__alt-titles">Further education tutor, Further education teacher</h3> -->
+                         <p class="category-job__overview">Driving instructors teach people the skills and knowledge they need to drive safely and pass their driving test.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="../job-profiles/E2E_psychologist" class="prototype-link">Taxi driver</a></h2>
+                         <h3 class="category-job__alt-titles">Cab driver, private hire driver, minicab driver</h3>
+                         <p class="category-job__overview">Taxi or private hire drivers pick up passengers and charge fares to take them to their destination by the quickest route.</p>
+                    </div>
+                    <div class="category-job">
+                         <h2 class="heading-medium category-job__title"><a href="../job-profiles/E2E_psychologist" class="prototype-link">Train driver</a></h2>
+                         <h3 class="category-job__alt-titles">Engine driver, underground driver, Eurostar driver</h3>
+                         <p class="category-job__overview">Train drivers operate trains on rail networks, making sure that passengers and freight get to where they're going safely and on time.</p>
+                    </div>
+               </div>
+          </div>
+          <div class="column-one-third">
+               <div class="PROD_govuk-related-items">
+                    <h2 class="heading-medium">Other job categories</h2>
+                    <div class="related-gov-links">
+                         <ul class="font-xsmall">
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_administration">Administration</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_animal-care">Animal care</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_beauty-wellbeing">Beauty and wellbeing</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_business-finance">Business and finance</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_delivery-storage">Delivery and storage</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_computing-technology-digital">Computing, technology and digital</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_construction-trades">Construction and trades</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_creative-media">Creative and media</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_emergency-uniform-services">Emergency and uniform services</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_engineering-maintenance">Engineering and maintenance</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_environment-land">Environment and land</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_government-services">Government services</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_healthcare">Healthcare</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_hospitality-food">Hospitality and food</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_legal">Legal</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_managerial">Managerial</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_manufacturing">Manufacturing</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_retail-sales">Retail and sales</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_science-research">Science and research</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_social-care">Social care</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_sports-leisure">Sports and leisure</a></li>
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_teaching-education">Teaching and education</a></li>
+                              <!-- <li style="margin-bottom:0.4em"><a href="./E2E_job-category_transport">Transport</a></li> -->
+                              <li style="margin-bottom:0.4em"><a href="./E2E_job-category_travel-tourism">Travel and tourism</a></li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+     </div>
+</main>
+
+{% endblock %}

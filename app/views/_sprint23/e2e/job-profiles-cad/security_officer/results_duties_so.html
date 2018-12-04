@@ -1,0 +1,86 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Legal - Search Results
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+
+{% include "../includes/survey.html" %}
+
+
+<main id="content" role="main" class="search">
+    <div id="global-header-bar"></div>
+    {% include "../includes/breadcrumb_searchresults.html" %}
+    <header class="filter-results-header">
+        <h1 class="filter-results-heading">Careers that have similar duties</h1>
+        <br>
+        <p class="meta"> Add or remove duties to change your results <a href="../job-categories/environment-land"> 7 Filters are currenly selected </a></p>        
+        <ul class="list">
+        </ul>
+        <p class="filter-results-subheading"></p>
+        <div class="heading-small">3 careers found</div>
+
+    </header>
+    <div class="results-block">
+        <div class="inner-block js-live-search-results-list">
+
+
+            <div class="search-results-list" id="searchResultsList" style="padding-top: 30px;">
+                <div class="search-result">
+                    <h3 class="heading-medium "><a href="../job-profiles/police-officer" class="prototype-link">Border Force officer</a></h3>
+                    <p>Border Force officers protect UK border entry points like ports and airports, by enforcing immigration and customs regulations.</p>
+                    <p class="heading-small">Salary: £33,800 to £39,000</p>
+                    <p class="meta">Found in: <a href="../job-categories/environment-administration"> Administration </a>, <a href="../job-categories/Emergency"> Emergency and uniform services</a>, <a href="../job-categories/government-services">Government services</a></p>
+                </div>
+
+                <div class="search-result">
+                    <h3 class="heading-medium "><a href="../job-profiles/police-officer" class="prototype-link">Border Force officer</a></h3>
+                    <p>Border Force officers protect UK border entry points like ports and airports, by enforcing immigration and customs regulations.</p>
+                    <p class="heading-small">Salary: £33,800 to £39,000r</p>
+                    <p class="meta">Found in: <a href="../job-categories/Administration"> Administration</a> ,<a href="../job-categories/government-services">Government services</a>, <a href="../job-categories/Emergency"> Emergency and uniform services</a>,</p>
+                </div>
+
+                <div class="search-result">
+                    <h3 class="heading-medium "><a href="../job-profiles/police-officer" class="prototype-link">Police officer</a></h3>
+                    <p class="job-categories">Policeman, policewoman, police constable</p>
+                    <p>Police officers keep law and order, investigate crime, and support crime prevention.</p>
+                    <p class="heading-small">Salary: £20,000 to £60,000</p>
+                    <p class="meta">Found in: <a href="../job-categories/government-services">Government services</a>, <a href="../job-categories/Emergency"> Emergency and uniform services</a> </p>
+                </div>
+
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!--<div class="grid-row">
+        <div class="column-two-thirds js-hidden pagination" id="searchResultsPagination">
+            <ul class="previous-next-navigation">
+                <li class="next">
+                    <a href="#1" id="nextBtn">
+                        <span class="pagination-label">Next</span>
+                        <span class="visuallyhidden">page</span>
+                        <span class="page-numbers">2 of Number of Pages</span>
+                    </a>
+                </li>
+                <li class="previous">
+                    <a href="#1" id="prevBtn">
+                        <span class="pagination-label">Previous</span>
+                        <span class="visuallyhidden">page</span>
+                        <span class="page-numbers">1 of Number of pages</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>-->
+
+</main>
+
+
+{% endblock %}

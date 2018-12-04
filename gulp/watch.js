@@ -134,3 +134,73 @@ gulp.task('watch-assets-S11', function () {
     config.paths.assetsS10 + 'javascripts/**',
     config.paths.assetsS10 + 'data/**'], { cwd: './' }, ['copy-assets-S11']);
 })
+
+gulp.task('watch-sass-S19', function () {
+    return gulp.watch(config.paths.assetsS19 + 'sass/**', { cwd: './' }, ['sass-S19']);
+})
+
+gulp.task('watch-assets-S19', function () {
+    return gulp.watch([config.paths.assetsS19 + 'images/**',
+    config.paths.assetsS19 + 'javascripts/**',
+    config.paths.assetsS19 + 'data/**'], { cwd: './' }, ['copy-assets-S19']);
+})
+
+gulp.task('watch-sass-S20', function () {
+    return gulp.watch(config.paths.assetsS20 + 'sass/**', { cwd: './' }, ['sass-S20']);
+})
+
+gulp.task('watch-assets-S20', function () {
+    return gulp.watch([config.paths.assetsS20 + 'images/**',
+    config.paths.assetsS20 + 'javascripts/**',
+    config.paths.assetsS20 + 'data/**'], { cwd: './' }, ['copy-assets-S20']);
+})
+
+gulp.task('watch-sass-S23', function () {
+    return gulp.watch(config.paths.assetsS23 + 'sass/**', { cwd: './' }, ['sass-S23']);
+})
+
+gulp.task('watch-assets-S23', function () {
+    return gulp.watch([config.paths.assetsS23 + 'images/**',
+    config.paths.assetsS23 + 'javascripts/**',
+    config.paths.assetsS23 + 'data/**'], { cwd: './' }, ['copy-assets-S23']);
+})
+
+gulp.task('watch-sass-S25', function () {
+    return gulp.watch(config.paths.assetsS25 + 'sass/**', { cwd: './' }, ['sass-S25']);
+})
+
+gulp.task('watch-assets-S25', function () {
+    return gulp.watch([config.paths.assetsS25 + 'images/**',
+    config.paths.assetsS25 + 'javascripts/**',
+    config.paths.assetsS25 + 'data/**'], { cwd: './' }, ['copy-assets-S25']);
+})
+
+gulp.task('watch-sass-S26', function () {
+    return gulp.watch(config.paths.assetsS26 + 'sass/**', { cwd: './' }, ['sass-S26']);
+})
+
+gulp.task('watch-assets-S26', function () {
+    return gulp.watch([config.paths.assetsS26 + 'images/**',
+    config.paths.assetsS26 + 'javascripts/**',
+    config.paths.assetsS26 + 'data/**'], { cwd: './' }, ['copy-assets-S26']);
+})
+
+gulp.task('watch-sass-S31', function () {
+    return gulp.watch(config.paths.assetsS31 + 'sass/**', { cwd: './' }, ['sass-S31']);
+})
+
+gulp.task('watch-assets-S31', function () {
+    return gulp.watch([config.paths.assetsS31 + 'images/**',
+    config.paths.assetsS31 + 'javascripts/**',
+    config.paths.assetsS31 + 'data/**'], { cwd: './' }, ['copy-assets-S31']);
+})
+
+gulp.task('watch-sass-L1', function () {
+    return gulp.watch(config.paths.assetsL1 + 'sass/**', { cwd: './' }, ['sass-L1']);
+})
+
+gulp.task('watch-assets-L1', function () {
+    return gulp.watch([config.paths.assetsL1 + 'images/**',
+    config.paths.assetsL1 + 'javascripts/**',
+    config.paths.assetsL1 + 'data/**'], { cwd: './' }, ['copy-assets-L1']);
+})

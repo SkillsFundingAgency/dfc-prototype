@@ -1,0 +1,38 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Training routes' %}
+
+{% include "../includes/survey.html" %}
+
+    {% include "../includes/global_header_bar.html" %}
+
+<main id="content" role="main">
+    {% include "../includes/breadcrumb_filters.html" %}
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h4 class="heading-small grey">Question 4 of 10</h4>
+            <h1 class="heading-medium top0">Analysing 2</h1>
+            <p id="answer-1" class="js-hidden">Excellent! You may need in investigate things and look into problems to work out how to solve them best as a Plumbing Apprentice.</p>
+            <p id="answer-2" class="js-hidden">Communicating with other people on site will help you to get the job done well, however, in this situation, you need to be able to evaluate the information you have been given to consider the best way to solve the problem.</p>
+            <p id="answer-3" class="js-hidden">By not evaluating the information you have been given, you may be causing more work for yourself or others later on down the line. Checking the information you have been given and thinking about how best to get the job done would be a good way of responding to this situation. Think about how comfortable you would feel doing this.</p>
+        </div>
+    </div>
+
+
+    <div class="grid-row">
+        <div class="column-full"><a href="question5" id="cc-nextq" class="explore-button">Next</a></div>
+    </div>
+
+</main>
+
+
+
+{% endblock %}

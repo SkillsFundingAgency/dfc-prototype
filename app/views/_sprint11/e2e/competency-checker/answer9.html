@@ -1,0 +1,38 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Training routes' %}
+
+{% include "../includes/survey.html" %}
+
+    {% include "../includes/global_header_bar.html" %}
+
+<main id="content" role="main">
+    {% include "../includes/breadcrumb_filters.html" %}
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h4 class="heading-small grey">Question 9 of 10</h4>
+            <h1 class="heading-medium top0">Achieving goals &amp; objectives</h1>
+            <p id="answer-1" class="js-hidden">Great answer! A Plumbing Apprentice may be required to travel a far distance to work sometimes, and to get up early in the morning as well as attend college. It requires a lot of drive and energy. If you think you will find it easy to work hard in this way, you are likely to be a good fit to the role.</p>
+            <p id="answer-2" class="js-hidden">As a Plumbing Apprentice, you will need to divide your time between college once a week and working on the job. Both of these may require travelling, long hours and a lot of energy. You may need to have early starts in the morning and you will need to sustain a high level of energy to complete your working day.</p>
+            <p id="answer-3" class="js-hidden">Although it can be difficult and tiring to attend college as well as work on the job, a Plumbing Apprentice will need to have the energy to complete both to the best of their abilities. If you think you may struggle with this aspect of the job, you may want to reconsider this role.</p>
+        </div>
+    </div>
+
+
+    <div class="grid-row">
+        <div class="column-full"><a href="question10" id="cc-nextq" class="explore-button">Next</a></div>
+    </div>
+
+</main>
+
+
+
+{% endblock %}

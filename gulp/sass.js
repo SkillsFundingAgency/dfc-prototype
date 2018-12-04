@@ -300,3 +300,185 @@ gulp.task('sass-documentation-S11', function () {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.paths.publicS11 + '/stylesheets/'))
 })
+
+gulp.task('sass-S19', function () {
+    return gulp.src(config.paths.assetsS19 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS19 + '/stylesheets/'))
+})
+
+gulp.task('sass-documentation-S19', function () {
+    return gulp.src(config.paths.docsAssetsS19 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS19 + '/stylesheets/'))
+})
+
+gulp.task('sass-S20', function () {
+    return gulp.src(config.paths.assetsS20 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS20 + '/stylesheets/'))
+})
+
+gulp.task('sass-documentation-S20', function () {
+    return gulp.src(config.paths.docsAssetsS20 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS20 + '/stylesheets/'))
+})
+
+gulp.task('sass-S23', function () {
+    return gulp.src(config.paths.assetsS23 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS23 + '/stylesheets/'))
+})
+
+gulp.task('sass-documentation-S23', function () {
+    return gulp.src(config.paths.docsAssetsS23 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS23 + '/stylesheets/'))
+})
+
+gulp.task('sass-S25', function () {
+    return gulp.src(config.paths.assetsS25 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS25 + '/stylesheets/'))
+})
+
+gulp.task('sass-documentation-S25', function () {
+    return gulp.src(config.paths.docsAssetsS25 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS25 + '/stylesheets/'))
+})
+
+gulp.task('sass-S26', function () {
+    return gulp.src(config.paths.assetsS26 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS26 + '/stylesheets/'))
+})
+
+gulp.task('sass-documentation-S26', function () {
+    return gulp.src(config.paths.docsAssetsS26 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS26 + '/stylesheets/'))
+})
+
+gulp.task('sass-S31', function () {
+    return gulp.src(config.paths.assetsS31 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS31 + '/stylesheets/'))
+})
+
+gulp.task('sass-documentation-S31', function () {
+    return gulp.src(config.paths.docsAssetsS31 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS31 + '/stylesheets/'))
+})
+
+gulp.task('sass-L1', function () {
+    return gulp.src(config.paths.assetsL1 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicL1 + '/stylesheets/'))
+})
+
+gulp.task('sass-documentation-L1', function () {
+    return gulp.src(config.paths.docsAssetsL1 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicL1 + '/stylesheets/'))
+})

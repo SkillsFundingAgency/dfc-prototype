@@ -1,0 +1,38 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Training routes' %}
+
+{% include "../includes/survey.html" %}
+
+    {% include "../includes/global_header_bar.html" %}
+
+<main id="content" role="main">
+    {% include "../includes/breadcrumb_filters.html" %}
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h4 class="heading-small grey">Question 5 of 10</h4>
+            <h1 class="heading-medium top0">Delivering &amp; meeting expectations</h1>
+            <p id="answer-1" class="js-hidden">Excellent! As a Plumbing Apprentice, you will need to be able to approach problems and be willing to take the initiative to work out how to solve them to get the job done.</p>
+            <p id="answer-2" class="js-hidden">Although it is good that you are willing to work out how to get the job done, sometimes you may need to get stuck in yourself and take control to get results, even if the task is an unpleasant one.</p>
+            <p id="answer-3" class="js-hidden">Using the right tools for the job is important, but sometimes you may find yourself on site and there is a manual, unpleasant job that needs to be done. A Plumbing Apprentice needs to be willing to get stuck in and take control to do what needs to be done to complete the job.</p>
+        </div>
+    </div>
+
+
+    <div class="grid-row">
+        <div class="column-full"><a href="question6" id="cc-nextq" class="explore-button">Next</a></div>
+    </div>
+
+</main>
+
+
+
+{% endblock %}

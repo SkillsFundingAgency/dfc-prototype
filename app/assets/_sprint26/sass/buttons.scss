@@ -1,0 +1,55 @@
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/_colours.scss';
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/design-patterns/_buttons.scss';
+
+.button-grey {
+    @include button ($grey-3);
+}
+
+// An extension of the GDS button class which creates a secondary button style that looks like a normal link
+.button-link {
+    background:$page-colour;
+    color: $link-colour;
+    text-decoration: underline;
+    box-shadow:none;
+
+    @include media (mobile) {
+        margin-top:0.75em;
+    }
+
+    &:focus {
+      background:$page-colour;
+      color: $link-colour;
+      @include box-shadow(0 2px 0 $focus-colour);
+    }
+
+    &:visited, &:link {
+      background:$page-colour;
+      color:$link-colour;
+    }
+
+    &:hover {
+      background:$page-colour;
+      color:$link-hover-colour;
+    }
+
+    &:active {
+      top:0;
+      color:$link-hover-colour;
+      background:$focus-colour;
+    }
+    // Disabled buttons
+    &.disabled,
+    &[disabled="disabled"],
+    &[disabled]{
+        background: $page-colour;
+        &:focus {
+          outline: none;
+        }
+        &:hover, &:link, &:visited, &:active{
+            background:$page-colour;
+            color: $link-colour;
+            text-decoration: underline;
+            box-shadow:none;
+        }
+    }
+}

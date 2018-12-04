@@ -1,0 +1,58 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+
+{% set categoryName = 'Science and research' %}
+
+{% include "../includes/survey.html" %}
+
+
+<main id="content" role="main">
+    {% include "../includes/global_header_bar.html" %}
+
+    {% include "../includes/breadcrumb_categories.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge" id="currentcategory">{{ categoryName}}</h1>
+            <!-- <p class="page-header__summary">Blurb about the category, what do the jobs on this page have in common etc.</p> -->
+
+            <div class="paginated-page" id="page1">
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Criminal intelligence analyst</a></h2>
+                    <h3 class="category-job__alt-titles">Intelligence officer</h3>
+                    <p class="category-job__overview">Criminal intelligence analysts find and analyse data to help detect and prevent crime, and to protect the security of the UK.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Forensic scientist</a></h2>
+                    <!-- <h3 class="category-job__alt-titles">Vehicle sales executive</h3> -->
+                    <p class="category-job__overview">Forensic scientists prepare traces of physical evidence for use in courts of law.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Psychologist</a></h2>
+                    <!-- <h3 class="category-job__alt-titles">Support worker, nursing assistant, nursing auxiliary</h3> -->
+                    <p class="category-job__overview">Psychologists study people's behaviour, motivations, thoughts and feelings, to help them overcome or control their problems.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Vet</a></h2>
+                    <h3 class="category-job__alt-titles">Veterinary surgeon, veterinarian</h3>
+                    <p class="category-job__overview">Vets diagnose and treat sick or injured animals.</p>
+                </div>
+            </div>
+            {% include "../includes/signpost.html" %}
+        </div>
+        <div class="column-one-third">
+            {% include "../includes/other_categories.html" %}
+        </div>
+    </div>
+</main>
+
+{% endblock %}

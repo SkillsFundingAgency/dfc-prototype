@@ -1,0 +1,13 @@
+<div class="breadcrumbs">
+    <ol>
+        <li><a href="/_sprint{{currentSprint}}/e2e/">Find a career home</a></li>
+        <!--<li><a id="currentCategory" href="#"></a></li>-->
+        <li>{{ profileName}}</li>
+    </ol>
+</div>
+
+<script>
+    var currentcatvar = document.getElementById("currentCategory")
+    currentcatvar.innerHTML = sessionStorage.getItem("data.currentcategory");
+    currentcatvar.href = sessionStorage.getItem("data.currentcategoryURL");
+</script>

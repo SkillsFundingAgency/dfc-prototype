@@ -1,0 +1,38 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Training routes' %}
+
+{% include "../includes/survey.html" %}
+
+    {% include "../includes/global_header_bar.html" %}
+
+<main id="content" role="main">
+    {% include "../includes/breadcrumb_filters.html" %}
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h4 class="heading-small grey">Question 1 of 10</h4>
+            <h1 class="heading-medium top0">Relating & Networking 1</h1>
+            <p id="answer-1" class="js-hidden">Correct answer! Working with others is a key skill of a Plumbing Apprentice, and building relationships by listening to people is very important. From your response you are likely to be a good fit to the role.</p>
+            <p id="answer-2" class="js-hidden">While it can be hard to work with people you have never met before, a Plumbing Apprentice will need to communicate with others and work together with other people.</p>
+            <p id="answer-3" class="js-hidden">Sometimes a Plumbing Apprentice will need to work alone, but often you will need to communicate with others and work together to get your work done, even if they are people you have not met before and may not work with again soon. If you are likely to struggle with this, you may find the role difficult.</p>
+        </div>
+    </div>
+
+
+    <div class="grid-row">
+        <div class="column-full"><a href="question2" id="cc-nextq" class="explore-button">Next</a></div>
+    </div>
+
+</main>
+
+
+
+{% endblock %}

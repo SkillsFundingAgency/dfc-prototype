@@ -1,0 +1,63 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Training routes' %}
+
+{% include "../includes/survey.html" %}
+
+    {% include "../includes/global_header_bar.html" %}
+
+<main id="content" role="main">
+    {% include "../includes/breadcrumb_filters.html" %}
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h4 class="heading-small grey">Question 4 of 10</h4>
+            <h1 class="heading-medium top0">Analysing 2</h1>
+            <p>You are working on some pipes in the loft of a large building; it is a hot and cramped environment.</p>
+            <p>The Site Manager has briefly explained what you need to do and has left you to complete the job of fitting the pipes in the loft.</p>
+            <p>When you get up into the loft you find that some electricians are also in the loft and are fitting wiring.</p>
+            <p>You need to work out the best way to fit the pipes around the wiring that is currently being fitted.</p>
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds explore-top">
+            <h1 class="heading-small">Choose your approach</h1>
+            <form>
+                <div class="form-group">
+                    <fieldset class="">
+                        <div class="multiple-choice">
+                            <input class="shm-radio" id="radio-inline-1" onClick="sessionStorage.SHManswer=1" type="radio" name="radio-inline-group" value="Yes">
+                            <label for="radio-inline-1">Evaluate the information you have been given so that you can work out how best to fit the pipes around the wiring.</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input class="shm-radio" id="radio-inline-2" onClick="sessionStorage.SHManswer=2" type="radio" name="radio-inline-group" value="No">
+                            <label for="radio-inline-2">See how long the electricians are going to be before deciding whether to consider your original plan to fit the pipes or not.</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input class="shm-radio" id="radio-inline-3" onClick="sessionStorage.SHManswer=3" type="radio" name="radio-inline-group" value="Yes">
+                            <label for="radio-inline-3">Stick to the explanation of the task that the Site Manager has given you and work around the electricians as best as you can.</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="grid-row">
+        <div class="column-full"><a href="answer4" id="cc-next" class="explore-button">Next</a></div>
+        <p class="cc-error right js-hidden">Please select an option from the choices above before continuing.</p>
+    </div>
+
+</main>
+
+
+
+{% endblock %}
