@@ -17,7 +17,9 @@
 
 
 
-
+{% block jobprofile_nav %}
+    {% include "../../includes/job-profile_nav_currentopps.html" %}
+{% endblock %}
 
 
 <!-- Related Careers -->
@@ -29,10 +31,6 @@
 {% set RelatedCareerLink3 = '#' %}
 {% set RelatedCareerName4 = 'IT security co-ordinator' %}
 {% set RelatedCareerLink4 = '#' %}
-{% block jobprofile_nav %}
-    {% include "../../includes/job-profile_nav_jobopps.html" %}
-{% endblock %}
-
 
 {% set serviceName = 'Explore careers' %}
 {% set bannerStyle = 'BETA-style' %}

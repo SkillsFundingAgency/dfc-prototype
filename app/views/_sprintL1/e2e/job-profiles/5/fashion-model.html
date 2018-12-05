@@ -13,7 +13,9 @@
 {% set hoursDetail = "term time" %}
 {% set patternValue = "freelance / self-employed" %}
 {% set patternDescription = "attending events or appointments" %}
-
+{% block jobprofile_nav %}
+    {% include "../../includes/job-profile_nav_currentopps.html" %}
+{% endblock %}
 <!-- Related Careers -->
 {% set RelatedCareerName1 = 'Make-up artist' %}
 {% set RelatedCareerLink1 = '#' %}
@@ -29,10 +31,6 @@
 
 {% set RelatedCareerName5 = 'Beauty consultant' %}
 {% set RelatedCareerLink5 = '#' %}
-{% block jobprofile_nav %}
-    {% include "../../includes/job-profile_nav_jobopps.html" %}
-{% endblock %}
-
 
 {% set serviceName = 'Explore careers' %}
 {% set bannerStyle = 'BETA-style' %}

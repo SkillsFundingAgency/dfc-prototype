@@ -16,7 +16,9 @@
 
 
 
-
+{% block jobprofile_nav %}
+    {% include "../../includes/job-profile_nav_currentopps.html" %}
+{% endblock %}
 
 
 <!-- Related Careers -->
@@ -35,11 +37,6 @@
 
 {% set RelatedCareerName5 = 'Sales manager' %}
 {% set RelatedCareerLink5 = '#' %}
-
-{% block jobprofile_nav %}
-    {% include "../../includes/job-profile_nav_jobopps.html" %}
-{% endblock %}
-
 
 {% set serviceName = 'Explore careers' %}
 {% set bannerStyle = 'BETA-style' %}

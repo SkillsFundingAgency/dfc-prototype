@@ -13,7 +13,9 @@
 {% set hoursDetail = "a week" %}
 {% set patternValue = "evenings / weekends / bank holidays" %}
 {% set patternDescription = "on shifts" %}
-
+{% block jobprofile_nav %}
+    {% include "../../includes/job-profile_nav_currentopps.html" %}
+{% endblock %}
 
 <!-- Related Careers -->
 {% set RelatedCareerName1 = 'Assistant immigration officer' %}
@@ -27,10 +29,6 @@
 
 {% set RelatedCareerName4 = 'Customs officer' %}
 {% set RelatedCareerLink4 = '#' %}
-
-{% block jobprofile_nav %}
-    {% include "../../includes/job-profile_nav_jobopps.html" %}
-{% endblock %}
 
 
 {% set serviceName = 'Explore careers' %}
@@ -195,7 +193,7 @@
 
 <section id="current-opportunities">
     <div id="MainContent_C020_Col00" class="sf_colsIn" data-sf-element="Container" data-placeholder-label="Job Profile Opportunities Container">
-        <h2 class="heading-large">Training opportunities</h2>
+        <h2 class="heading-large">Current opportunities</h2>
 
         <div class="grid-row" id="appGeneric">
             <div class="column-full">

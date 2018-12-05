@@ -14,16 +14,13 @@
 {% set hoursDetail = "a week" %}
 {% set patternValue = "evenings / weekends / bank holidays" %}
 {% set patternDescription = "on shifts" %}
-
+{% block jobprofile_nav %}
+    {% include "../../includes/job-profile_nav_currentopps.html" %}
+{% endblock %}
 
 <!-- Related Careers -->
 {% set RelatedCareerName1 = 'Police officer' %}
 {% set RelatedCareerLink1 = '#' %}
-
-{% block jobprofile_nav %}
-    {% include "../../includes/job-profile_nav_jobopps.html" %}
-{% endblock %}
-
 
 {% set serviceName = 'Explore careers' %}
 {% set bannerStyle = 'BETA-style' %}

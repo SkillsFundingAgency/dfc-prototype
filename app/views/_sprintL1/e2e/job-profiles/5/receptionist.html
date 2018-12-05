@@ -14,7 +14,9 @@
 {% set hoursDetail = "a week" %}
 {% set patternValue = "Evenings / weekends / bank holidays" %}
 {% set patternDescription = "on shifts" %}
-
+{% block jobprofile_nav %}
+    {% include "../../includes/job-profile_nav_currentopps.html" %}
+{% endblock %}
 <!-- Related Careers -->
 {% set RelatedCareerName1 = 'Telephonist' %}
 {% set RelatedCareerLink1 = '#' %}
@@ -26,10 +28,6 @@
 {% set RelatedCareerLink4 = '#' %}
 {% set RelatedCareerName5 = 'Admin assistant' %}
 {% set RelatedCareerLink5 = '#' %}
-{% block jobprofile_nav %}
-    {% include "../../includes/job-profile_nav_jobopps.html" %}
-{% endblock %}
-
 
 {% set serviceName = 'Explore careers' %}
 {% set bannerStyle = 'BETA-style' %}

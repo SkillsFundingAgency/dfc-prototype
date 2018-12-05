@@ -15,7 +15,9 @@
 {% set patternValue = "between 8am and 6pm" %}
 {% set patternDescription = "" %}
 
-
+{% block jobprofile_nav %}
+    {% include "../../includes/job-profile_nav_currentopps.html" %}
+{% endblock %}
 
 <!-- Related Careers -->
 {% set RelatedCareerName1 = 'Local government administrative assistant' %}
@@ -28,11 +30,6 @@
 {% set RelatedCareerLink4 = '#' %}
 {% set RelatedCareerName5 = 'Health records clerk' %}
 {% set RelatedCareerLink5 = '#' %}
-
-{% block jobprofile_nav %}
-    {% include "../../includes/job-profile_nav_jobopps.html" %}
-{% endblock %}
-
 
 
 {% set serviceName = 'Explore careers' %}

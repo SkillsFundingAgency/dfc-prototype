@@ -15,7 +15,9 @@
 {% set patternValue = "evenings" %}
 {% set patternDescription = "occasionally" %}
 
-
+{% block jobprofile_nav %}
+    {% include "../../includes/job-profile_nav_currentopps.html" %}
+{% endblock %}
 <!-- Related Careers -->
 {% set RelatedCareerName1 = 'Graphic designer' %}
 {% set RelatedCareerLink1 = '#' %}
@@ -23,10 +25,6 @@
 {% set RelatedCareerLink2 = '#' %}
 {% set RelatedCareerName3 = 'Animator' %}
 {% set RelatedCareerLink3 = '#' %}
-{% block jobprofile_nav %}
-    {% include "../../includes/job-profile_nav_jobopps.html" %}
-{% endblock %}
-
 
 {% set serviceName = 'Explore careers' %}
 {% set bannerStyle = 'BETA-style' %}
