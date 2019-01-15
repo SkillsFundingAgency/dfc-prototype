@@ -1,0 +1,12 @@
+<div class="breadcrumbs">
+    <ol>
+        <li><a href="">Home</a></li>
+        <!--<li><a id="currentCategory" href="#"></a></li>-->
+    </ol>
+</div>
+
+<script>
+    var currentcatvar = document.getElementById("currentCategory")
+    currentcatvar.innerHTML = sessionStorage.getItem("data.currentcategory");
+    currentcatvar.href = sessionStorage.getItem("data.currentcategoryURL");
+</script>

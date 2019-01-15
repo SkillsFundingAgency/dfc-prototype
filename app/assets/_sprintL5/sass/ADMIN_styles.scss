@@ -1,0 +1,8 @@
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/_colours.scss';
+
+.ADMIN_archived {
+	color: $grey-2;
+	a {
+		color: $grey-2 !important;	
+	}
+}

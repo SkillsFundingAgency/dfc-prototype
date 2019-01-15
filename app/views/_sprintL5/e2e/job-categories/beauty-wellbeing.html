@@ -1,0 +1,52 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+
+{% set categoryName = 'Beauty and wellbeing' %}
+
+{% include "../includes/survey.html" %}
+
+
+<main id="content" role="main">
+    {% include "../includes/global_header_bar.html" %}
+
+    {% include "../includes/breadcrumb_categories.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge" id="currentcategory">{{ categoryName}}</h1>
+            <!-- <p class="page-header__summary">Blurb about the category, what do the jobs on this page have in common etc.</p> -->
+
+            <div class="paginated-page" id="page1">
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Beauty therapist</a></h2>
+                    <!-- <h3 class="category-job__alt-titles">Keeper, animal keeper, zoo keeper</h3> -->
+                    <p class="category-job__overview">Beauty therapists carry out face and body treatments to help clients look and feel better.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Hairdresser</a></h2>
+                    <!-- <h3 class="category-job__alt-titles">Veterinary surgeon, veterinarian</h3> -->
+                    <p class="category-job__overview">Hairdressers cut, colour and shape clients' hair to create the look they want.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Massage therapist</a></h2>
+                    <!-- <h3 class="category-job__alt-titles">Veterinary surgeon, veterinarian</h3> -->
+                    <p class="category-job__overview">Massage therapists manipulate clients' muscles and soft tissues to help them relax, treat sports injuries, and give relief to people with long-term health conditions.</p>
+                </div>
+            </div>
+        </div>
+        <div class="column-one-third">
+            {% include "../includes/other_categories.html" %}
+        </div>
+    </div>
+</main>
+
+{% endblock %}
