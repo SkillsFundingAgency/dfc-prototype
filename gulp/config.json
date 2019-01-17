@@ -1,19 +1,26 @@
 {
   "paths": {
     "public": "public/",
-    "publicbeta": "public/_beta-initial-state/",
-    "publicL1": "public/_sprintL1/",
-    "publicL5": "public/_sprintL5/",
     "assets": "app/assets/",
-    "assetsbeta": "app/assets/_beta-initial-state/",
-    "assetsL1": "app/assets/_sprintL1/",
-    "assetsL5": "app/assets/_sprintL5/",
     "docsAssets": "docs/assets/",
-    "docsAssetsbeta": "docs/assets/_beta-initial-state/",
-    "docsAsstsL1": "docs/assets/_sprintL1/",
-    "docsAsstsL5": "docs/assets/_sprintL5/",
     "govukModules": "govuk_modules/",
     "nodeModules": "node_modules/",
-    "lib": "lib/"
+    "lib": "lib/",
+
+    "publicbeta": "public/_beta-initial-state/",
+    "assetsbeta": "app/assets/_beta-initial-state/",
+    "docsAssetsbeta": "docs/assets/_beta-initial-state/",
+
+    "publicL1": "public/_sprintL1/",
+    "assetsL1": "app/assets/_sprintL1/",
+    "docsAsstsL1": "docs/assets/_sprintL1/",
+
+    "publicL5": "public/_sprintL5/",
+    "assetsL5": "app/assets/_sprintL5/",
+    "docsAsstsL5": "docs/assets/_sprintL5/",
+
+    "publicL6": "public/_sprintL6/",
+    "assetsL6": "app/assets/_sprintL6/",
+    "docsAsstsL6": "docs/assets/_sprintL6/"
   }
 }

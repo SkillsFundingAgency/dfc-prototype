@@ -1,0 +1,103 @@
+{% set searchTerm = data.searchTerm %}
+{% set searchPrompt = data.searchPrompt %}
+{% set currentSprint = 'L6' %}
+{% extends "./layout.html" %}
+
+{% block head %}
+<script>
+    // Making data object accessible in client
+    var session = {{ data | dump | safe }};
+
+    if (localStorage.getItem("webchat") == "chat") {
+        window.location = 'webchat-chat.html';
+    } else {
+        
+    };
+
+</script>
+  {% include "./includes/head.html" %}
+{% endblock %}
+{% block proposition_header %}
+<div class="header-container">
+    <div class="header-title">Webchat - Explore careers</div>
+
+</div>
+{% endblock %}
+
+{% block body_classes %}webchat-pop{% endblock %}
+
+
+{% block before_content %}
+
+
+
+
+<main id="content" role="main">
+    <form name="webchat" id="webchat-form" class="webchat-form">
+        <div class="form-group">
+            <label class="form-label" for="first-name-f1">
+                First name
+                <span class="error-message">
+                    Enter your first name
+                </span>
+
+            </label>
+            <input class="form-control webchat-input" id="first-name-f1" type="text" name="first-name-f1">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="last-name-f1">
+                Last name
+                <span class="error-message">
+                    Enter your last name
+                </span>
+
+            </label>
+            <input class="form-control webchat-input" id="last-name-f1" type="text" name="last-name-f1">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="email-address-f1">
+                Email Address
+                <span class="error-message">
+                    Enter your email address
+                </span>
+
+            </label>
+            <input class="form-control webchat-input" id="email-address-f1" type="text" name="email-address-f1">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="textarea">
+                Your question?
+
+                <span class="error-message">
+                    Enter a question
+                </span>
+            </label>
+            <textarea class="form-control form-control-3-4 webchat-input" name="textarea" id="your-question-f1" rows="5"></textarea>
+            <span class="webchat-count">2000 characters left</span>
+        </div>
+        <div class="webchat-guide">
+            <p>To use our webchat you must:</p>
+            <ul class="list list-bullet">
+                <li>be at least 13 years old</li>
+                <li>live in England</li>
+            </ul>
+        </div>
+        <div class="webchat-start">
+            <a href="webchat-chat.html" type="submit" class="button" id="webchat-submit">Start chat</a>
+        </div>
+        <div class="webchat-guide">
+            <p>By using this webchat service you agree to our <a href="#">terms and conditions</a></p>
+            <p>You can read our <a href="#">privacy policy</a></p>
+        </div>
+
+    </form>
+</main>
+        {% endblock %}
+        {% block body_end %}
+        {% include "./includes/scripts.html" %}
+<!-- GOV.UK Prototype kit {{releaseVersion}} -->
+ {% endblock %}
+

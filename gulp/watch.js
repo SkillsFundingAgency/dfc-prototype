@@ -44,3 +44,14 @@ gulp.task('watch-assets-L5', function () {
     config.paths.assetsL5 + 'javascripts/**',
     config.paths.assetsL5 + 'data/**'], { cwd: './' }, ['copy-assets-L5']);
 })
+
+
+gulp.task('watch-sass-L6', function () {
+    return gulp.watch(config.paths.assetsL6 + 'sass/**', { cwd: './' }, ['sass-L6']);
+})
+
+gulp.task('watch-assets-L6', function () {
+    return gulp.watch([config.paths.assetsL6 + 'images/**',
+    config.paths.assetsL6 + 'javascripts/**',
+    config.paths.assetsL6 + 'data/**'], { cwd: './' }, ['copy-assets-L6']);
+})
