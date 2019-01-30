@@ -21,6 +21,10 @@
 
     "publicL6": "public/_sprintL6/",
     "assetsL6": "app/assets/_sprintL6/",
-    "docsAsstsL6": "docs/assets/_sprintL6/"
+    "docsAsstsL6": "docs/assets/_sprintL6/",
+
+    "publicL7": "public/_sprintL7/",
+    "assetsL7": "app/assets/_sprintL7/",
+    "docsAsstsL7": "docs/assets/_sprintL7/"
   }
 }
