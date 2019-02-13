@@ -252,11 +252,29 @@ $(document).ready(function () {
     $(".htb-section .htb-readmore").click(function () {
         $(this).parent().toggleClass("active", 250);
     });
-
-    $("#sticky_item").stick_in_parent();
-
-
 });
+
+$(document).ready(function () {
+    var formselect = "";
+    $("#ContactWhy").on("change", function () {
+        formselect = $("#ContactWhy").val();
+        if (formselect == "adviser") {
+            $(".form-adviser").toggleClass('form-hidden');
+            $(".form-technical").addClass('form-hidden');
+            $(".form-feedback").addClass('form-hidden');
+        } else
+        if (formselect == "technical") {
+            $(".form-technical").toggleClass('form-hidden');
+            $(".form-adviser").addClass('form-hidden');
+            $(".form-feedback").addClass('form-hidden');
+        } else
+        if (formselect == "feedback") {
+            $(".form-feedback").toggleClass('form-hidden');
+            $(".form-adviser").addClass('form-hidden');
+            $(".form-technical").addClass('form-hidden');
+        }
+    })
+})
 
 $('.job-profile-jumps li a').on('click', function (event) {
     $(this).parent().find('a').removeClass('active');

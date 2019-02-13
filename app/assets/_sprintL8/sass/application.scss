@@ -34,7 +34,7 @@ $careers-turquoise: #207e77;
 }
 
 .govuk-related-items-bau {
-    border-top: 6px solid $govuk-blue !important;
+    border-top: 10px solid $govuk-blue !important;
 
     }
     // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
@@ -4040,4 +4040,8 @@ i {
 
 .lowercase {
     text-transform: lowercase;
+}
+
+.form-hidden {
+    display: none;
 }
