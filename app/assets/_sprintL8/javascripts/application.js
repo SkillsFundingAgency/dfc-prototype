@@ -264,11 +264,15 @@ $(document).ready(function () {
 
         if (formSelect == "adviser") {
 
-          $("#show-basic-details").attr("href", "adviserform")
-      } else
-      {
-          $("#show-basic-details").attr("href", "page2")
-      }
+          $("#show-basic-details").attr("href", "contact-an-adviser")
+        }
+        else if (formSelect == "technical") {
+
+          $("#show-basic-details").attr("href", "technical")
+        }
+        else {
+          $("#show-basic-details").attr("href", "feedback")
+        }
 
     sessionStorage.setItem("formSelected", formSelect);
 
