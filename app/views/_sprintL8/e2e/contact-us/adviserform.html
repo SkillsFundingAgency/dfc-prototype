@@ -1,0 +1,52 @@
+{% extends "../base.html" %}
+
+
+{% block content_block %} 
+
+<form class="form form-adviser-additional-info">
+    <!-- Date of birth -->
+    <div id="divDOB" class="form-group ">
+        <input data-val="true" data-val-agerange="The field Date of birth is invalid." data-val-agerange-dates="13 120" data-val-agerange-errormessages="You must be over 13 to use this service, You must be under 120 to use this service, Enter a valid date of birth" data-val-required="Enter a valid date of birth" id="DateOfBirth" name="DateOfBirth" type="hidden" value="">
+        <fieldset>
+            <legend class="visually-hidden">
+                Enter date of birth
+            </legend> <label class="form-label">Date of birth</label>
+            <span class="field-validation-valid error-message" data-valmsg-for="DateOfBirth" data-valmsg-replace="true"></span>
+            <span class="field-validation-valid error-message" data-valmsg-for="DateOfBirthDay" data-valmsg-replace="true"></span>
+            <span class="field-validation-valid error-message" data-valmsg-for="DateOfBirthMonth" data-valmsg-replace="true"></span>
+            <span class="field-validation-valid error-message" data-valmsg-for="DateOfBirthYear" data-valmsg-replace="true"></span>
+
+            <div class="form-date form-group">
+                <p class="form-hint" id="dob-hint">For example, 31 03 1980</p>
+                <div class="form-group form-group-day">
+                    <label for="DateOfBirthDay">Day</label>
+                    <input class="form-control" data-val="true" data-val-regex="Day must be a number between 1 and 31" data-val-regex-pattern="^(0[1-9]|[1-9]|[1-2][0-9]|3[0-1])$" id="DateOfBirthDay" name="DateOfBirthDay" type="text" value="">
+                </div>
+                <div class="form-group form-group-month">
+                    <label for="DateOfBirthMonth">Month</label>
+                    <input class="form-control" data-val="true" data-val-regex="Month must be a number between 1 and 12" data-val-regex-pattern="^(0[1-9]|[1-9]|1[0-2])$" id="DateOfBirthMonth" name="DateOfBirthMonth" type="text" value="">
+                </div>
+                <div class="form-group form-group-year">
+                    <label for="DateOfBirthYear">Year</label>
+                    <input class="form-control" data-val="true" data-val-regex="Year must be a number" data-val-regex-pattern="^[0-9]*$" id="DateOfBirthYear" name="DateOfBirthYear" type="text" value="">
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <!--postcode-->
+    <div class="form-group ">
+        <label class="form-label" for="Postcode">Post code</label>
+        <span class="field-validation-valid error-message" data-valmsg-for="Postcode" data-valmsg-replace="true"></span>
+        <p class="form-hint">For example, SW1A 1AA</p>
+        <input class="form-control" data-val="true" data-val-doubleregex="Postcode must be an English or BFPO postcode" data-val-doubleregex-drerrormessage="Postcode must be an English or BFPO postcode" data-val-doubleregex-firstregex="^([bB][fF][pP][oO]\s{0,1}[0-9]{1,4}|[gG][iI][rR]\s{0,1}0[aA][aA]|[a-pr-uwyzA-PR-UWYZ]([0-9]{1,2}|([a-hk-yA-HK-Y][0-9]|[a-hk-yA-HK-Y][0-9]([0-9]|[abehmnprv-yABEHMNPRV-Y]))|[0-9][a-hjkps-uwA-HJKPS-UW])\s{0,1}[0-9][abd-hjlnp-uw-zABD-HJLNP-UW-Z]{2})$" data-val-doubleregex-isandoperator="True" data-val-doubleregex-isdrrequired="True" data-val-doubleregex-secondregex="^(?!ab|bt|cf|ch5|ch6|ch7|ch8|dd|dg|eh|fk|g[0-9]|gy|hs|im|iv|je|ka|kw|ky|ld|ll|ml|np|pa|ph|sa|sy|td|ze)+.*$" data-val-length="Postcode too long (max. 10)" data-val-length-max="10" data-val-required="Enter your postcode" id="Postcode" name="Postcode" type="text" value="">
+    </div>
+
+    <div class="form-group">
+        <a id="show-basic-details" class="button disable-button-onclick" href="javascript:history.back()">back</a>
+        <a id="show-basic-details" class="button disable-button-onclick" href="page2">Next</a>
+
+    </div>
+</form> 
+
+
+{% endblock %}

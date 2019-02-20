@@ -1,0 +1,118 @@
+﻿
+{% extends "../base.html" %}
+
+
+{% block content_block %} 
+
+
+
+<!-- Adviser feedback  form -->
+<form class="form form-adviser-message form-hidden">
+    <h2 class="heading-large">Your question</h2>
+    <p>Give us as much detail as possible about your query. It'll help us get back to you quickly and accurately.</p>
+    <div class="form-group ">
+        <label class="form-label" for="QuestionArea">What is your question about?</label>
+        <span class="field-validation-valid error-message" data-valmsg-for="QuestionArea" data-valmsg-replace="true"></span>
+        <select class="form-control" data-val="true" data-val-required="Select your question Category" id="QuestionArea" name="QuestionArea">
+            <option value="">Select</option>
+            <option value="1">Careers</option>
+            <option value="2">Qualifications</option>
+            <option value="3">Finding a course</option>
+            <option value="4">General feedback</option>
+            <option value="5">Funding</option>
+        </select>
+    </div>
+    <div class="form-group ">
+        <label class="form-label" for="Feedback">Enter your questions for the advisers in the box below.</label>
+        <span class="field-validation-valid error-message" data-valmsg-for="Feedback" data-valmsg-replace="true"></span>
+        <span class="form-hint">Do not include any personal or sign in information.</span>
+        <textarea class="form-control w100" cols="30" data-val="true" data-val-length="Feedback too long (max. 1000)" data-val-length-max="1000" data-val-required="Enter your feedback" id="Feedback" name="Feedback" rows="10"></textarea>
+        <p class="font-xsmall">(Limit is 1000 characters)</p>
+    </div>
+
+
+</form>
+
+<!-- Feedback form -->
+<form class="form form-feedback-message form-hidden">
+    <h2 class="heading-large">Your feedback</h2>
+    <p>Give as much information as you can. Tell us about the parts of the service you visited and what you thought of them.</p>
+    <div class="form-group ">
+        <label class="form-label" for="QuestionAreaGeneral">What do you want to tell us about?</label>
+        <span class="field-validation-valid error-message" data-valmsg-for="QuestionAreaGeneral" data-valmsg-replace="true"></span>
+        <select class="form-control" data-val="true" data-val-required="The What do you want to tell us about? field is required." id="QuestionAreaGeneral" name="QuestionAreaGeneral">
+            <option selected="selected" value="0">General</option>
+            <option value="1">Funding</option>
+            <option value="2">Careers</option>
+            <option value="3">Qualifications</option>
+            <option value="4">Course Search</option>
+            <option value="5">Technical Support</option>
+            <option value="6">Website</option>
+            <option value="7">Customer Service</option>
+        </select>
+    </div>
+    <div class="form-group ">
+        <label class="form-label" for="Feedback">Enter your feedback in the box below. If you're commenting on particular pages, list them.</label>
+        <span class="field-validation-valid error-message" data-valmsg-for="Feedback" data-valmsg-replace="true"></span>
+        <span class="form-hint">
+            Do not include
+            any personal or sign in information.
+        </span>
+        <textarea class="form-control w100" cols="30" data-val="true" data-val-length="Feedback too long (max. 1000)" data-val-length-max="1000" data-val-required="Enter your feedback" id="Feedback" name="Feedback" rows="10"></textarea>
+        <p class="font-xsmall">(Limit is 1000 characters)</p>
+    </div>
+    
+</form>
+
+<!-- Technical feedback form -->
+<form class="form form-technical-message form-hidden">
+
+    <h2 class="heading-large">Your feedback</h2>
+    <p>
+        Give details of the issue you've experienced. Tell us about the browser you were using, any error messages you
+        were shown and the rough date and time.
+    </p>
+    <div class="form-group ">
+        <label class="form-label" for="Feedback">Enter your feedback</label>
+        <span class="field-validation-valid error-message" data-valmsg-for="Feedback" data-valmsg-replace="true"></span>
+        <span class="form-hint">Do not include any personal or sign in information.</span>
+        <textarea class="form-control w100" cols="30" data-val="true" data-val-length="Feedback too long (max. 1000)" data-val-length-max="1000" data-val-required="Enter your feedback" id="Feedback" name="Feedback" rows="10"></textarea>
+        <p class="font-xsmall">(Limit is 1000 characters)</p>
+    </div>
+
+
+</form>
+
+<form class="form form-feedback-submit">
+
+
+    <h2 class="heading-medium">Do you want us to contact you?</h2>
+    <div class="form-group">
+        <fieldset class="inline">
+            <legend class="visuallyhidden">Do you want us to contact you?</legend>
+            <label class="block-label" for="radio-inline-1">
+                <input data-val="true" data-val-required="The Do you want us to contact you? field is required." id="radio-inline-1" name="DoYouWantUsToContactYou" type="radio" value="True"> Yes
+            </label>
+            <label class="block-label selected" for="radio-inline-2">
+                <input checked="checked" id="radio-inline-2" name="DoYouWantUsToContactYou" type="radio" value="False"> No
+            </label>
+        </fieldset>
+    </div>
+    <h2 class="heading-medium">Terms and conditions</h2>
+    <div class="form-group ">
+        <span class="field-validation-valid error-message" data-valmsg-for="AcceptTermsAndConditions" data-valmsg-replace="true"></span>
+        <span class="block-label">
+            <label for="AcceptTermsAndConditions">I accept the <a href="/about-us/terms-and-conditions">terms and conditions</a> and I am 13 or over</label>
+            <input data-val="true" data-val-enforcetrue="You must accept our Terms and Conditions" data-val-required="The I accept the <a href=&quot;/about-us/terms-and-conditions&quot;>terms and conditions</a> and I am 13 or over field is required." id="AcceptTermsAndConditions" name="AcceptTermsAndConditions" type="checkbox" value="true"><input name="AcceptTermsAndConditions" type="hidden" value="false">
+        </span>
+    </div>
+    <div class="form-group">
+      <a id="show-basic-details" class="button disable-button-onclick" href="javascript:history.back()">back</a>
+      <input name="submitFeedbackQuestion" type="hidden" value="SendFeedback">
+      <input class="button disable-button-onclick" type="submit" value="Send feedback">
+  </div>
+</form>
+
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+﻿{% extends "../base.html" %}
+
+{% block content_block %} 
+ 
+
+<h1 class="heading-xlarge">Contact us</h1>
+
+<p>Take some time to think about your answers on this form. They'll give us an understanding of how we can help you with your career.</p>
+<form class="form form-intro">
+    <div class="form-group ">
+        <label class="form-label" for="Why">Why would you like to contact us? </label>
+        <span class="field-validation-valid error-message" data-valmsg-for="Why" data-valmsg-replace="true"></span>
+    </div>
+    
+    <div class="form-group">
+ <div class="multiple-choice">
+        <input type="radio" name="Why" value="adviser"><label for="adviser">Contact an adviser</label>
+    </div>
+    </div>
+    <div class="form-group">
+        <div class="multiple-choice">
+        <input type="radio" name="Why" value="technical"><label for="technical">Technical support</label>
+    </div>
+    </div>
+    <div class="form-group">
+        <div class="multiple-choice">
+        <input type="radio" name="Why" value="feedback"><label for="feedback">Feedback</label>
+    </div>
+
+    </div>
+    <div class="form-group">
+        <a id="show-basic-details" class="button disable-button-onclick" href="page2">Next</a>
+    </div>
+</form> 
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
