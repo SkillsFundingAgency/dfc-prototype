@@ -5,9 +5,9 @@
 if (
   window.sessionStorage && window.sessionStorage.getItem('prototypeWarning') !== 'false' &&
   window.console && window.console.info
-) {
+  ) {
   window.console.info('GOV.UK Prototype Kit - do not use for production')
-  window.sessionStorage.setItem('prototypeWarning', true)
+window.sessionStorage.setItem('prototypeWarning', true)
 }
 
 $(document).ready(function () {
@@ -119,32 +119,32 @@ $(document).ready(function () {
             window.open('filters2/interests.html', '_self', false);
             f.preventDefault();        }
 
-        else if ($("#restrictions").hasClass("active")) {
-            sessionStorage.setItem("exploresteps", "false");
-            window.open('filters2/restrictions.html', '_self', false);
-            f.preventDefault();        }
+            else if ($("#restrictions").hasClass("active")) {
+                sessionStorage.setItem("exploresteps", "false");
+                window.open('filters2/restrictions.html', '_self', false);
+                f.preventDefault();        }
 
-        else if ($("#salary").hasClass("active")) {
-            sessionStorage.setItem("exploresteps", "false");
-            window.open('filters2/salary.html', '_self', false);
-            f.preventDefault();        }
+                else if ($("#salary").hasClass("active")) {
+                    sessionStorage.setItem("exploresteps", "false");
+                    window.open('filters2/salary.html', '_self', false);
+                    f.preventDefault();        }
 
-        else if ($("#qualifications").hasClass("active")) {
-            sessionStorage.setItem("exploresteps", "false");
-            window.open('filters2/qualifications.html', '_self', false);
-            f.preventDefault();        }
+                    else if ($("#qualifications").hasClass("active")) {
+                        sessionStorage.setItem("exploresteps", "false");
+                        window.open('filters2/qualifications.html', '_self', false);
+                        f.preventDefault();        }
 
-        else if ($("#routes").hasClass("active")) {
-            sessionStorage.setItem("exploresteps", "false");
-            window.open('filters2/apprenticeship.html', '_self', false);
-            f.preventDefault();        }
+                        else if ($("#routes").hasClass("active")) {
+                            sessionStorage.setItem("exploresteps", "false");
+                            window.open('filters2/apprenticeship.html', '_self', false);
+                            f.preventDefault();        }
 
-        else {
-            sessionStorage.setItem("exploresteps", "false");
-            $(".explore-error").removeClass("js-hidden");
-            f.preventDefault();
-        }
-    });
+                            else {
+                                sessionStorage.setItem("exploresteps", "false");
+                                $(".explore-error").removeClass("js-hidden");
+                                f.preventDefault();
+                            }
+                        });
 
     $("#explore-submit-steps").click(function (g) {
         g.preventDefault(); 
@@ -255,26 +255,49 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    var formselect = "";
-    $("#ContactWhy").on("change", function () {
-        formselect = $("#ContactWhy").val();
-        if (formselect == "adviser") {
-            $(".form-adviser").toggleClass('form-hidden');
-            $(".form-technical").addClass('form-hidden');
-            $(".form-feedback").addClass('form-hidden');
-        } else
-        if (formselect == "technical") {
-            $(".form-technical").toggleClass('form-hidden');
-            $(".form-adviser").addClass('form-hidden');
-            $(".form-feedback").addClass('form-hidden');
-        } else
-        if (formselect == "feedback") {
-            $(".form-feedback").toggleClass('form-hidden');
-            $(".form-adviser").addClass('form-hidden');
-            $(".form-technical").addClass('form-hidden');
+
+    var formSelect = "";
+
+    $(".form-intro input[type='radio']").on("click", function () {
+
+        formSelect = $(".form-intro input[type='radio']:checked").val();
+
+        if (formSelect == "adviser") {
+
+          $("#show-basic-details").attr("href", "contact-an-adviser")
         }
-    })
-})
+        else if (formSelect == "technical") {
+
+          $("#show-basic-details").attr("href", "technical")
+        }
+        else {
+          $("#show-basic-details").attr("href", "feedback")
+        }
+
+    sessionStorage.setItem("formSelected", formSelect);
+
+  });
+    
+    formSelect = sessionStorage.getItem("formSelected");
+
+    if (formSelect == "adviser") {
+        $(".form-adviser-message").toggleClass('form-hidden');
+        $(".form-technical-message").addClass('form-hidden');
+        $(".form-feedback-message").addClass('form-hidden');
+    } else
+    if (formSelect == "technical") {
+        $(".form-technical-message").toggleClass('form-hidden');
+        $(".form-adviser-message").addClass('form-hidden');
+        $(".form-feedback-message").addClass('form-hidden');
+    } else
+    if (formSelect == "feedback") {
+        $(".form-feedback-message").toggleClass('form-hidden');
+        $(".form-adviser-message").addClass('form-hidden');
+        $(".form-technical-message").addClass('form-hidden');
+    } 
+
+
+}); 
 
 $('.job-profile-jumps li a').on('click', function (event) {
     $(this).parent().find('a').removeClass('active');
