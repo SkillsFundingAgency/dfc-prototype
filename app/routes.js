@@ -12,5 +12,6 @@ router.post('/data', function(req, res){
 })
 
 // add your routes here
+require('./routes/_sprintL9/routing.js')(router);
 
-module.exports = router
+module.exports = router;

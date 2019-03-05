@@ -1,0 +1,22 @@
+{% extends "../base.html" %}
+
+
+{% block content_block %}
+
+<h1 class="heading-xlarge">Report a technical issue</h1>
+<p>Use this form if you are in England and need technical support to use any of the tools on the website.</p>
+<h2 class="heading-large">Tell us about your issue</h2>
+<label class="form-label" for="textarea">
+    Give details of the issue you've experienced. Tell us about the browser you were using, any error messages you were shown and the rough date and time.</label>
+<span class="form-hint">Do not include any personal or sign in information.</span>
+<textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+<h2 class="heading-medium">Terms and conditions</h2>
+<div class="form-group">
+    <div class="multiple-choice">
+        <input id="terms" name="terms" type="checkbox" value="true">
+        <label for="terms">I accept the <a href="about-us/terms-and-conditions">terms and conditions</a> and I am 13 or over</label>
+    </div>
+</div>
+<a href="thanks-feedback" class="button">Send</a>
+
+{% endblock %}
