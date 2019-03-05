@@ -1,0 +1,62 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+
+{% set categoryName = 'Government services' %}
+
+{% include "../includes/survey.html" %}
+
+
+<main id="content" role="main">
+    {% include "../includes/global_header_bar.html" %}
+
+    {% include "../includes/breadcrumb_categories.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge" id="currentcategory">{{ categoryName}}</h1>
+            <!-- <p class="page-header__summary">Blurb about the category, what do the jobs on this page have in common etc.</p> -->
+
+            <div class="paginated-page" id="page1">
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Border force officer</a></h2>
+                    <!-- <h3 class="category-job__alt-titles">Veterinary surgeon, veterinarian</h3> -->
+                    <p class="category-job__overview">Border force officers secure the UK border by carrying out immigration and customs controls for people and goods entering the UK.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Criminal intelligence analyst</a></h2>
+                    <h3 class="category-job__alt-titles">Intelligence officer</h3>
+                    <p class="category-job__overview">Criminal intelligence analysts find and analyse data to help detect and prevent crime, and to protect the security of the UK.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Environmental health officer</a></h2>
+                    <h3 class="category-job__alt-titles">Environmental health practitioner</h3>
+                    <p class="category-job__overview">Environmental health officers make sure people's surroundings are safe, healthy and hygienic.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Police officer</a></h2>
+                    <h3 class="category-job__alt-titles">Policeman, policewoman, police constable</h3>
+                    <p class="category-job__overview">A police officer keeps law and order, investigates crime and supports crime prevention.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Registrar of births, deaths, marriages and civil partnerships</a></h2>
+                    <!-- <h3 class="category-job__alt-titles">Keeper, animal keeper, zoo keeper</h3> -->
+                    <p class="category-job__overview">Registrars collect and record details of all births, deaths, marriages and civil partnerships.</p>
+                </div>
+            </div>
+        </div>
+        <div class="column-one-third">
+            {% include "../includes/other_categories.html" %}
+        </div>
+    </div>
+</main>
+
+{% endblock %}

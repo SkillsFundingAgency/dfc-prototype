@@ -1,0 +1,36 @@
+{% extends "../base.html" %}
+
+
+{% block content_block %} 
+
+<h1 class="heading-xlarge">Contact an adviser</h1>
+
+    <p>Give us as much detail as possible. It'll help us get back to you quickly and accurately.</p>
+    <div class="form-group ">
+    <label class="form-label" for="QuestionArea">What is your query about?</label>
+    <span class="field-validation-valid error-message" data-valmsg-for="QuestionArea" data-valmsg-replace="true"></span>
+    <select class="form-control" data-val="true" data-val-required="Select your question Category" id="QuestionArea" name="QuestionArea"><option value="">Select</option>
+        <option value="1">Careers</option>
+        <option value="2">Qualifications</option>
+        <option value="3">Finding a course</option>
+        <option value="4">General feedback</option>
+        <option value="5">Funding</option>
+    </select>
+    </div>
+    <div class="form-group ">
+    <label class="form-label" for="Feedback">Enter your query for the adviser.</label>
+    <span class="field-validation-valid error-message" data-valmsg-for="Feedback" data-valmsg-replace="true"></span>
+    <span class="form-hint">Do not include any personal or sign in information.</span>
+    <textarea class="form-control w100" cols="30" data-val="true" data-val-length="Feedback too long (max. 1000)" data-val-length-max="1000" data-val-required="Enter your feedback" id="Feedback" name="Feedback" rows="10"></textarea>
+    <p class="font-xsmall">(Limit is 1000 characters)</p>
+    </div>
+    <h2 class="heading-medium">Terms and conditions</h2>
+    <div class="form-group">
+    <div class="multiple-choice">
+        <input id="terms" name="terms" type="checkbox" value="true">
+        <label for="terms">I accept the <a href="about-us/terms-and-conditions">terms and conditions</a> and I am 13 or over</label>
+    </div>
+    </div>
+    <a href="thanks-adviser" class="button">Send</a>
+
+{% endblock %}

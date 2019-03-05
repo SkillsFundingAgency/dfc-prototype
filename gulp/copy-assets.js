@@ -90,3 +90,15 @@ gulp.task('copy-documentation-assets-L8', function () {
     config.paths.docsAssetsL8 + '/**'])
         .pipe(gulp.dest(config.paths.publicL8))
 })
+
+gulp.task('copy-assets-L9', function () {
+    return gulp.src(['!' + config.paths.assetsL9 + 'sass{,/**/*}',
+        config.paths.assetsL9 + '/**'])
+        .pipe(gulp.dest(config.paths.publicL9))
+})
+
+gulp.task('copy-documentation-assets-L9', function () {
+    return gulp.src(['!' + config.paths.docsAssetsL9 + 'sass{,/**/*}',
+        config.paths.docsAssetsL9 + '/**'])
+        .pipe(gulp.dest(config.paths.publicL9))
+})
