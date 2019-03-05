@@ -45,7 +45,7 @@ gulp.task('generate-assets', function (done) {
     'copy-documentation-assets-L8',
     'copy-assets-L9',
     'copy-documentation-assets-L9',
-      done)
+    done)
 })
 
 gulp.task('copy-govuk-modules', [
