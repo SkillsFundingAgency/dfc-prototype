@@ -29,6 +29,10 @@
 
     "publicL8": "public/_sprintL8/",
     "assetsL8": "app/assets/_sprintL8/",
-    "docsAsstsL8": "docs/assets/"
+    "docsAsstsL8": "docs/assets/",
+
+    "publicL9": "public/_sprintL9/",
+    "assetsL9": "app/assets/_sprintL9/",
+    "docsAsstsL9": "docs/assets/"
   }
 }
