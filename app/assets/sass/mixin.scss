@@ -35,6 +35,14 @@
 .fl { float: left;}
 .fr { float: right;}
 .fc { position: relative;}
+.cb {clear: both;}
+.cl {clear: left;}
+.cr {clear: right}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 .mb50 { margin-bottom: 50px;}
 .mb40 { margin-bottom: 40px;}

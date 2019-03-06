@@ -1,38 +1,10 @@
 {
   "paths": {
     "public": "public/",
-    "assets": "app/assets/",
-    "docsAssets": "docs/assets/",
+    "assets" : "app/assets/",
+    "docsAssets" : "docs/assets/",
     "govukModules": "govuk_modules/",
     "nodeModules": "node_modules/",
-    "lib": "lib/",
-
-    "publicbeta": "public/_beta-initial-state/",
-    "assetsbeta": "app/assets/_beta-initial-state/",
-    "docsAssetsbeta": "docs/assets/_beta-initial-state/",
-
-    "publicL1": "public/_sprintL1/",
-    "assetsL1": "app/assets/_sprintL1/",
-    "docsAsstsL1": "docs/assets/",
-
-    "publicL5": "public/_sprintL5/",
-    "assetsL5": "app/assets/_sprintL5/",
-    "docsAsstsL5": "docs/assets/",
-
-    "publicL6": "public/_sprintL6/",
-    "assetsL6": "app/assets/_sprintL6/",
-    "docsAsstsL6": "docs/assets/",
-
-    "publicL7": "public/_sprintL7/",
-    "assetsL7": "app/assets/_sprintL7/",
-    "docsAsstsL7": "docs/assets/",
-
-    "publicL8": "public/_sprintL8/",
-    "assetsL8": "app/assets/_sprintL8/",
-    "docsAsstsL8": "docs/assets/",
-
-    "publicL9": "public/_sprintL9/",
-    "assetsL9": "app/assets/_sprintL9/",
-    "docsAsstsL9": "docs/assets/"
+    "lib": "lib/"
   }
 }
