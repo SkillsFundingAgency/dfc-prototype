@@ -1,0 +1,33 @@
+<div class="VOC-exit-routes_container {{bannerStyle}}" id="VOC-exit-routes_container">
+     <div class="main">
+          <div class="VOC-exit-routes_banner">
+               <div id="vocExit_recruit-message">
+                    <h2 class="heading-small" style="margin-bottom: 0;">Tell us what you think of {{serviceName}} - <a href="#1" style="font-weight:500;">fill in a short survey</a></h2>
+                    <a class="VOC-exit-routes_banner__close-btn" href="#1" onclick="vocExit.hideOrReset()">Close</a>
+               </div>          
+          </div>
+     </div>
+</div>
+
+<script>
+
+/* --------------------------------------------------------
+     VOC exit routes banner
+-------------------------------------------------------- */
+
+var vocExit = {};
+
+(function(window, document, vocExit, undefined) {
+     /* -- Variables --*/
+     
+     var survey = document.getElementById('exit-routesSurvey');
+
+     /* -- External vocConsume functions --*/
+
+     vocExit.hideOrReset = function hideOrReset() {
+          document.getElementById('VOC-exit-routes_container').classList.add('js-hidden');
+          // surveySubmitted ? vocExit.endSurvey() : resetSurvey();
+     }
+})(window, document, vocExit);
+
+</script>

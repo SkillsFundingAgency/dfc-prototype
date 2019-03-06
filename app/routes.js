@@ -3,14 +3,15 @@ var router = express.Router()
 
 // Route index page
 router.get('/', function (req, res) {
-  res.render('index', { data : req.session['data'] })
+    res.render('index', { data : req.session['data'] })
 })
 
 router.post('/data', function(req, res){
-	req.session['data'] = req.body;
-	res.send({ success : true });
+    req.session['data'] = req.body;
+    res.send({ success : true });
 })
 
 // add your routes here
+require('./routes/_sprintL8/routing.js')(router);
 
-module.exports = router
+module.exports = router;
