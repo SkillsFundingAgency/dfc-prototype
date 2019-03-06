@@ -8,18 +8,12 @@ module.exports = function (router) {
     router.post(version + e2e + contact + 'select-option', function (req, res){
         req.session.option = req.body.why;
         if (req.body.why == "adviser") {
-            res.redirect(301, version + e2e + contact + 'your-details-adviser');
+            res.redirect(301, version + e2e + contact + 'contact-an-adviser');
         }
-        else {
-            res.redirect(301, version + e2e + contact + 'your-details');
-        }
-    });
-
-    router.post(version + e2e + contact + 'your-details', function (req, res){
-        if (req.session.option == "technical") {
+        if (req.body.why == "technical") {
             res.redirect(301, version + e2e + contact + 'technical');
         }
-        else {
+        if (req.body.why == "feedback") {
             res.redirect(301, version + e2e + contact + 'feedback');
         }
     });
