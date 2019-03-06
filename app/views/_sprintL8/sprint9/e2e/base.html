@@ -1,0 +1,51 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+Contact us | National Careers Service
+{% endblock %}
+
+
+
+
+<!-- Related Careers -->
+{% set RelatedCareerName1 = 'Assistant immigration officer' %}
+{% set RelatedCareerLink1 = '#' %}
+
+{% set RelatedCareerName2 = 'Civil Service executive officer' %}
+{% set RelatedCareerLink2 = '#' %}
+
+{% set RelatedCareerName3 = 'Diplomatic service officer' %}
+{% set RelatedCareerLink3 = '#' %}
+
+{% set RelatedCareerName4 = 'Customs officer' %}
+{% set RelatedCareerLink4 = '#' %}
+
+{% block content %}
+
+{% set serviceName = 'Explore careers' %}
+{% set bannerStyle = 'BETA-style' %}
+
+
+
+<main id="content">
+	{% include "../e2e/includes/breadcrumb_contactus.html" %}
+
+	<div class="grid-row"> 
+		<div class="column-two-thirds">
+			{% block content_block %}
+
+			{% endblock %}
+		</div>
+		<div class="column-one-third">
+			<aside class="govuk-related-items govuk-related-items-bau" role="complementary">
+				<h2 class="heading-medium">Want to speak to an adviser?</h2>
+				<p class="font-small" style="margin-bottom: 0px;"><span class="bold-small">Call </span>0800 100 900 or <a style="white-space: nowrap;" href="https://cxdirect.serco.com/visitor/EntryPage.htm" rel="external" target="'_blank'">use webchat</a></p>
+				<p class="grey font-xsmall">8am to 10pm, 7 days a week</p>
+			</aside>
+		</div>
+	</div>
+
+</main>
+
+
+{% endblock %}

@@ -1,0 +1,223 @@
+{% set searchTerm = data.searchTerm %}
+{% set searchPrompt = data.searchPrompt %}
+{% set currentSprint = 'L7' %}
+{% extends "./layout.html" %}
+
+{% block head %}
+<script>
+    // Making data object accessible in client
+    var session = {{ data | dump | safe }};
+
+    localStorage.setItem('webchat', 'finish');
+
+</script>
+  {% include "./includes/head.html" %}
+{% endblock %}
+{% block proposition_header %}
+<div class="header-container">
+    <div class="header-title">Webchat - Explore careers</div> <div class="header-close"><a href="javascript:window.open('','_self').close();">Close</a></div>
+
+</div>
+{% endblock %}
+
+{% block body_classes %}webchat-pop{% endblock %}
+
+
+{% block before_content %}
+
+
+
+
+<main id="content" role="main">
+    <div class="webchat-form webchat-feedback">
+        <script id="ss-embed-557296">(function (d, w) { var s, ss; ss = d.createElement('script'); ss.type = 'text/javascript'; ss.async = true; ss.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.smartsurvey.co.uk/s/r/embed.aspx?i=485077&c=557296'; s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ss, s); })(document, window);</script>
+    </div>
+        <!--<div class="webchat-form webchat-feedback">
+            <p class="heading-medium">
+                Thanks for using Find a career webchat.
+            </p>
+            <p>
+                Can you tell us a little about your experience?
+            </p>
+            <div class="form-group">
+                <fieldset class="inline">
+
+                    <legend>
+                        <h3 class="heading-small">
+                            Did you find what you were looking for today?
+                        </h3>
+                    </legend>
+
+                    <div class="multiple-choice">
+                        <input id="radio-inline-21" type="radio" name="radio-inline-group1" value="Yes">
+                        <label for="radio-inline-21">Yes</label>
+                    </div>
+                    <div class="multiple-choice">
+                        <input id="radio-inline-22" type="radio" name="radio-inline-group1" value="No">
+                        <label for="radio-inline-22">No</label>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <fieldset class="inline">
+
+                    <legend>
+                        <h3 class="heading-small">
+                            How satisified were you with the service?
+                        </h3>
+                    </legend>
+
+                    <div class="multiple-choice">
+                        <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+                        <label for="radio-inline-1"></label>
+                    </div>
+                    <div class="multiple-choice">
+                        <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+                        <label for="radio-inline-2"></label>
+                    </div>
+
+                    <div class="multiple-choice">
+                        <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+                        <label for="radio-inline-2"></label>
+                    </div>
+
+                    <div class="multiple-choice">
+                        <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+                        <label for="radio-inline-2"></label>
+                    </div>
+                    <div class="multiple-choice-scale">
+                        <span>Not satisfied</span>
+                        <span>Extremely satisfied</span>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <fieldset class="inline">
+
+                    <legend>
+                        <h3 class="heading-small">
+                            How well would you say the adviser understood and met your needs?
+                        </h3>
+                    </legend>
+
+                    <div class="multiple-choice">
+                        <input id="radio-inline-1" type="radio" name="radio-inline-group5" value="Yes">
+                        <label for="radio-inline-1"></label>
+                    </div>
+                    <div class="multiple-choice">
+                        <input id="radio-inline-2" type="radio" name="radio-inline-group5" value="No">
+                        <label for="radio-inline-2"></label>
+                    </div>
+
+                    <div class="multiple-choice">
+                        <input id="radio-inline-2" type="radio" name="radio-inline-group5" value="No">
+                        <label for="radio-inline-2"></label>
+                    </div>
+
+                    <div class="multiple-choice">
+                        <input id="radio-inline-2" type="radio" name="radio-inline-group5" value="No">
+                        <label for="radio-inline-2"></label>
+                    </div>
+                    <div class="multiple-choice-scale">
+                        <span>Not confident</span>
+                        <span>Very confident</span>
+                    </div>
+                </fieldset>
+            </div>
+
+
+
+
+
+            <div class="form-group">
+                <fieldset class="inline">
+
+                    <legend>
+                        <h3 class="heading-small">
+                            How likely is it that you would recommend the National Careers Service to a friend or colleague?
+                        </h3>
+                    </legend>
+
+                    <div class="multiple-choice">
+                        <input id="radio-inline-1" type="radio" name="radio-inline-group3" value="Yes">
+                        <label for="radio-inline-1"></label>
+                    </div>
+                    <div class="multiple-choice">
+                        <input id="radio-inline-2" type="radio" name="radio-inline-group3" value="No">
+                        <label for="radio-inline-2"></label>
+                    </div>
+
+                    <div class="multiple-choice">
+                        <input id="radio-inline-2" type="radio" name="radio-inline-group3" value="No">
+                        <label for="radio-inline-2"></label>
+                    </div>
+
+                    <div class="multiple-choice">
+                        <input id="radio-inline-2" type="radio" name="radio-inline-group3" value="No">
+                        <label for="radio-inline-2"></label>
+                    </div>
+                    <div class="multiple-choice-scale">
+                        <span>Not likely</span>
+                        <span>Very likely</span>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <fieldset class="inline">
+
+                    <legend>
+                        <h3 class="heading-small">
+                            How confident are you about taking your next steps?
+                        </h3>
+                    </legend>
+
+                    <div class="multiple-choice">
+                        <input id="radio-inline-1" type="radio" name="radio-inline-group4" value="Yes">
+                        <label for="radio-inline-1"></label>
+                    </div>
+                    <div class="multiple-choice">
+                        <input id="radio-inline-2" type="radio" name="radio-inline-group4" value="No">
+                        <label for="radio-inline-2"></label>
+                    </div>
+
+                    <div class="multiple-choice">
+                        <input id="radio-inline-2" type="radio" name="radio-inline-group4" value="No">
+                        <label for="radio-inline-2"></label>
+                    </div>
+
+                    <div class="multiple-choice">
+                        <input id="radio-inline-2" type="radio" name="radio-inline-group4" value="No">
+                        <label for="radio-inline-2"></label>
+                    </div>
+                    <div class="multiple-choice-scale">
+                        <span>Not confident</span>
+                        <span>Very confident</span>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <div class="form-group">
+                <label class="form-label" for="textarea">
+                    Leave any further comments below.
+                </label>
+                <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+            </div>
+            <a class="button" href="webchat-thankyou.html" role="button">Submit</a>
+
+
+
+
+
+        </div>-->
+</main>
+        {% endblock %}
+        {% block body_end %}
+        {% include "./includes/scripts.html" %}
+<!-- GOV.UK Prototype kit {{releaseVersion}} -->
+ {% endblock %}
+

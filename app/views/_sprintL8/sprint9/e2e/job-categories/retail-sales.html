@@ -1,0 +1,77 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+
+{% set categoryName = 'Retail and sales' %}
+
+{% include "../includes/survey.html" %}
+
+
+<main id="content" role="main">
+    {% include "../includes/global_header_bar.html" %}
+
+    {% include "../includes/breadcrumb_categories.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge" id="currentcategory">{{ categoryName}}</h1>
+            <!-- <p class="page-header__summary">Blurb about the category, what do the jobs on this page have in common etc.</p> -->
+
+            <div class="paginated-page" id="page1">
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Air cabin crew</a></h2>
+                    <h3 class="category-job__alt-titles">Flight attendant</h3>
+                    <p class="category-job__overview">Air cabin crew look after airline passengers, making sure they have a safe, comfortable and pleasant flight.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Car salesperson</a></h2>
+                    <h3 class="category-job__alt-titles">Vehicle sales executive</h3>
+                    <p class="category-job__overview">As a car salesperson you'll sell new and used cars, vans or motorbikes.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Estate agent</a></h2>
+                    <h3 class="category-job__alt-titles">Property agent</h3>
+                    <p class="category-job__overview">Estate agents sell and rent out commercial and residential property, acting as negotiators between buyers and sellers.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Events manager</a></h2>
+                    <!-- <h3 class="category-job__alt-titles">Oral health practitioner</h3> -->
+                    <p class="category-job__overview">Events managers organise and run promotional, business and social events.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Marketing manager</a></h2>
+                    <h3 class="category-job__alt-titles">Brand manager, account manager</h3>
+                    <p class="category-job__overview">Marketing managers plan how to promote products, services or brands and oversee all marketing activity.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Pharmacist</a></h2>
+                    <h3 class="category-job__alt-titles">Dispensing chemist, community pharmacist, hospital pharmacist</h3>
+                    <p class="category-job__overview">Pharmacists provide expert advice on the use and supply of medicines and medical appliances.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Sales representative</a></h2>
+                    <h3 class="category-job__alt-titles">Salesperson, sales rep, sales executive, field sales executive</h3>
+                    <p class="category-job__overview">Sales representatives meet or ring customers to persuade them to buy products or services.</p>
+                </div>
+                <div class="category-job">
+                    <h2 class="heading-medium category-job__title"><a href="../job-profiles/police-officer" class="prototype-link">Travel agent</a></h2>
+                    <h3 class="category-job__alt-titles">Travel consultant</h3>
+                    <p class="category-job__overview">Travel agents book and plan business and leisure travel for customers.</p>
+                </div>
+            </div>
+        </div>
+        <div class="column-one-third">
+            {% include "../includes/other_categories.html" %}
+        </div>
+    </div>
+</main>
+
+{% endblock %}
