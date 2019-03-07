@@ -4,7 +4,9 @@
 {% block content_block %}
 
 <h1 class="heading-xlarge">Give feedback</h1>
-<label class="form-label" for="QuestionAreaGeneral">What is your feedback about?</label>
+<form class="form form-intro" method="post">
+    <div class="form-group">
+    <label class="form-label" for="QuestionAreaGeneral">What is your feedback about?</label>
 <span class="field-validation-valid error-message" data-valmsg-for="QuestionArea" data-valmsg-replace="true"></span>
 <select class="form-control" data-val="true" data-val-required="The What do you want to tell us about? field is required." id="QuestionAreaGeneral" name="QuestionAreaGeneral"><option selected="selected" value="0">General</option>
     <option value="1">Funding</option>
@@ -21,7 +23,10 @@
 <span class="form-hint">Do not include any personal or sign in information.</span>
 <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
 <p class="font-xsmall">Character limit is 1000.</p>
+    </div>
 
-<a href="your-details" class="button">Continue</a>
-
+    <div class="form-group">
+        <button type="submit" class="button" role="button">Continue</button>
+    </div>
+</form>
 {% endblock %}

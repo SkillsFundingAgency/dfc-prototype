@@ -18,4 +18,25 @@ module.exports = function (router) {
         }
     });
 
+
+    router.post(version + e2e + contact + 'contact-an-adviser', function (req, res){
+        res.redirect(301, version + e2e + contact + 'your-details-adviser');
+    });
+
+    router.post(version + e2e + contact + 'technical', function (req, res){
+        res.redirect(301, version + e2e + contact + 'your-details');
+    });
+
+    router.post(version + e2e + contact + 'feedback', function (req, res){
+        res.redirect(301, version + e2e + contact + 'your-details');
+    });
+
+    router.post(version + e2e + contact + 'your-details', function (req, res){
+        res.redirect(301, version + e2e + contact + 'thanks-feedback');
+    });
+
+    router.post(version + e2e + contact + 'your-details-adviser', function (req, res){
+        res.redirect(301, version + e2e + contact + 'thanks-adviser');
+    });
+
 };

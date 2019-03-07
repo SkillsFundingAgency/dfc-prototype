@@ -6,7 +6,8 @@
 <h1 class="heading-xlarge">Contact an adviser</h1>
 
 <p>Give us as much detail as possible. It'll help us get back to you quickly with relevant information.</p>
-<div class="form-group ">
+<form class="form form-intro" method="post">
+<div class="form-group">
     <label class="form-label" for="QuestionArea">What is your query about?</label>
     <span class="field-validation-valid error-message" data-valmsg-for="QuestionArea" data-valmsg-replace="true"></span>
     <select class="form-control" data-val="true" data-val-required="Select your question Category" id="QuestionArea" name="QuestionArea"><option value="">Select</option>
@@ -17,7 +18,7 @@
         <option value="5">Funding</option>
     </select>
 </div>
-<div class="form-group ">
+<div class="form-group">
     <label class="form-label" for="Feedback">Enter your query for the adviser.</label>
     <span class="field-validation-valid error-message" data-valmsg-for="Feedback" data-valmsg-replace="true"></span>
     <span class="form-hint">Do not include any personal or sign in information.</span>
@@ -25,6 +26,8 @@
     <p class="font-xsmall">Character limit is 1000.</p>
 </div>
 
-<a href="your-details-adviser" class="button">Continue</a>
-
+    <div class="form-group">
+        <button type="submit" class="button" role="button">Continue</button>
+    </div>
+</form>
 {% endblock %}
