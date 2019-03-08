@@ -1,0 +1,41 @@
+﻿{% extends "../base.html" %}
+
+{% block content_block %}
+
+
+<h1 class="heading-xlarge">Why would you like to contact us?</h1>
+
+<form class="form form-intro" method="post">
+    <div class="form-group">
+        <fieldset>
+            <div class="multiple-choice">
+                <input id="adviser" type="radio" name="why" value="adviser">
+                <label for="adviser">Contact an adviser</label>
+            </div>
+            <div class="multiple-choice">
+                <input id="technical" type="radio" name="why" value="technical">
+                <label for="technical">Report a technical issue</label>
+            </div>
+            <div class="multiple-choice">
+                <input id="feedback" type="radio" name="why" value="feedback">
+                <label for="feedback">Give feedback</label>
+            </div>
+        </fieldset>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="button" role="button">Continue</button>
+    </div>
+</form>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

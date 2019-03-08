@@ -1,0 +1,85 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+Contact us | National Careers Service
+{% endblock %}
+
+<!-- Related Careers -->
+{% set RelatedCareerName1 = 'Assistant immigration officer' %}
+{% set RelatedCareerLink1 = '#' %}
+
+{% set RelatedCareerName2 = 'Civil Service executive officer' %}
+{% set RelatedCareerLink2 = '#' %}
+
+{% set RelatedCareerName3 = 'Diplomatic service officer' %}
+{% set RelatedCareerLink3 = '#' %}
+
+{% set RelatedCareerName4 = 'Customs officer' %}
+{% set RelatedCareerLink4 = '#' %}
+
+{% block content %}
+
+{% set serviceName = 'Explore careers' %}
+{% set bannerStyle = 'BETA-style' %}
+
+
+
+<main id="content">
+    {% include "../includes/breadcrumb_contactus.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">Contact us</h1>
+            <h3 class="heading-small">Webchat</h3>
+            <p>Contact an adviser using <a href="https://cxdirect.serco.com/visitor/EntryPage.htm">webchat</a>. This service is open from 8am to 10pm, 7 days a week.</p>
+            <h3 class="heading-small">Phone</h3>
+            <p>Call 0800 100 900 to speak to an adviser. Lines are open from 8am to 10pm, 7 days a week. Calls are free from landlines and most mobile numbers. Find out about <a href="https://www.gov.uk/call-charges">call charges and freephone numbers</a>.</p>
+            <p>If you need advice in a different language, choose option 5 to speak to an adviser using an interpreter.</p>
+            <h3 class="heading-small">Online message</h3>
+
+            <p><a href="/_sprint{{currentSprint}}/e2e/contact-us/select-option">Send us an online message</a> to ask an adviser a question, report a technical issue or tell us what you think about our service.</p>
+
+
+
+
+
+            <h3 class="heading-small">Callback</h3>
+            <p>Tell us your phone number and we will <a href="https://cxdirect.serco.com/phone_callback.htm">call you back</a>.</p>
+            <h3 class="heading-small">Face-to-face advice</h3>
+            <p>Call 0800 100 900 to find out if you are eligible for a face-to-face appointment with an adviser.</p>
+            <h3 class="heading-small">Text</h3>
+            <p>Text your name and the word ADVICE to 07766 413219 and a National Careers Service adviser will call you back for free. You can also use this text number to ask for information like telephone numbers and addresses.</p>
+            <p>Please note: we cannot open pictures sent by text.</p>
+            <h3 class="heading-small">Post</h3>
+            <p>
+                National Careers Service<br>
+                PO Box 1331<br>
+                Newcastle Upon Tyne<br>
+                <strong>NE99 5EB</strong>
+            </p>
+
+        </div>
+        <div class="column-one-third">
+            <aside class="govuk-related-items govuk-related-items-bau" role="complementary"><p>The National Careers Service offers advice about careers and skills in England. For careers advice in other parts of the UK visit:</p><ul><li><a href="https://www.myworldofwork.co.uk/">Skills Development Scotland - <br>My World of Work</a></li><li><a href="https://www.careerswales.com/">Careers Wales</a></li><li><a href="https://www.nidirect.gov.uk/campaigns/careers">Careers Service Northern Ireland</a></li></ul></aside>
+        </div>
+    </div>
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
